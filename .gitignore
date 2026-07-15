@@ -6,6 +6,7 @@ db.json
 .DS_Store
 Thumbs.db
 .trash/
+README.md
 
 # Local/raw working assets. Converted posts and public-ready media should live in source/.
 res/
