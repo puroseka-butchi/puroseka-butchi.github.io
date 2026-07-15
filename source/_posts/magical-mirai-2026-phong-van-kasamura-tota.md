@@ -1,7 +1,7 @@
 ---
 title: Hatsune Miku "Magical Mirai 2026" – Phỏng vấn Kasamura Tota
 date: 2026-07-11 02:45
-updated: "2026-07-15 13:06:27"
+updated: "2026-07-16 01:23:54"
 original_date: "2026-07-01 07:00:00"
 categories:
   - Phỏng vấn
@@ -10,7 +10,7 @@ tags:
   - Magical Mirai 2026
   - Kasamura Tota
   - Vocaloid
-description: <span class="post-summary"><span class="post-summary__field"><strong>Tiêu đề:</strong> Phỏng vấn Kasamura Tota – Magical Mirai 2026</span><span class="post-summary__field"><strong>Nhân vật / Khách mời:</strong> Kasamura Tota, Hatsune Miku</span><span class="post-summary__intro">Giấc mơ viết ca khúc chủ đề cho Magical Mirai từng được Kasamura Tota ghi trên một tờ A4 nay đã thành hiện thực.</span></span>
+description: <span class="post-summary"><span class="post-summary__field"><strong>Tiêu đề:</strong> Phỏng vấn Kasamura Tota – Magical Mirai 2026</span><span class="post-summary__field"><strong>Nhân vật / Khách mời:</strong> Kasamura Tota</span><span class="post-summary__intro">Giấc mơ viết ca khúc chủ đề cho Magical Mirai từng được Kasamura Tota ghi trên một tờ A4 nay đã thành hiện thực.</span></span>
 post_type: interview
 characters:
   - Kasamura Tota
