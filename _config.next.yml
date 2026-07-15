@@ -1,0 +1,127 @@
+# Chỉ ghi các giá trị tùy chỉnh tại đây để cập nhật theme không làm mất cấu hình.
+scheme: Gemini
+darkmode: true
+minify: true
+
+custom_file_path:
+  head: source/_data/head.njk
+  style: source/_data/styles.styl
+  bodyEnd: source/_data/body-end.njk
+
+menu:
+  home: / || fa fa-home
+  Bản dịch: /overview/ || fa fa-book-open
+  tags: /tags/ || fa fa-tags
+  Cập nhật: /updates/ || fa fa-bullhorn
+  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+
+menu_settings:
+  icons: true
+  badges: false
+
+sidebar:
+  position: left
+  display: post
+  width_expanded: 320
+  width_dual_column: 260
+
+avatar:
+  url: images\avatar.png
+  rounded: true
+  rotated: false
+
+site_state: false
+
+social:
+  GitHub: https://github.com/YOUR_USERNAME || fab fa-github
+  E-Mail: mailto:your-email@example.com || fa fa-envelope
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: true
+
+toc:
+  enable: true
+  number: false
+  wrap: true
+  expand_all: false
+  max_depth: 4
+
+# Hiển thị tất cả thẻ cùng kích thước; không phóng to theo số bài.
+tagcloud:
+  min: 14
+  max: 14
+  amount: 200
+  orderby: name
+  order: 1
+
+footer:
+  since: 2026
+  powered: true
+  theme:
+    enable: true
+    version: false
+
+post_edit:
+  enable: false
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: false
+    another_day: true
+  categories: true
+
+font:
+  enable: true
+  global:
+    external: false
+    family: Segoe UI
+    size: 1
+  title:
+    external: false
+    family: Segoe UI
+  headings:
+    external: false
+    family: Segoe UI
+  posts:
+    external: false
+    family: Segoe UI
+  codes:
+    external: false
+    family: Consolas
+
+creative_commons:
+  license: by-nc-nd
+  size: small
+  sidebar: false
+  post: false
+  language: deed.vi
+
+local_search:
+  enable: true
+  top_n_per_article: 3
+  unescape: true
+  preload: false
+
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+reading_progress:
+  enable: true
+  color: "#4455DD"
+  height: 3px
+
+bookmark:
+  enable: true
+  color: "#4455DD"
+  save: auto
+
+motion:
+  enable: true
+  async: true

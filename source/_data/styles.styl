@@ -1,0 +1,1040 @@
+// Màu nhận diện của website
+$brand = #4455DD
+$brand-soft = #EEF0FF
+$text-muted = #6f6f7a
+
+html[data-theme="light"]
+  --body-bg-color: #eee
+  --content-bg-color: #fff
+  --card-bg-color: #f5f5f5
+  --text-color: #555
+  --selection-bg: #262a30
+  --selection-color: #eee
+  --blockquote-color: #666
+  --link-color: #555
+  --link-hover-color: #222
+  --brand-color: #fff
+  --brand-hover-color: #fff
+  --table-row-odd-bg-color: #f9f9f9
+  --table-row-hover-bg-color: #f5f5f5
+  --menu-item-bg-color: #f5f5f5
+  --theme-color: #222
+  --btn-default-bg: #fff
+  --btn-default-color: #555
+  --btn-default-border-color: #555
+  --btn-default-hover-bg: #222
+  --btn-default-hover-color: #fff
+  --btn-default-hover-border-color: #222
+  --highlight-background: #f3f3f3
+  --highlight-foreground: #444
+  --highlight-gutter-background: #e1e1e1
+  --highlight-gutter-foreground: #555
+  color-scheme: light
+
+html[data-theme="dark"]
+  --body-bg-color: #282828
+  --content-bg-color: #333
+  --card-bg-color: #555
+  --text-color: #ccc
+  --selection-bg: #bbb
+  --selection-color: #333
+  --blockquote-color: #bbb
+  --link-color: #ccc
+  --link-hover-color: #eee
+  --brand-color: #ddd
+  --brand-hover-color: #ddd
+  --table-row-odd-bg-color: #282828
+  --table-row-hover-bg-color: #363636
+  --menu-item-bg-color: #555
+  --theme-color: #222
+  --btn-default-bg: #222
+  --btn-default-color: #ccc
+  --btn-default-border-color: #555
+  --btn-default-hover-bg: #666
+  --btn-default-hover-color: #ccc
+  --btn-default-hover-border-color: #666
+  --highlight-background: #1c1b1b
+  --highlight-foreground: #fff
+  --highlight-gutter-background: #323131
+  --highlight-gutter-foreground: #e8e8e8
+  color-scheme: dark
+
+html[data-theme="light"] img
+  opacity: 1
+
+html[data-theme="dark"] img
+  opacity: .75
+
+html[data-theme="dark"] img:hover
+  opacity: .9
+
+.theme-toggle
+  align-items: center
+  background: var(--content-bg-color)
+  border: 1px solid var(--btn-default-border-color)
+  border-radius: 50%
+  bottom: 18px
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .2)
+  color: var(--text-color)
+  cursor: pointer
+  display: flex
+  font: inherit
+  height: 44px
+  justify-content: center
+  padding: 0
+  position: fixed
+  right: 18px
+  transition: background .2s ease, color .2s ease, transform .2s ease
+  width: 44px
+  z-index: 1050
+
+.theme-toggle:hover
+  background: var(--btn-default-hover-bg)
+  color: var(--btn-default-hover-color)
+  transform: translateY(-2px)
+
+.theme-toggle:focus-visible
+  outline: 3px solid rgba(124, 111, 232, .5)
+  outline-offset: 3px
+
+.theme-toggle__icon
+  font-size: 21px
+  line-height: 1
+
+body
+  letter-spacing: .01em
+
+// Không để tag cloud phóng to các thẻ xuất hiện nhiều lần.
+.tag-cloud-tags a
+  font-size: 14px !important
+
+.post-title, .post-title-link, .post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6
+  font-family: "Segoe UI", "Arial", sans-serif !important
+  font-variant-ligatures: none
+
+.post-block .post-description
+  display: none
+
+.footer .fa-heart::before
+  content: "🌠"
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif
+
+.site-brand-container
+  background: #4455DD
+
+.post-button .btn
+  border-color: #222
+  color: #222
+
+.post-button .btn:hover
+  background: #222
+  border-color: #222
+  color: #fff
+
+.post-summary
+  display: block
+  line-height: 1.75
+  text-align: left
+
+.post-summary__field
+  display: block
+  margin-bottom: .2em
+
+.post-summary__intro
+  color: var(--text-color)
+  display: block
+  margin-top: .75em
+
+html[data-theme="dark"] .post-button .btn
+  border-color: #eee
+  color: #eee
+
+html[data-theme="dark"] .post-button .btn:hover
+  background: #eee
+  color: #222
+
+.translation-meta
+  background: $brand-soft
+  border-left: 4px solid $brand
+  border-radius: 0 8px 8px 0
+  color: #3f3a62
+  line-height: 1.8
+  margin: 1.5em 0
+  padding: 1em 1.2em
+
+.translation-dialogue
+  align-items: start
+  display: grid
+  gap: 14px
+  grid-template-columns: 80px minmax(0, 1fr)
+  margin: 1.35em 0
+
+.translation-dialogue__portrait
+  padding-top: 1.65em
+
+.translation-dialogue__avatar
+  background: #f3f3f3
+  border: 3px solid var(--character-color)
+  border-radius: 50%
+  box-sizing: border-box
+  display: block
+  height: 76px
+  object-fit: cover
+  width: 76px
+
+.translation-dialogue__content
+  min-width: 0
+
+.translation-dialogue__name
+  color: var(--character-text)
+  font-size: .86em
+  font-weight: 750
+  letter-spacing: .045em
+  margin: 0 0 .35em .65em
+  text-transform: uppercase
+
+.translation-dialogue__bubble
+  background: var(--character-bg)
+  border: 1px solid var(--character-border)
+  border-radius: 10px
+  box-shadow: 0 2px 5px rgba(35, 31, 50, .16)
+  color: #3f3f48
+  line-height: 1.75
+  min-height: 1.75em
+  padding: .85em 1.05em
+  position: relative
+
+.translation-dialogue__bubble::before
+  border-bottom: 10px solid transparent
+  border-right: 13px solid var(--character-bg)
+  border-top: 10px solid transparent
+  content: ""
+  left: -13px
+  position: absolute
+  top: 14px
+
+.translation-dialogue__bubble p
+  margin: 0
+
+.translation-dialogue__bubble p + p
+  margin-top: .75em
+
+.translation-dialogue--thought .translation-dialogue__bubble
+  border-style: dashed
+  font-style: italic
+
+.translation-dialogue--no-avatar
+  grid-template-columns: 1fr
+  margin-left: 94px
+
+.translation-dialogue--no-avatar .translation-dialogue__portrait
+  display: none
+
+.translation-dialogue--no-avatar .translation-dialogue__bubble::before
+  display: none
+
+.translation-scene-title
+  color: $text-muted
+  font-size: .92em
+  font-weight: 700
+  letter-spacing: .02em
+  margin: 1.6em 0 .9em
+  text-align: center
+
+// Tương thích với các bài cũ dùng HTML thủ công.
+.dialogue
+  background: #fff
+  border: 1px solid #ebe9f5
+  border-radius: 10px
+  box-shadow: 0 3px 12px rgba(62, 54, 115, .07)
+  margin: 1.15em 0
+  padding: 1em 1.2em
+
+.dialogue .speaker
+  color: $brand
+  font-size: .92em
+  font-weight: 700
+  margin-bottom: .35em
+
+.dialogue p
+  margin: 0
+
+.translation-scene
+  margin: 1.8em 0
+
+.translation-scene img
+  border-radius: 4px
+  display: block
+  height: auto
+  margin: 0
+  width: 100%
+
+.translation-scene figcaption
+  color: $text-muted
+  font-size: .85em
+  margin-top: .45em
+  text-align: center
+
+.interview-kicker
+  color: #777
+  font-size: .72em
+  font-weight: 600
+  letter-spacing: .09em
+  margin: 0 0 1.4em
+  text-transform: uppercase
+
+.interview-article
+  font-family: Inter, "Segoe UI", Arial, sans-serif
+  font-size: 16px
+  line-height: 1.85
+  margin: 0 auto
+  max-width: 704px
+  text-align: left
+
+.interview-article > :not(.translation-scene)
+  box-sizing: border-box
+  margin-left: auto
+  margin-right: auto
+  max-width: 100%
+
+.interview-article > .translation-scene
+  margin-left: auto
+  margin-right: auto
+  max-width: calc(100% - 80px)
+
+.interview-article > .interview-kicker + .translation-scene
+  max-width: calc(100% - 80px)
+
+.interview-article .translation-scene img
+  border-radius: 0
+
+.post-body .interview-article .translation-scene figcaption
+  font-size: .75em
+  font-weight: 400
+  line-height: 1.55
+  margin: .55em 0 0 !important
+  position: static
+  text-align: left
+  transform: none
+
+.interview-article > h2
+  border-bottom: 2px solid #8d8d8d
+  font-family: inherit
+  font-size: 1.55em
+  font-weight: 400 !important
+  line-height: 1.4
+  margin-bottom: 1.25em
+  margin-top: 2.8em
+  padding-bottom: .3em
+
+.interview-article > h3
+  font-family: inherit
+  font-size: 1.25em
+  font-weight: 500 !important
+  margin-top: 2.2em
+
+.interview-article > .translation-meta
+  background: transparent
+  border: 0
+  color: #777
+  font-size: .78em
+  line-height: 1.65
+  padding: 0
+  text-align: right
+
+.interview-lead
+  color: inherit
+  font-size: 1em
+  line-height: 1.95
+  margin-bottom: 2.6em
+  margin-top: 2.1em
+  padding: 0
+
+.interview-lead p
+  margin: 0
+
+.interview-question
+  margin-left: 2.5em
+  margin-bottom: .75em
+  margin-top: 2.25em
+  padding: 0
+
+.interview-question__label
+  clip: rect(0, 0, 0, 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  white-space: nowrap
+  width: 1px
+
+.interview-question__body
+  color: inherit
+  font-weight: 700
+  line-height: 1.85
+
+.interview-question__body p, .interview-answer__body p
+  margin: 0
+
+.interview-answer
+  margin-bottom: 1.8em
+  padding: 0
+
+.interview-answer__speaker
+  clip: rect(0, 0, 0, 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  white-space: nowrap
+  width: 1px
+
+.interview-answer__body
+  line-height: 1.95
+
+.interview-facts
+  margin-bottom: 2.4em
+  margin-top: 1.5em
+  padding: 0
+
+.interview-facts dl
+  margin: 0
+
+.interview-facts dt, .interview-facts dd
+  margin: 0
+
+.interview-facts dt
+  font-size: .86em
+  font-weight: 700
+  margin-top: 1.4em
+
+.interview-facts dd
+  line-height: 1.8
+  margin-top: .25em
+
+.translation-bgm-player
+  align-items: center
+  backdrop-filter: blur(12px)
+  background: rgba(255, 255, 255, .94)
+  border: 1px solid rgba(124, 111, 232, .28)
+  border-radius: 14px
+  bottom: 18px
+  box-shadow: 0 8px 28px rgba(35, 31, 70, .2)
+  display: grid
+  gap: 9px
+  grid-template-columns: 38px minmax(110px, 1fr) 34px 76px
+  left: 18px
+  max-width: 440px
+  padding: 9px 11px
+  position: fixed
+  width: calc(100vw - 36px)
+  z-index: 1050
+
+.translation-bgm-player button
+  align-items: center
+  background: $brand
+  border: 0
+  border-radius: 50%
+  color: #fff
+  cursor: pointer
+  display: inline-flex
+  font: inherit
+  height: 34px
+  justify-content: center
+  padding: 0
+  width: 34px
+
+.translation-bgm-player button:hover
+  background: #6558d3
+
+.translation-bgm-player__information
+  display: flex
+  flex-direction: column
+  line-height: 1.25
+  min-width: 0
+
+.translation-bgm-player__title
+  color: #39364d
+  font-size: .82em
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.translation-bgm-player__status
+  color: $text-muted
+  font-size: .68em
+  margin-top: 2px
+
+.translation-bgm-player__volume
+  accent-color: $brand
+  cursor: pointer
+  margin: 0
+  min-width: 0
+  width: 76px
+
+.translation-bgm-player.is-playing
+  border-color: rgba(124, 111, 232, .58)
+
+.translation-note
+  background: #fff9e8
+  border: 1px solid #f4df9b
+  border-radius: 8px
+  color: #5c512f
+  margin: 1.5em 0
+  padding: 1em 1.2em
+
+.status-badge
+  background: $brand-soft
+  border-radius: 999px
+  color: $brand
+  display: inline-block
+  font-size: .82em
+  font-weight: 600
+  padding: .2em .7em
+
+.masterlist-table td:first-child
+  min-width: 12em
+
+.translation-library-project
+  border-bottom: 2px solid $brand
+  font-size: 2em
+  font-weight: 500
+  margin: 2.6em 0 1.8em
+  padding-bottom: .35em
+  text-align: left
+
+.translation-library-tabs
+  border-bottom: 1px solid #ddd
+  display: flex
+  flex-wrap: wrap
+  gap: .35em
+  justify-content: center
+  margin: 2.4em 0 2.8em
+
+.translation-library-tab
+  background: transparent
+  border: 0
+  border-bottom: 3px solid transparent
+  color: var(--text-color)
+  cursor: pointer
+  font: inherit
+  font-size: 1.08em
+  font-weight: 600
+  margin-bottom: -1px
+  padding: .65em 1.15em
+
+.translation-library-tab:hover
+  color: $brand
+
+.translation-library-tab.is-active
+  border-bottom-color: $brand
+  color: $brand
+
+.translation-library-pane[hidden]
+  display: none
+
+.translation-library-pane > .translation-library-project
+  display: none
+
+.translation-library-series
+  margin: 0 auto 4.5em
+  max-width: 860px
+  text-align: left
+
+.translation-library-series > h2
+  border: 0
+  font-size: 1.45em
+  margin: 0 0 1.35em
+  text-align: center
+  text-decoration: underline
+  text-underline-offset: .18em
+
+.translation-library-series__body
+  align-items: stretch
+  display: grid
+  gap: 1.4em
+  grid-template-columns: minmax(180px, 320px) minmax(0, 1fr)
+
+.translation-library-cover
+  margin: 0 !important
+  max-width: none
+
+.translation-library-cover img
+  border-radius: 4px
+  display: block
+  height: 100%
+  margin: 0
+  max-height: 190px
+  min-height: 150px
+  object-fit: cover
+  opacity: 1
+  width: 100%
+
+.translation-library-series__content
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 150px
+
+.translation-library-title
+  border: 0 !important
+  font-size: 1.2em
+  font-weight: 500
+  line-height: 1.45
+  margin: 0
+
+.translation-library-links
+  line-height: 2
+  margin-top: 1.6em
+  text-align: right
+
+.translation-library-links p
+  margin: 0
+
+.translation-library-links a
+  display: inline-block
+  margin: 0 0 0 .75em
+
+.translation-library-feature
+  margin: 0 auto 4.5em
+  max-width: 860px
+  text-align: left
+
+.translation-library-feature > h2
+  border-bottom: 1px solid var(--content-border-color)
+  font-size: 1.45em
+  margin: 0 0 1.35em
+  padding-bottom: .3em
+  text-align: left
+  text-decoration: none
+
+.translation-library-feature__body
+  align-items: center
+  display: grid
+  gap: 2em
+  grid-template-columns: minmax(240px, 390px) minmax(260px, 1fr)
+
+.translation-library-feature__cover
+  margin: 0 !important
+
+.translation-library-feature__cover a
+  border: 0
+  display: block
+
+.translation-library-feature__cover img
+  display: block
+  height: auto
+  margin: 0 auto
+  max-height: 210px
+  object-fit: contain
+  opacity: 1
+  width: 100%
+
+.translation-library-feature__content
+  align-self: stretch
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 145px
+
+.translation-library-feature__title
+  border: 0 !important
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif !important
+  font-size: 1.25em
+  font-weight: 600
+  line-height: 1.45
+  margin: 0
+  text-align: center
+  text-decoration: underline
+  text-underline-offset: .22em
+
+.translation-library-feature__links
+  font-size: 1.08em
+  line-height: 1.7
+  margin-top: 1.4em
+
+.translation-library-feature__link-columns
+  display: grid
+  gap: 1.4em 3.5em
+  grid-template-columns: repeat(2, max-content)
+  justify-content: center
+
+.translation-library-feature__link-column
+  min-width: 0
+
+.translation-library-feature__link-column > span
+  display: block
+  margin: 0 0 .18em
+
+.translation-library-feature--interview .translation-library-feature__title
+  font-family: inherit !important
+  font-weight: 500
+
+.translation-library-grid-section
+  margin: 0 auto 4em
+  max-width: 900px
+  text-align: center
+
+.translation-library-grid-section > h3
+  border: 0 !important
+  font-size: 1.1em
+  font-weight: 400
+  margin: 0 0 1.7em
+
+.translation-library-grid
+  display: grid
+  gap: 1.5em 1.15em
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr))
+  justify-items: center
+  margin: 0 auto 3em
+
+.post-body .translation-library-card
+  margin: 0 !important
+  max-width: 132px
+  width: 132px
+
+.translation-library-card a
+  border: 0
+  display: block
+
+.translation-library-card img
+  display: block
+  height: 102px
+  margin: 0 auto
+  object-fit: cover
+  opacity: 1
+  transition: filter .25s ease, opacity .25s ease, transform .25s ease
+  width: 102px
+
+.translation-library-card a:hover img
+  transform: translateY(-2px)
+
+.translation-library-card:hover img
+  opacity: 1
+
+.translation-library-card.is-wip img
+  filter: grayscale(1)
+  opacity: .6
+
+.translation-library-side-card
+  margin: 0 !important
+  max-width: 210px
+  text-align: center
+  width: 100%
+
+.translation-library-side-card a
+  border: 0
+  color: inherit
+  display: block
+
+.translation-library-side-card__single-art,
+.translation-library-side-card__arts
+  background: #111
+  border: 4px solid #222
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .22)
+  box-sizing: border-box
+  height: 112px
+  overflow: hidden
+  position: relative
+  width: 100%
+
+.translation-library-side-card__single-art img,
+.translation-library-side-card__art img
+  display: block
+  height: 100%
+  margin: 0
+  object-fit: cover
+  opacity: 1
+  transition: filter .25s ease, opacity .25s ease, transform .25s ease
+  width: 100%
+
+.translation-library-side-card__arts
+  display: flex
+  gap: 0
+
+.translation-library-side-card__art
+  border: 0
+  display: block
+  flex: 1 1 50%
+  min-width: 0
+  overflow: hidden
+  position: relative
+  transition: flex-basis .28s ease, flex-grow .28s ease, filter .25s ease
+
+.translation-library-side-card__art + .translation-library-side-card__art
+  border-left: 2px solid rgba(255, 255, 255, .8)
+
+.translation-library-side-card__art span
+  background: rgba(0, 0, 0, .62)
+  bottom: 0
+  color: #fff
+  font-size: .68em
+  left: 0
+  letter-spacing: .03em
+  opacity: 0
+  padding: .12em .45em
+  position: absolute
+  right: 0
+  text-align: center
+  transform: translateY(4px)
+  transition: opacity .2s ease, transform .2s ease
+
+.translation-library-side-card--dual .translation-library-side-card__arts:hover .translation-library-side-card__art
+  flex-grow: .65
+
+.translation-library-side-card--dual .translation-library-side-card__arts .translation-library-side-card__art:hover
+  flex-grow: 2.35
+
+.translation-library-side-card__art:hover img,
+.translation-library-side-card a:hover img
+  transform: scale(1.035)
+
+.translation-library-side-card__art:hover span
+  opacity: 1
+  transform: translateY(0)
+
+.translation-library-side-card.is-wip img,
+.translation-library-side-card__art.is-wip img
+  filter: grayscale(1)
+  opacity: .55
+
+.translation-library-side-card figcaption
+  line-height: 1.45
+  margin: .65em 0 0 !important
+  text-align: center
+
+.translation-library-side-card figcaption strong
+  display: block
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif
+  font-size: .96em
+  font-weight: 700
+  margin-bottom: .25em
+
+.translation-library-side-card__links
+  display: flex
+  gap: 1.35em
+  justify-content: center
+  line-height: 1.35
+
+.translation-library-side-card__links a,
+.translation-library-side-card__links span
+  display: inline-block
+
+.post-body .translation-library-card figcaption
+  font-size: .82em
+  font-weight: 400
+  line-height: 1.45
+  margin: .6em 0 0 !important
+  text-align: center
+
+.translation-library-episode
+  margin: .4em auto
+  max-width: 650px
+  text-align: center
+
+.translation-library-episode summary
+  background: #e8e8e8
+  border: 1px solid #777
+  cursor: pointer
+  padding: .35em .8em
+  transition: background .2s ease
+
+.translation-library-episode summary:hover
+  background: #fffbd8
+  color: #222
+
+.translation-library-episode p
+  line-height: 2
+  margin: .8em 0 1.2em
+  text-align: center
+
+html[data-theme="dark"] .translation-library-tabs
+  border-color: #555
+
+html[data-theme="dark"] .translation-library-episode summary
+  background: #444
+  border-color: #777
+
+html[data-theme="dark"] .translation-library-card.is-wip img
+  opacity: .48
+
+html[data-theme="dark"] .translation-library-side-card__single-art,
+html[data-theme="dark"] .translation-library-side-card__arts
+  border-color: #111
+
+html[data-theme="dark"] .translation-library-side-card.is-wip img,
+html[data-theme="dark"] .translation-library-side-card__art.is-wip img
+  opacity: .48
+
+.post-toc .nav-item
+  line-height: 1.5
+  margin-bottom: .55em
+  margin-top: .55em
+
+.post-toc .nav-child .nav-item
+  margin-bottom: .4em
+  margin-top: .4em
+
+@media (prefers-color-scheme: dark)
+  html:not([data-theme="light"])
+    .translation-library-tabs
+      border-color: #555
+    .translation-library-episode summary
+      background: #444
+      border-color: #777
+    .translation-library-side-card__single-art,
+    .translation-library-side-card__arts
+      border-color: #111
+    .translation-library-side-card.is-wip img,
+    .translation-library-side-card__art.is-wip img
+      opacity: .48
+    .post-button .btn
+      border-color: #eee
+      color: #eee
+    .post-button .btn:hover
+      background: #eee
+      color: #222
+    .translation-meta
+      background: #29263d
+      color: #ddd8ff
+    .translation-dialogue__name
+      color: var(--character-color)
+    .translation-dialogue__bubble
+      background: var(--character-bg-dark)
+      color: #e6e6eb
+    .translation-dialogue__bubble::before
+      border-right-color: var(--character-bg-dark)
+    .dialogue
+      background: #222
+      border-color: #3b3947
+    .translation-bgm-player
+      background: rgba(31, 30, 38, .94)
+      border-color: rgba(166, 148, 255, .38)
+    .translation-bgm-player__title
+      color: #f0eefc
+    .interview-lead
+      color: inherit
+    .interview-article > h2
+      border-color: #777
+    .translation-note
+      background: #332f20
+      border-color: #5b5130
+      color: #eadfae
+
+html[data-theme="dark"]
+  .translation-meta
+    background: #29263d
+    color: #ddd8ff
+  .translation-dialogue__name
+    color: var(--character-color)
+  .translation-dialogue__bubble
+    background: var(--character-bg-dark)
+    color: #e6e6eb
+  .translation-dialogue__bubble::before
+    border-right-color: var(--character-bg-dark)
+  .dialogue
+    background: #222
+    border-color: #3b3947
+  .translation-bgm-player
+    background: rgba(31, 30, 38, .94)
+    border-color: rgba(166, 148, 255, .38)
+  .translation-bgm-player__title
+    color: #f0eefc
+  .interview-lead
+    color: inherit
+  .interview-article > h2
+    border-color: #777
+  .translation-note
+    background: #332f20
+    border-color: #5b5130
+    color: #eadfae
+
+@media (max-width: 767px)
+  .theme-toggle
+    bottom: 12px
+    height: 40px
+    right: 12px
+    width: 40px
+  .translation-library-project
+    font-size: 1.65em
+    margin-top: 2em
+  .translation-library-series
+    margin-bottom: 3.2em
+  .translation-library-series > h2
+    font-size: 1.3em
+  .translation-library-series__body
+    grid-template-columns: 1fr
+  .translation-library-feature__body
+    gap: 1.3em
+    grid-template-columns: 1fr
+  .translation-library-feature__content
+    min-height: 0
+  .translation-library-feature__links
+    text-align: center
+  .translation-library-feature__link-columns
+    grid-template-columns: 1fr
+  .translation-library-cover img
+    max-height: none
+    min-height: 0
+  .translation-library-links
+    text-align: center
+  .translation-library-tabs
+    margin: 1.8em 0 2.2em
+  .translation-library-tab
+    font-size: .95em
+    padding: .55em .75em
+  .post-body .translation-library-card
+    max-width: 112px
+    width: 112px
+  .translation-library-side-card
+    max-width: 170px
+  .translation-library-side-card__single-art,
+  .translation-library-side-card__arts
+    height: 92px
+  .translation-library-card img
+    height: 92px
+    width: 92px
+  .translation-library-links a
+    margin: 0 .3em
+  .translation-meta, .translation-note
+    padding: .85em 1em
+  .translation-dialogue
+    gap: 9px
+    grid-template-columns: 54px minmax(0, 1fr)
+    margin: 1.1em 0
+  .translation-dialogue__portrait
+    padding-top: 1.45em
+  .translation-dialogue__avatar
+    border-width: 2px
+    height: 50px
+    width: 50px
+  .translation-dialogue__name
+    font-size: .78em
+    margin-left: .45em
+  .translation-dialogue__bubble
+    border-radius: 8px
+    line-height: 1.65
+    padding: .72em .85em
+  .translation-dialogue--no-avatar
+    margin-left: 63px
+  .translation-bgm-player
+    bottom: 10px
+    gap: 7px
+    grid-template-columns: 36px minmax(90px, 1fr) 32px
+    left: 10px
+    max-width: calc(100vw - 20px)
+    padding: 8px 9px
+    width: calc(100vw - 20px)
+  .translation-bgm-player__volume
+    display: none
+  .interview-question
+    margin-left: 1.25em
+  .interview-article > .translation-scene, .interview-article > .interview-kicker + .translation-scene
+    max-width: 100%
+  .interview-article > h2
+    font-size: 1.4em
+    margin-top: 2.3em
+  .post-body
+    font-size: 15px

@@ -1,0 +1,45 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Website chia sẻ các bản dịch, xây dựng bằng Hexo và NexT.Gemini",
+  "private": true,
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "server": "hexo server",
+    "server:debug": "hexo server --debug",
+    "admin": "node tools/admin-server.js",
+    "new": "hexo new post",
+    "new:interview": "hexo new interview",
+    "convert": "node tools/convert-translation.js",
+    "import:media": "node tools/import-media.js",
+    "test": "npm run test:converter",
+    "test:converter": "node --test --test-isolation=none tools/convert-translation.test.js"
+  },
+  "keywords": [
+    "hexo",
+    "translation",
+    "vietnamese"
+  ],
+  "author": "Translator",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "dependencies": {
+    "hexo": "^8.1.2",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-searchdb": "^1.5.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-next": "^8.28.0",
+    "js-yaml": "^4.3.0",
+    "marked": "^18.0.6"
+  }
+}

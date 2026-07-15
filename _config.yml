@@ -1,0 +1,70 @@
+# Thông tin website
+title: "Bút chì ở puroseka"
+subtitle: "Một con người bình thường đang sống một cuộc đời phi thường."
+description: |
+  Blog lưu trữ bản dịch Tiếng Việt <br>phi lợi nhuận về Project Sekai. 
+keywords:
+  - bản dịch tiếng Việt
+  - dịch thuật
+  - Project Sekai
+author: M T
+language: vi
+timezone: Asia/Ho_Chi_Minh
+
+# Thay YOUR_USERNAME trước khi xuất bản lên GitHub Pages.
+url: https://<username>.github.io
+root: /puroseka-butchi/
+permalink: translations/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+# Thư mục
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Nội dung
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ""
+filename_case: 1
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+
+# Trang chủ và phân trang
+index_generator:
+  path: ""
+  per_page: 8
+  order_by: -date
+per_page: 10
+pagination_dir: page
+
+# Tìm kiếm cục bộ
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+# Theme
+theme: next

@@ -1,0 +1,106 @@
+side-story:
+  name: Side Story
+  description: Bản dịch side story với avatar, màu nhân vật và import TXT.
+  supports_txt_import: true
+  categories: [Project Sekai, Side Story]
+  tags: []
+  default_body: |-
+    <div class="translation-meta">
+      <strong>Tiêu đề:</strong> Điền tiêu đề<br>
+      <strong>Nhân vật:</strong> Điền tên nhân vật<br>
+      <strong>Người dịch:</strong> Tên của bạn<br>
+      <strong>Trạng thái:</strong> Bản nháp
+    </div>
+
+    <!-- more -->
+
+    ## Phần 1
+
+    {% dialogue unknown %}
+    Nội dung lời thoại.
+    {% enddialogue %}
+
+event-story:
+  name: Event Story
+  description: Bản dịch event story nhiều phần, hỗ trợ cùng cú pháp hội thoại và import TXT.
+  supports_txt_import: true
+  categories: [Project Sekai, Event Story]
+  tags: []
+  default_body: |-
+    <div class="translation-meta">
+      <strong>Event:</strong> Tên event<br>
+      <strong>Chương:</strong> Tên chương<br>
+      <strong>Người dịch:</strong> Tên của bạn<br>
+      <strong>Trạng thái:</strong> Bản nháp
+    </div>
+
+    <!-- more -->
+
+    ## Mở đầu
+
+    {% dialogue unknown %}
+    Nội dung lời thoại.
+    {% enddialogue %}
+
+interview:
+  name: Phỏng vấn
+  description: Bài dịch phỏng vấn với hero, đoạn dẫn, hỏi–đáp, ảnh minh họa và hồ sơ khách mời.
+  supports_txt_import: false
+  categories: [Phỏng vấn]
+  tags: []
+  default_body: |-
+    <div class="interview-kicker">ĐẶC BIỆT · PHỎNG VẤN</div>
+
+    {% scene "/images/translations/ten-bai/cover.jpg" "" %}
+
+    <div class="translation-meta">
+      <strong>Khách mời:</strong> Tên khách mời<br>
+      <strong>Phỏng vấn / biên soạn:</strong> Tên người thực hiện<br>
+      <strong>Nguồn:</strong> <a href="URL_BAI_GOC">Tên nguồn</a><br>
+      <strong>Người dịch:</strong> Tên của bạn
+    </div>
+
+    {% interview_lead %}
+    Viết đoạn dẫn giới thiệu khách mời và chủ đề phỏng vấn.
+    {% endinterview_lead %}
+
+    <!-- more -->
+
+    ## Tiêu đề chương
+
+    {% interview_question %}
+    Câu hỏi của người phỏng vấn?
+    {% endinterview_question %}
+
+    {% interview_answer "Tên khách mời" %}
+    Câu trả lời của khách mời.
+    {% endinterview_answer %}
+
+    {% scene "/images/translations/ten-bai/figure-01.jpg" "Chú thích ảnh." %}
+
+    ## Hồ sơ khách mời
+
+    **Tên khách mời**
+
+    Tiểu sử ngắn.
+
+article:
+  name: Bài báo / Bài viết
+  description: Bài dịch văn xuôi với tiêu đề, ảnh, đề mục và trích dẫn.
+  supports_txt_import: false
+  categories: [Bài viết]
+  tags: []
+  default_body: |-
+    <div class="translation-meta">
+      <strong>Tác giả gốc:</strong> Tên tác giả<br>
+      <strong>Nguồn:</strong> Liên kết bài gốc<br>
+      <strong>Người dịch:</strong> Tên của bạn
+    </div>
+
+    <!-- more -->
+
+    ## Mở đầu
+
+    Nội dung bài viết.
+
+    > Trích dẫn nổi bật.

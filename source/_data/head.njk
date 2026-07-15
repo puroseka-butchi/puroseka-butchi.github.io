@@ -1,0 +1,10 @@
+<script>
+  try {
+    const savedTheme = localStorage.getItem('blog-theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      document.documentElement.dataset.theme = savedTheme;
+    }
+  } catch (error) {
+    // Trình duyệt chặn localStorage: website vẫn dùng theme của hệ điều hành.
+  }
+</script>

@@ -1,0 +1,551 @@
+# ID nhân vật được dùng trong tag: {% dialogue <id> %}
+# Avatar có thể thay sau. Các nhân vật chưa có ảnh riêng đang dùng unknown.svg.
+# Virtual Singer có 1 ID gốc và 5 ID biến thể Sekai: ln, mmj, vbs, wxs, niigo.
+
+ichika:
+  name: Hoshino Ichika
+  short_name: Ichika
+  aliases: [Hoshino, "星乃 一歌", "星乃一歌"]
+  avatar: /images/characters/project-sekai/ichika.png
+  color: "#33AAEE"
+  text_color: "#185478"
+
+saki:
+  name: Tenma Saki
+  short_name: Saki
+  aliases: [Tenma, "天馬 咲希", "天馬咲希"]
+  avatar: /images/characters/project-sekai/saki.png
+  color: "#E6C63D"
+  text_color: "#655312"
+
+honami:
+  name: Mochizuki Honami
+  short_name: Honami
+  aliases: [Mochizuki, "望月 穂波", "望月穂波"]
+  avatar: /images/characters/project-sekai/honami.png
+  color: "#EE6666"
+  text_color: "#6E2B2B"
+
+shiho:
+  name: Hinomori Shiho
+  short_name: Shiho
+  aliases: [Hinomori, "日野森 志歩", "日野森志歩"]
+  avatar: /images/characters/project-sekai/shiho.png
+  color: "#BBDD22"
+  text_color: "#4E5F0F"
+
+minori:
+  name: Hanasato Minori
+  short_name: Minori
+  aliases: [Hanasato, "花里 みのり", "花里みのり"]
+  avatar: /images/characters/project-sekai/minori.png
+  color: "#FFCCAA"
+  text_color: "#73462E"
+
+haruka:
+  name: Kiritani Haruka
+  short_name: Haruka
+  aliases: [Kiritani, "桐谷 遥", "桐谷遥"]
+  avatar: /images/characters/project-sekai/haruka.png
+  color: "#99CCFF"
+  text_color: "#315C86"
+
+airi:
+  name: Momoi Airi
+  short_name: Airi
+  aliases: [Momoi, "桃井 愛莉", "桃井愛莉"]
+  avatar: /images/characters/project-sekai/airi.png
+  color: "#FFAACC"
+  text_color: "#783F58"
+
+shizuku:
+  name: Hinomori Shizuku
+  short_name: Shizuku
+  aliases: [Hinomori Shizuku, "日野森 雫", "日野森雫"]
+  avatar: /images/characters/project-sekai/shizuku.png
+  color: "#99EEDD"
+  text_color: "#33685F"
+
+kohane:
+  name: Azusawa Kohane
+  short_name: Kohane
+  aliases: [Azusawa, "小豆沢 こはね", "小豆沢こはね"]
+  avatar: /images/characters/project-sekai/kohane.png
+  color: "#FF6699"
+  text_color: "#78304C"
+
+an:
+  name: Shiraishi An
+  short_name: An
+  aliases: [Shiraishi, "白石 杏", "白石杏"]
+  avatar: /images/characters/project-sekai/an.png
+  color: "#00BBDD"
+  text_color: "#005363"
+
+akito:
+  name: Shinonome Akito
+  short_name: Akito
+  aliases: [Shinonome Akito, "東雲 彰人", "東雲彰人"]
+  avatar: /images/characters/project-sekai/akito.png
+  color: "#FF7722"
+  text_color: "#74330E"
+
+toya:
+  name: Aoyagi Toya
+  short_name: Toya
+  aliases: [Aoyagi, "青柳 冬弥", "青柳冬弥"]
+  avatar: /images/characters/project-sekai/toya.png
+  color: "#0077DD"
+  text_color: "#003965"
+
+tsukasa:
+  name: Tenma Tsukasa
+  short_name: Tsukasa
+  aliases: [Tenma Tsukasa, "天馬 司", "天馬司"]
+  avatar: /images/characters/project-sekai/tsukasa.png
+  color: "#D99F00"
+  text_color: "#5F4500"
+
+emu:
+  name: Otori Emu
+  short_name: Emu
+  aliases: [Otori, "鳳 えむ", "鳳えむ"]
+  avatar: /images/characters/project-sekai/emu.png
+  color: "#FF66BB"
+  text_color: "#783058"
+
+nene:
+  name: Kusanagi Nene
+  short_name: Nene
+  aliases: [Kusanagi, "草薙 寧々", "草薙寧々"]
+  avatar: /images/characters/project-sekai/nene.png
+  color: "#33DD99"
+  text_color: "#166344"
+
+rui:
+  name: Kamishiro Rui
+  short_name: Rui
+  aliases: [Kamishiro, "神代 類", "神代類"]
+  avatar: /images/characters/project-sekai/rui.png
+  color: "#BB88EE"
+  text_color: "#563F70"
+
+kanade:
+  name: Yoisaki Kanade
+  short_name: Kanade
+  aliases: [Yoisaki, K, "宵崎 奏", "宵崎奏"]
+  avatar: /images/characters/project-sekai/kanade.png
+  color: "#BB6688"
+  text_color: "#4F2939"
+
+mafuyu:
+  name: Asahina Mafuyu
+  short_name: Mafuyu
+  aliases: [Asahina, "朝比奈 まふゆ", "朝比奈まふゆ"]
+  avatar: /images/characters/project-sekai/mafuyu.png
+  color: "#8888CC"
+  text_color: "#30305E"
+
+ena:
+  name: Shinonome Ena
+  short_name: Ena
+  aliases: [Shinonome Ena, "東雲 絵名", "東雲絵名"]
+  avatar: /images/characters/project-sekai/ena.png
+  color: "#CCAA88"
+  text_color: "#594633"
+
+mizuki:
+  name: Akiyama Mizuki
+  short_name: Mizuki
+  aliases: [Akiyama, "暁山 瑞希", "暁山瑞希"]
+  avatar: /images/characters/project-sekai/mizuki.png
+  color: "#DDAACC"
+  text_color: "#62445A"
+
+miku:
+  name: Hatsune Miku
+  short_name: Miku
+  aliases: ["ミク", "ミク (Miku)", Hatsune, "初音 ミク", "初音ミク"]
+  avatar: /images/characters/project-sekai/miku.png
+  color: "#33CCBB"
+  text_color: "#1F5E58"
+
+miku-ln:
+  name: Hatsune Miku (Leo/need)
+  short_name: Miku
+  aliases: [Miku LN, Miku Leo/need, "ミク LN", "ミク (Leo/need)"]
+  avatar: /images/characters/project-sekai/miku-ln.png
+  color: "#33CCBB"
+  text_color: "#1F5E58"
+
+miku-mmj:
+  name: Hatsune Miku (MORE MORE JUMP!)
+  short_name: Miku
+  aliases: [Miku MMJ, "ミク MMJ", "ミク (MORE MORE JUMP!)"]
+  avatar: /images/characters/project-sekai/miku-mmj.png
+  color: "#33CCBB"
+  text_color: "#1F5E58"
+
+miku-vbs:
+  name: Hatsune Miku (Vivid BAD SQUAD)
+  short_name: Miku
+  aliases: [Miku VBS, "ミク VBS", "ミク (Vivid BAD SQUAD)"]
+  avatar: /images/characters/project-sekai/miku-vbs.png
+  color: "#33CCBB"
+  text_color: "#1F5E58"
+
+miku-wxs:
+  name: Hatsune Miku (Wonderlands x Showtime)
+  short_name: Miku
+  aliases: [Miku WXS, "ミク WXS", "ミク (Wonderlands x Showtime)"]
+  avatar: /images/characters/project-sekai/miku-wxs.png
+  color: "#33CCBB"
+  text_color: "#1F5E58"
+
+miku-niigo:
+  name: Hatsune Miku (Nightcord at 25:00)
+  short_name: Miku
+  aliases: [Miku NIIGO, Miku N25, "ミク NIIGO", "ミク (25時、ナイトコードで。)"]
+  avatar: /images/characters/project-sekai/miku-niigo.png
+  color: "#33CCBB"
+  text_color: "#1F5E58"
+
+rin:
+  name: Kagamine Rin
+  short_name: Rin
+  aliases: ["リン", "リン (Rin)", Kagamine Rin, "鏡音 リン", "鏡音リン"]
+  avatar: /images/characters/project-sekai/rin.png
+  color: "#E6B80F"
+  text_color: "#654F07"
+
+rin-ln:
+  name: Kagamine Rin (Leo/need)
+  short_name: Rin
+  aliases: [Rin LN, Rin Leo/need, "リン LN", "リン (Leo/need)"]
+  avatar: /images/characters/project-sekai/rin-ln.png
+  color: "#E6B80F"
+  text_color: "#654F07"
+
+rin-mmj:
+  name: Kagamine Rin (MORE MORE JUMP!)
+  short_name: Rin
+  aliases: [Rin MMJ, "リン MMJ", "リン (MORE MORE JUMP!)"]
+  avatar: /images/characters/project-sekai/rin-mmj.png
+  color: "#E6B80F"
+  text_color: "#654F07"
+
+rin-vbs:
+  name: Kagamine Rin (Vivid BAD SQUAD)
+  short_name: Rin
+  aliases: [Rin VBS, "リン VBS", "リン (Vivid BAD SQUAD)"]
+  avatar: /images/characters/project-sekai/rin-vbs.png
+  color: "#E6B80F"
+  text_color: "#654F07"
+
+rin-wxs:
+  name: Kagamine Rin (Wonderlands x Showtime)
+  short_name: Rin
+  aliases: [Rin WXS, "リン WXS", "リン (Wonderlands x Showtime)"]
+  avatar: /images/characters/project-sekai/rin-wxs.png
+  color: "#E6B80F"
+  text_color: "#654F07"
+
+rin-niigo:
+  name: Kagamine Rin (Nightcord at 25:00)
+  short_name: Rin
+  aliases: [Rin NIIGO, Rin N25, "リン NIIGO", "リン (25時、ナイトコードで。)"]
+  avatar: /images/characters/project-sekai/rin-niigo.png
+  color: "#E6B80F"
+  text_color: "#654F07"
+
+len:
+  name: Kagamine Len
+  short_name: Len
+  aliases: ["レン", "レン (Len)", Kagamine Len, "鏡音 レン", "鏡音レン"]
+  avatar: /images/characters/project-sekai/len.png
+  color: "#D9C80F"
+  text_color: "#5F5707"
+
+len-ln:
+  name: Kagamine Len (Leo/need)
+  short_name: Len
+  aliases: [Len LN, Len Leo/need, "レン LN", "レン (Leo/need)"]
+  avatar: /images/characters/project-sekai/len-ln.png
+  color: "#D9C80F"
+  text_color: "#5F5707"
+
+len-mmj:
+  name: Kagamine Len (MORE MORE JUMP!)
+  short_name: Len
+  aliases: [Len MMJ, "レン MMJ", "レン (MORE MORE JUMP!)"]
+  avatar: /images/characters/project-sekai/len-mmj.png
+  color: "#D9C80F"
+  text_color: "#5F5707"
+
+len-vbs:
+  name: Kagamine Len (Vivid BAD SQUAD)
+  short_name: Len
+  aliases: [Len VBS, "レン VBS", "レン (Vivid BAD SQUAD)"]
+  avatar: /images/characters/project-sekai/len-vbs.png
+  color: "#D9C80F"
+  text_color: "#5F5707"
+
+len-wxs:
+  name: Kagamine Len (Wonderlands x Showtime)
+  short_name: Len
+  aliases: [Len WXS, "レン WXS", "レン (Wonderlands x Showtime)"]
+  avatar: /images/characters/project-sekai/len-wxs.png
+  color: "#D9C80F"
+  text_color: "#5F5707"
+
+len-niigo:
+  name: Kagamine Len (Nightcord at 25:00)
+  short_name: Len
+  aliases: [Len NIIGO, Len N25, "レン NIIGO", "レン (25時、ナイトコードで。)"]
+  avatar: /images/characters/project-sekai/len-niigo.png
+  color: "#D9C80F"
+  text_color: "#5F5707"
+
+luka:
+  name: Megurine Luka
+  short_name: Luka
+  aliases: ["ルカ", "ルカ (Luka)", Megurine Luka, "巡音 ルカ", "巡音ルカ"]
+  avatar: /images/characters/project-sekai/luka.png
+  color: "#FFBBCC"
+  text_color: "#724653"
+
+luka-ln:
+  name: Megurine Luka (Leo/need)
+  short_name: Luka
+  aliases: [Luka LN, Luka Leo/need, "ルカ LN", "ルカ (Leo/need)"]
+  avatar: /images/characters/project-sekai/luka-ln.png
+  color: "#FFBBCC"
+  text_color: "#724653"
+
+luka-mmj:
+  name: Megurine Luka (MORE MORE JUMP!)
+  short_name: Luka
+  aliases: [Luka MMJ, "ルカ MMJ", "ルカ (MORE MORE JUMP!)"]
+  avatar: /images/characters/project-sekai/luka-mmj.png
+  color: "#FFBBCC"
+  text_color: "#724653"
+
+luka-vbs:
+  name: Megurine Luka (Vivid BAD SQUAD)
+  short_name: Luka
+  aliases: [Luka VBS, "ルカ VBS", "ルカ (Vivid BAD SQUAD)"]
+  avatar: /images/characters/project-sekai/luka-vbs.png
+  color: "#FFBBCC"
+  text_color: "#724653"
+
+luka-wxs:
+  name: Megurine Luka (Wonderlands x Showtime)
+  short_name: Luka
+  aliases: [Luka WXS, "ルカ WXS", "ルカ (Wonderlands x Showtime)"]
+  avatar: /images/characters/project-sekai/luka-wxs.png
+  color: "#FFBBCC"
+  text_color: "#724653"
+
+luka-niigo:
+  name: Megurine Luka (Nightcord at 25:00)
+  short_name: Luka
+  aliases: [Luka NIIGO, Luka N25, "ルカ NIIGO", "ルカ (25時、ナイトコードで。)"]
+  avatar: /images/characters/project-sekai/luka-niigo.png
+  color: "#FFBBCC"
+  text_color: "#724653"
+
+meiko:
+  name: MEIKO
+  short_name: MEIKO
+  aliases: ["メイコ", "メイコ (MEIKO)"]
+  avatar: /images/characters/project-sekai/meiko.png
+  color: "#DD4444"
+  text_color: "#661F1F"
+
+meiko-ln:
+  name: MEIKO (Leo/need)
+  short_name: MEIKO
+  aliases: [MEIKO LN, MEIKO Leo/need, "メイコ LN", "メイコ (Leo/need)"]
+  avatar: /images/characters/project-sekai/meiko-ln.png
+  color: "#DD4444"
+  text_color: "#661F1F"
+
+meiko-mmj:
+  name: MEIKO (MORE MORE JUMP!)
+  short_name: MEIKO
+  aliases: [MEIKO MMJ, "メイコ MMJ", "メイコ (MORE MORE JUMP!)"]
+  avatar: /images/characters/project-sekai/meiko-mmj.png
+  color: "#DD4444"
+  text_color: "#661F1F"
+
+meiko-vbs:
+  name: MEIKO (Vivid BAD SQUAD)
+  short_name: MEIKO
+  aliases: [MEIKO VBS, "メイコ VBS", "メイコ (Vivid BAD SQUAD)"]
+  avatar: /images/characters/project-sekai/meiko-vbs.png
+  color: "#DD4444"
+  text_color: "#661F1F"
+
+meiko-wxs:
+  name: MEIKO (Wonderlands x Showtime)
+  short_name: MEIKO
+  aliases: [MEIKO WXS, "メイコ WXS", "メイコ (Wonderlands x Showtime)"]
+  avatar: /images/characters/project-sekai/meiko-wxs.png
+  color: "#DD4444"
+  text_color: "#661F1F"
+
+meiko-niigo:
+  name: MEIKO (Nightcord at 25:00)
+  short_name: MEIKO
+  aliases: [MEIKO NIIGO, MEIKO N25, "メイコ NIIGO", "メイコ (25時、ナイトコードで。)"]
+  avatar: /images/characters/project-sekai/meiko-niigo.png
+  color: "#DD4444"
+  text_color: "#661F1F"
+
+kaito:
+  name: KAITO
+  short_name: KAITO
+  aliases: ["カイト", "カイト (KAITO)"]
+  avatar: /images/characters/project-sekai/kaito.png
+  color: "#3366CC"
+  text_color: "#18305F"
+
+kaito-ln:
+  name: KAITO (Leo/need)
+  short_name: KAITO
+  aliases: [KAITO LN, KAITO Leo/need, "カイト LN", "カイト (Leo/need)"]
+  avatar: /images/characters/project-sekai/kaito-ln.png
+  color: "#3366CC"
+  text_color: "#18305F"
+
+kaito-mmj:
+  name: KAITO (MORE MORE JUMP!)
+  short_name: KAITO
+  aliases: [KAITO MMJ, "カイト MMJ", "カイト (MORE MORE JUMP!)"]
+  avatar: /images/characters/project-sekai/kaito-mmj.png
+  color: "#3366CC"
+  text_color: "#18305F"
+
+kaito-vbs:
+  name: KAITO (Vivid BAD SQUAD)
+  short_name: KAITO
+  aliases: [KAITO VBS, "カイト VBS", "カイト (Vivid BAD SQUAD)"]
+  avatar: /images/characters/project-sekai/kaito-vbs.png
+  color: "#3366CC"
+  text_color: "#18305F"
+
+kaito-wxs:
+  name: KAITO (Wonderlands x Showtime)
+  short_name: KAITO
+  aliases: [KAITO WXS, "カイト WXS", "カイト (Wonderlands x Showtime)"]
+  avatar: /images/characters/project-sekai/kaito-wxs.png
+  color: "#3366CC"
+  text_color: "#18305F"
+
+kaito-niigo:
+  name: KAITO (Nightcord at 25:00)
+  short_name: KAITO
+  aliases: [KAITO NIIGO, KAITO N25, "カイト NIIGO", "カイト (25時、ナイトコードで。)"]
+  avatar: /images/characters/project-sekai/kaito-niigo.png
+  color: "#3366CC"
+  text_color: "#18305F"
+
+unknown:
+  name: Nhân vật chưa xác định
+  short_name: "???"
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+narrator:
+  name: Người dẫn chuyện
+  short_name: Người dẫn chuyện
+  avatar: ""
+  color: "#777777"
+  text_color: "#3F3F3F"
+  avatar_hidden: true
+
+giao-vien: 
+  name: Giáo viên
+  short_name: Giáo viên
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ichika-saki-honami:
+  name: "Ichika・Saki・Honami"
+  short_name: "Ichika・Saki・Honami"
+  aliases: ["Ichika・Saki・Honami"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+co-ban-hoa:
+  name: "Cô bán hoa"
+  short_name: "Cô bán hoa"
+  aliases: ["Cô bán hoa"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ichika-honami:
+  name: "Ichika・Honami"
+  short_name: "Ichika・Honami"
+  aliases: ["Ichika・Honami"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ichika-saki-honami-shiho:
+  name: "Ichika・Saki・Honami・Shiho"
+  short_name: "Ichika・Saki・Honami・Shiho"
+  aliases: ["Ichika・Saki・Honami・Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+iori:
+  name: "Iori"
+  short_name: "Iori"
+  aliases: ["Iori"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+ichika-saki-haruka:
+  name: "Ichika・Saki・Haruka"
+  short_name: "Ichika・Saki・Haruka"
+  aliases: ["Ichika・Saki・Haruka"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-miku:
+  name: "Giọng Miku"
+  short_name: "Giọng Miku"
+  aliases: ["Giọng Miku"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+ichika-va-miku:
+  name: "Ichika và Miku"
+  short_name: "Ichika và Miku"
+  aliases: ["Ichika và Miku"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+saki-rin:
+  name: "Saki・Rin"
+  short_name: "Saki・Rin"
+  aliases: ["Saki・Rin"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"

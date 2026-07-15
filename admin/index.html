@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post Studio · Góc Dịch Thuật</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-block">
+      <p class="eyebrow">Góc Dịch Thuật</p>
+      <h1>Post Studio</h1>
+    </div>
+    <nav class="workspace-switcher" aria-label="Khu vực quản lý">
+      <button id="mode-posts" class="workspace-switcher__button is-active" type="button">Bài viết</button>
+      <button id="mode-blog" class="workspace-switcher__button" type="button">Quản lý blog</button>
+      <button id="mode-guide" class="workspace-switcher__button" type="button">Hướng dẫn</button>
+      <button id="mode-icons" class="workspace-switcher__button" type="button">Icon Maker</button>
+    </nav>
+    <div class="header-actions">
+      <span id="save-status" class="save-status">Sẵn sàng</span>
+      <button id="build-button" class="button button--secondary" type="button">Build website</button>
+      <button id="new-button" class="button button--primary" type="button">＋ Bài mới</button>
+    </div>
+  </header>
+
+  <div id="posts-view" class="app-shell">
+    <aside class="post-sidebar" aria-label="Quản lý bài viết">
+      <div class="sidebar-tools">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="post-search" type="search" placeholder="Tìm bài viết…">
+        </label>
+        <div class="filter-tabs" role="group" aria-label="Lọc trạng thái">
+          <button class="filter-tab is-active" data-filter="all" type="button">Tất cả</button>
+          <button class="filter-tab" data-filter="visible" type="button">Đang hiện</button>
+          <button class="filter-tab" data-filter="hidden" type="button">Đang ẩn</button>
+        </div>
+        <button id="refresh-posts" class="button button--secondary sidebar-refresh" type="button">↻ Nạp lại danh sách</button>
+      </div>
+      <div id="post-list" class="post-list"></div>
+    </aside>
+
+    <main class="workspace">
+      <section id="empty-state" class="empty-state">
+        <div class="empty-state__icon">✦</div>
+        <h2>Chọn một bài để chỉnh sửa</h2>
+        <p>Hoặc tạo bài mới từ template Side Story, Event Story, Phỏng vấn hay Bài viết.</p>
+        <button id="empty-new-button" class="button button--primary" type="button">Tạo bài mới</button>
+      </section>
+
+      <section id="editor" class="editor" hidden>
+        <form id="post-form" autocomplete="off">
+          <div class="editor-toolbar">
+            <div>
+              <p id="editor-mode" class="eyebrow">Chỉnh sửa</p>
+              <h2 id="editor-heading">Bài viết</h2>
+            </div>
+            <div class="editor-actions">
+              <label class="visibility-toggle">
+                <input id="published" type="checkbox" checked>
+                <span>Hiển thị trên website</span>
+              </label>
+              <button id="delete-button" class="button button--danger" type="button">Xóa</button>
+              <button class="button button--primary" type="submit">Lưu bài</button>
+            </div>
+          </div>
+
+          <div class="metadata-grid panel">
+            <label class="field field--wide">
+              <span>Tiêu đề</span>
+              <input id="title" name="title" required placeholder="Tên bài viết">
+            </label>
+            <label class="field">
+              <span>Slug</span>
+              <input id="slug" name="slug" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="ten-bai-khong-dau">
+              <small id="slug-help">Không thể đổi slug sau khi tạo.</small>
+            </label>
+            <label class="field">
+              <span>Loại bài</span>
+              <select id="post-type" name="post_type"></select>
+            </label>
+            <label class="field">
+              <span>Ngày đăng</span>
+              <input id="date" name="date" type="datetime-local">
+            </label>
+            <label class="field">
+              <span>Thứ tự trang chủ</span>
+              <input id="home-order" name="home_order" type="number" step="1" placeholder="Để trống = theo ngày">
+            </label>
+            <label class="field">
+              <span>Trạng thái bản dịch</span>
+              <select id="translation-status" name="translation_status">
+                <option value="draft">Bản nháp</option>
+                <option value="incomplete">Chưa hoàn thành</option>
+                <option value="complete">Hoàn thành</option>
+              </select>
+            </label>
+            <label class="field field--wide">
+              <span>Mô tả</span>
+              <textarea id="description" name="description" rows="2" placeholder="Mô tả ngắn dùng ở trang chủ và tìm kiếm"></textarea>
+            </label>
+            <label class="field">
+              <span>Danh mục</span>
+              <input id="categories" name="categories" placeholder="Project Sekai, Side Story">
+            </label>
+            <label class="field">
+              <span>Tags</span>
+              <input id="tags" name="tags" placeholder="Niigo, Virtual Singer, Event">
+            </label>
+            <label class="field">
+              <span>Nhân vật</span>
+              <input id="characters" name="characters" placeholder="Kanade, Mafuyu, Ena, Mizuki">
+            </label>
+            <label class="field">
+              <span>Người dịch</span>
+              <input id="translator" name="translator" placeholder="Tên người dịch">
+            </label>
+            <label class="field field--wide">
+              <span>Nguồn gốc</span>
+              <input id="source-url" name="source_url" type="url" placeholder="https://…">
+            </label>
+          </div>
+
+          <section id="txt-import-panel" class="import-panel panel">
+            <div>
+              <h3>Import kịch bản TXT</h3>
+              <p>Áp dụng cho Side Story và Event Story. Nội dung được chuyển thành các tag hội thoại để bạn chỉnh tiếp.</p>
+            </div>
+            <label class="file-picker">
+              <input id="txt-file" type="file" accept=".txt,text/plain">
+              <span>Chọn file TXT</span>
+            </label>
+            <button id="import-txt-button" class="button button--secondary" type="button">Chuyển đổi và chèn</button>
+          </section>
+
+          <section class="find-replace-panel panel">
+            <div>
+              <h3>Find / Replace</h3>
+              <p>Đổi hàng loạt trong Markdown, ví dụ <code>miku-niigo</code> thành <code>miku-ln</code>.</p>
+            </div>
+            <label class="field">
+              <span>Tìm</span>
+              <input id="find-text" placeholder="miku-niigo">
+            </label>
+            <label class="field">
+              <span>Thay bằng</span>
+              <input id="replace-text" placeholder="miku-ln">
+            </label>
+            <label class="visibility-toggle">
+              <input id="replace-case-sensitive" type="checkbox" checked>
+              <span>Phân biệt hoa/thường</span>
+            </label>
+            <button id="find-next-button" class="button button--secondary" type="button">Tìm tiếp</button>
+            <button id="replace-all-button" class="button button--primary" type="button">Thay tất cả</button>
+            <p id="replace-status" class="replace-status">Sẵn sàng.</p>
+          </section>
+
+          <div class="composer">
+            <section class="composer-pane">
+              <div class="pane-heading">
+                <div><span class="pane-label">Markdown</span><small>Chỉnh sửa nội dung nguồn</small></div>
+                <button id="refresh-preview" class="text-button" type="button">Làm mới preview</button>
+              </div>
+              <textarea id="body" name="body" spellcheck="true" aria-label="Nội dung Markdown"></textarea>
+            </section>
+            <section class="composer-pane composer-pane--preview">
+              <div class="pane-heading">
+                <div><span class="pane-label">Preview</span><small>Xem trước gần đúng</small></div>
+              </div>
+              <iframe id="preview" sandbox="" title="Bản xem trước bài viết"></iframe>
+            </section>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <main id="blog-view" class="blog-settings" hidden>
+    <form id="blog-settings-form" autocomplete="off">
+      <div class="editor-toolbar">
+        <div>
+          <p class="eyebrow">Cấu hình website</p>
+          <h2>Quản lý blog</h2>
+        </div>
+        <div class="editor-actions">
+          <span id="blog-save-status" class="save-status">Chưa tải dữ liệu</span>
+          <button class="button button--primary" type="submit">Lưu và cập nhật website</button>
+        </div>
+      </div>
+
+      <section class="panel blog-section">
+        <div class="section-heading">
+          <div><h3>Thông tin chung</h3><p>Những thông tin này được lưu trong <code>_config.yml</code>.</p></div>
+        </div>
+        <div class="blog-config-grid">
+          <label class="field field--wide">
+            <span>Tên blog</span>
+            <input id="blog-title" required placeholder="Tên hiển thị của website">
+          </label>
+          <label class="field field--wide">
+            <span>Phụ đề</span>
+            <input id="blog-subtitle" placeholder="Câu giới thiệu ngắn">
+          </label>
+          <label class="field field--wide">
+            <span>Tác giả</span>
+            <input id="blog-author" placeholder="Tên tác giả / người dịch">
+          </label>
+          <label class="field field--wide">
+            <span>URL website</span>
+            <input id="blog-url" type="url" placeholder="https://ten-cua-ban.github.io">
+          </label>
+          <label class="field field--full">
+            <span>Mô tả website</span>
+            <textarea id="blog-description" rows="4" placeholder="Mô tả dùng cho website và công cụ tìm kiếm"></textarea>
+          </label>
+        </div>
+      </section>
+
+      <section class="panel blog-section">
+        <div class="section-heading">
+          <div><h3>Soạn trang Bản dịch</h3><p>Chỉnh trực tiếp nội dung của <code>source/overview/index.md</code>.</p></div>
+          <span class="section-note">Ảnh đặt trong <code>source/images/overview/</code> và dùng đường dẫn <code>/images/overview/ten-anh.jpg</code>.</span>
+        </div>
+        <label class="field">
+          <span>Tiêu đề trang</span>
+          <input id="overview-title" required>
+        </label>
+        <label class="field blog-editor-field">
+          <span>Nội dung Markdown</span>
+          <textarea id="overview-body" rows="26" spellcheck="true"></textarea>
+        </label>
+        <div class="library-guide">
+          <strong>Cú pháp thêm dự án và cụm bản dịch</strong>
+          <pre>{% library_project Project Sekai %}
+
+## Event Stories
+
+{% library_event Event Stories | /images/overview/ten-anh.jpg | Tên event | /translations/duong-dan-bai/ %}
+[Chapter 1](/translations/bai-1/)
+[Chapter 2](/translations/bai-2/)
+[Chapter 3](/translations/bai-3/)
+Chapter 4
+{% endlibrary_event %}</pre>
+          <p><code>library_event</code> dùng cho Event Story; <code>library_interview</code> dùng cho Phỏng vấn với cùng cú pháp. Ảnh nằm bên trái, tên nằm góc trên bên phải, link chapter/bài đọc tự chia cột ở phía dưới. Muốn tên event xuống dòng, chèn <code>&lt;br&gt;</code> vào vị trí cần ngắt (không nhấn Enter giữa tag). Thêm một <code>library_project</code> mới khi cần mở rộng sang dự án khác.</p>
+          <p>Mỗi <code>library_project</code> tự trở thành một tab lựa chọn. Với Side Story dạng thẻ ảnh nhỏ, dùng:</p>
+          <pre>{% library_grid_start Wonderlands x Showtime %}
+{% library_card /images/overview/anh-the.jpg | Tên Side Story | /translations/duong-dan/ %}
+{% library_card /images/overview/anh-dang-lam.jpg | Bài đang thực hiện | %}
+{% library_grid_end %}</pre>
+          <p><code>library_card</code> dùng cho Side Story dạng lưới. Card có link sẽ giữ màu; card không có link sẽ tự chuyển trắng đen để đánh dấu chưa có bài đọc.</p>
+          <p>Với event có nhiều chương, nếu muốn chia cụm nhỏ hơn trong phần link, có thể chèn khối thu gọn:</p>
+          <pre>{% library_episode Episode 1 %}
+[1-1](/translations/bai-1-1/) · [1-2](/translations/bai-1-2/)
+{% endlibrary_episode %}</pre>
+        </div>
+      </section>
+
+      <section class="panel blog-section">
+        <div class="section-heading">
+          <div><h3>Cập nhật</h3><p>Nhật ký thay đổi hiển thị tại trang Cập nhật.</p></div>
+        </div>
+        <label class="field">
+          <span>Tiêu đề trang</span>
+          <input id="updates-title" required>
+        </label>
+        <label class="field blog-editor-field">
+          <span>Nội dung Markdown</span>
+          <textarea id="updates-body" rows="14" spellcheck="true"></textarea>
+        </label>
+      </section>
+
+      <section class="panel blog-section">
+        <div class="section-heading">
+          <div><h3>Giới thiệu</h3><p>Thông tin về website, chính sách sử dụng và cách liên hệ.</p></div>
+        </div>
+        <label class="field">
+          <span>Tiêu đề trang</span>
+          <input id="about-title" required>
+        </label>
+        <label class="field blog-editor-field">
+          <span>Nội dung Markdown</span>
+          <textarea id="about-body" rows="18" spellcheck="true"></textarea>
+        </label>
+      </section>
+
+      <section class="panel blog-section">
+        <div class="section-heading">
+          <div><h3>Nhân vật</h3><p>Chỉnh trực tiếp registry dùng cho tag <code>{% dialogue id %}</code> và tool import TXT.</p></div>
+          <span class="section-note">Mỗi ID cần có <code>name</code>, <code>short_name</code>, <code>aliases</code>, <code>avatar</code>, <code>color</code> và <code>text_color</code>.</span>
+        </div>
+        <label class="field blog-editor-field">
+          <span>Nội dung YAML</span>
+          <textarea id="characters-body" rows="24" spellcheck="false"></textarea>
+        </label>
+      </section>
+    </form>
+  </main>
+
+  <main id="icons-view" class="icon-maker" hidden>
+    <section class="panel icon-maker__panel">
+      <div class="editor-toolbar">
+        <div>
+          <p class="eyebrow">Addon xử lý ảnh</p>
+          <h2>Tạo icon nhân vật</h2>
+        </div>
+        <div class="editor-actions">
+          <button id="icon-download" class="button button--secondary" type="button">Tải PNG</button>
+          <button id="icon-save" class="button button--primary" type="button">Lưu icon</button>
+        </div>
+      </div>
+
+      <div class="icon-maker-grid">
+        <section class="icon-card">
+          <div class="section-heading section-heading--compact">
+            <div><h3>Ảnh đầu vào</h3><p>Chọn ảnh lớn, rồi chỉnh vị trí trong khung icon 128×128.</p></div>
+          </div>
+          <label class="file-drop">
+            <input id="icon-source-file" type="file" accept="image/png,image/jpeg,image/webp">
+            <span>Chọn ảnh để cắt icon</span>
+          </label>
+          <div class="icon-source-preview">
+            <img id="icon-source-preview" alt="Ảnh đầu vào">
+          </div>
+        </section>
+
+        <section class="icon-card icon-card--preview">
+          <div class="section-heading section-heading--compact">
+            <div><h3>Preview</h3><p>Icon đầu ra được tạo bằng canvas, không làm thay đổi ảnh gốc.</p></div>
+          </div>
+          <div class="icon-preview-frame">
+            <canvas id="icon-canvas" width="256" height="256" aria-label="Preview icon"></canvas>
+          </div>
+        </section>
+
+        <section class="icon-card">
+          <div class="section-heading section-heading--compact">
+            <div><h3>Tùy chỉnh</h3><p>Preset mặc định bám theo icon mẫu trong <code>res/icon</code>.</p></div>
+          </div>
+          <div class="icon-controls">
+            <label class="field">
+              <span>Tên file</span>
+              <input id="icon-file-name" placeholder="ichika-new">
+            </label>
+            <label class="field">
+              <span>Kích thước</span>
+              <select id="icon-size">
+                <option value="128" selected>128 × 128</option>
+                <option value="256">256 × 256</option>
+                <option value="512">512 × 512</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Kiểu khung</span>
+              <select id="icon-shape">
+                <option value="circle" selected>Tròn</option>
+                <option value="rounded">Bo góc</option>
+                <option value="square">Vuông</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Nền ngoài ảnh</span>
+              <input id="icon-bg-color" type="color" value="#f6f2ff">
+            </label>
+            <label class="field">
+              <span>Màu viền</span>
+              <input id="icon-border-color" type="color" value="#ffffff">
+            </label>
+            <label class="field">
+              <span>Độ dày viền</span>
+              <input id="icon-border-size" type="range" min="0" max="16" value="6">
+            </label>
+            <label class="field">
+              <span>Zoom</span>
+              <input id="icon-zoom" type="range" min="1" max="3" step="0.01" value="1.25">
+            </label>
+            <label class="field">
+              <span>Dịch ngang</span>
+              <input id="icon-offset-x" type="range" min="-100" max="100" value="0">
+            </label>
+            <label class="field">
+              <span>Dịch dọc</span>
+              <input id="icon-offset-y" type="range" min="-100" max="100" value="0">
+            </label>
+            <label class="visibility-toggle icon-save-res">
+              <input id="icon-save-res" type="checkbox">
+              <span>Lưu thêm vào <code>res/icon</code> làm mẫu</span>
+            </label>
+          </div>
+        </section>
+      </div>
+
+      <section class="icon-samples">
+        <div class="section-heading section-heading--compact">
+          <div><h3>Icon mẫu trong res/icon</h3><p>Bấm một mẫu để đưa vào khung xử lý, hoặc chỉ dùng để đối chiếu phong cách.</p></div>
+        </div>
+        <div id="icon-sample-list" class="icon-sample-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <main id="guide-view" class="guide-view" hidden>
+    <article class="guide-manual panel">
+      <header class="guide-hero">
+        <p class="eyebrow">Sổ tay vận hành</p>
+        <h2>Hướng dẫn sử dụng blog dịch thuật</h2>
+        <p>Tất cả những việc thường gặp khi tạo bài, quản lý tài nguyên, build và đưa website lên GitHub Pages.</p>
+      </header>
+
+      <nav class="guide-toc" aria-label="Mục lục hướng dẫn">
+        <a href="#guide-start">Khởi động</a>
+        <a href="#guide-posts">Bài viết</a>
+        <a href="#guide-dialogue">Side/Event Story</a>
+        <a href="#guide-interview">Phỏng vấn</a>
+        <a href="#guide-assets">Ảnh và nhạc</a>
+        <a href="#guide-icons">Icon Maker</a>
+        <a href="#guide-characters">Nhân vật</a>
+        <a href="#guide-pages">Trang blog</a>
+        <a href="#guide-publish">GitHub Pages</a>
+        <a href="#guide-trouble">Lỗi thường gặp</a>
+      </nav>
+
+      <section id="guide-start" class="guide-section">
+        <h3>1. Khởi động và kiểm tra website</h3>
+        <p>Mở terminal tại thư mục dự án <code>E:\Blog_PJSK\Blog</code>. Lần đầu tiên hoặc sau khi tải dự án về máy khác, chạy:</p>
+        <pre><code>npm install</code></pre>
+        <p>Chạy website để đọc thử:</p>
+        <pre><code>npm run server</code></pre>
+        <p>Mở <code>http://localhost:4000</code>. Nếu báo cổng 4000 đã được dùng nhưng trình duyệt vẫn mở được website, thường là một server cũ còn đang chạy. Có thể dùng cổng khác bằng:</p>
+        <pre><code>npx hexo server -p 4001</code></pre>
+        <p>Chạy Post Studio:</p>
+        <pre><code>npm run admin</code></pre>
+        <p>Mở <code>http://127.0.0.1:4173</code>. Khi dùng xong, quay lại terminal và nhấn <code>Ctrl+C</code> để tắt.</p>
+      </section>
+
+      <section id="guide-posts" class="guide-section">
+        <h3>2. Quản lý, tạo mới và chỉnh sửa bài</h3>
+        <p>Tab <strong>Bài viết</strong> là nơi làm việc chính. Cột trái cho phép tìm bài, lọc bài đang hiện hoặc đang ẩn. Nút <strong>Bài mới</strong> tạo bài từ template.</p>
+        <ul>
+          <li><strong>Hiển thị trên website:</strong> bật/tắt trường <code>published</code>. Bài ẩn vẫn còn file trong <code>source/_posts/</code>.</li>
+          <li><strong>Xóa:</strong> Post Studio chuyển bài và asset vào <code>.trash/</code> để có thể khôi phục thủ công nếu cần.</li>
+          <li><strong>Slug:</strong> là URL và tên file. Sau khi tạo bài, slug bị khóa để tránh làm hỏng liên kết cũ.</li>
+          <li><strong>Trạng thái bản dịch:</strong> chỉ dùng cho tiến độ: <code>Bản nháp</code>, <code>Chưa hoàn thành</code>, <code>Hoàn thành</code>. Trạng thái không còn được đưa vào tag.</li>
+          <li><strong>Tags:</strong> dùng cho chủ đề thật như <code>Niigo</code>, <code>Vocaloid</code>, <code>Magical Mirai 2026</code>.</li>
+        </ul>
+        <p>Sau khi bấm <strong>Lưu bài</strong>, Post Studio lưu Markdown rồi tự build lại website.</p>
+      </section>
+
+      <section id="guide-dialogue" class="guide-section">
+        <h3>3. Side Story / Event Story</h3>
+        <p>Hai dạng này dùng tag hội thoại. Mỗi câu thoại có ID nhân vật:</p>
+        <pre><code>{% dialogue kanade %}
+Nội dung lời thoại.
+{% enddialogue %}
+
+{% dialogue kanade thought %}
+(Độc thoại nội tâm.)
+{% enddialogue %}</code></pre>
+        <p>Import TXT trong Post Studio chỉ hiện khi loại bài hỗ trợ Side Story hoặc Event Story. Định dạng TXT gợi ý:</p>
+        <pre><code># Part 1
+
+# Trường nữ sinh Miyamasuzaka - Sân trong
+
+Kanade: Dòng đầu tiên.
+Dòng này vẫn thuộc lời thoại Kanade.
+
+Mafuyu: Lời thoại tiếp theo.</code></pre>
+        <p>Khi import, các mốc <code>Part 1</code>, <code>Part 2</code>, <code>Ghi chú</code> sẽ thành tiêu đề <code>##</code> để hiện trong mục lục. Các heading khác được xem là tên cảnh nên không hiện trong mục lục.</p>
+        <p>Tool import sẽ dò tên nhân vật theo <code>source/_data/characters.yml</code>, gồm ID, tên đầy đủ, tên ngắn và alias. Nếu gặp nhân vật chưa có, nó sẽ để lại TODO để bạn bổ sung.</p>
+        <p>Nếu tạo bài bằng lệnh <code>npm run convert</code> trong khi Studio đang mở, bấm <strong>Nạp lại danh sách</strong>. Converter tự chuẩn hóa slug về chữ thường và ghi sẵn loại bài, nhân vật để có thể chỉnh sửa ngay.</p>
+      </section>
+
+      <section id="guide-interview" class="guide-section">
+        <h3>4. Bài phỏng vấn</h3>
+        <p>Chọn loại bài <strong>Phỏng vấn</strong> để có layout câu hỏi, câu trả lời, ảnh minh họa và phần thông tin nguồn. Các tag chính:</p>
+        <pre><code>{% interview_lead %}
+Đoạn dẫn mở đầu.
+{% endinterview_lead %}
+
+{% interview_question %}
+Câu hỏi?
+{% endinterview_question %}
+
+{% interview_answer "Tên khách mời" %}
+Câu trả lời.
+{% endinterview_answer %}</code></pre>
+        <p>Câu hỏi sẽ được in đậm và thụt vào; câu trả lời nằm bên dưới. Không cần tự thêm dấu gạch đầu dòng vào câu hỏi.</p>
+      </section>
+
+      <section id="guide-assets" class="guide-section">
+        <h3>5. Ảnh, cảnh nền và nhạc nền</h3>
+        <p>Với converter dòng lệnh, đặt TXT trong <code>res/</code> và background trong <code>res/bg/</code>. Chỉ dẫn <code>[IMAGE: ten-anh.png | Chú thích]</code> sẽ tự tìm ảnh trong thư mục <code>bg</code>.</p>
+        <p>Ảnh dùng trong bài nên đặt ở <code>source/images/translations/slug-bai/</code>. Chèn ảnh bằng:</p>
+        <pre><code>{% scene "/images/translations/slug-bai/figure-01.jpg" "Chú thích ảnh." %}</code></pre>
+        <p>Ảnh nhân vật đặt ở <code>source/images/characters/project-sekai/</code>. Ảnh trang Bản dịch đặt ở <code>source/images/overview/</code>.</p>
+        <p>Nhạc nền đặt ở <code>source/audio/translations/slug-bai/</code> và chèn bằng:</p>
+        <pre><code>{% bgm "/audio/translations/slug-bai/bgm.mp3" "Tên bản nhạc" autoplay %}</code></pre>
+        <p>Trình duyệt có thể chặn autoplay có âm thanh; khi đó người đọc sẽ cần bấm nút phát. Chỉ nên dùng nhạc bạn có quyền phân phối.</p>
+      </section>
+
+      <section id="guide-icons" class="guide-section">
+        <h3>6. Icon Maker</h3>
+        <p>Tab <strong>Icon Maker</strong> dùng để cắt ảnh lớn thành avatar/icon nhân vật theo phong cách các file mẫu trong <code>res/icon</code>. Chọn ảnh đầu vào, chỉnh zoom và vị trí, sau đó bấm <strong>Lưu icon</strong>.</p>
+        <p>Icon được lưu mặc định vào <code>source/images/characters/project-sekai/</code>, đúng nơi registry nhân vật đang trỏ tới. Nếu bật tùy chọn lưu thêm vào <code>res/icon</code>, icon đó cũng trở thành mẫu để đối chiếu về sau.</p>
+      </section>
+
+      <section id="guide-characters" class="guide-section">
+        <h3>7. Nhân vật và Virtual Singer</h3>
+        <p>Registry nhân vật nằm trong <code>source/_data/characters.yml</code>, và cũng có thể sửa ở tab <strong>Quản lý blog → Nhân vật</strong>.</p>
+        <pre><code>kanade:
+  name: Yoisaki Kanade
+  short_name: Kanade
+  aliases: [Yoisaki, K]
+  avatar: /images/characters/project-sekai/kanade.png
+  color: "#BB6688"
+  text_color: "#4F2939"</code></pre>
+        <p>ID được dùng trong tag <code>{% dialogue id %}</code>. Virtual Singer hiện có ID gốc và 5 biến thể Sekai, ví dụ <code>miku</code>, <code>miku-ln</code>, <code>miku-mmj</code>, <code>miku-vbs</code>, <code>miku-wxs</code>, <code>miku-niigo</code>. Hiện các biến thể dùng chung ảnh gốc; sau này chỉ cần đổi trường <code>avatar</code>.</p>
+      </section>
+
+      <section id="guide-pages" class="guide-section">
+        <h3>8. Quản lý trang blog</h3>
+        <p>Tab <strong>Quản lý blog</strong> cho phép sửa tên blog, mô tả, URL, tác giả và các trang tĩnh.</p>
+        <ul>
+          <li><strong>Bản dịch:</strong> sửa nội dung <code>source/overview/index.md</code>.</li>
+          <li><strong>Cập nhật:</strong> sửa <code>source/updates/index.md</code>.</li>
+          <li><strong>Giới thiệu:</strong> sửa <code>source/about/index.md</code>.</li>
+          <li><strong>Nhân vật:</strong> sửa <code>source/_data/characters.yml</code>.</li>
+        </ul>
+        <p>Cú pháp trang Bản dịch:</p>
+        <pre><code>{% library_project Project Sekai %}
+
+## Event Stories
+
+{% library_event Event Stories | /images/overview/event.jpg | Tên event | /translations/bai/ %}
+[Chapter 1](/translations/bai-1/)
+[Chapter 2](/translations/bai-2/)
+[Chapter 3](/translations/bai-3/)
+Chapter 4
+{% endlibrary_event %}</code></pre>
+        <p><code>library_event</code> dùng cho Event Story; <code>library_interview</code> dùng cho Phỏng vấn. Ảnh bên trái, tên ở góc trên bên phải, link chapter/bài đọc tự chia cột ở phía dưới. Muốn tên event xuống dòng, chèn <code>&lt;br&gt;</code> vào vị trí cần ngắt (không nhấn Enter giữa tag). Mỗi <code>library_project</code> sẽ thành một tab.</p>
+        <pre><code>{% library_grid_start Wonderlands x Showtime %}
+{% library_card /images/overview/rui-card.jpg | Rui 4★ - A Step Towards My Dream | /translations/rui-dream/ %}
+{% library_card /images/overview/rui-birthday.jpg | Rui - Happy Birthday!! | %}
+{% library_grid_end %}</code></pre>
+        <p><code>library_card</code> dùng cho Side Story dạng lưới. Card có link sẽ giữ màu; card không có link sẽ tự chuyển trắng đen.</p>
+      </section>
+
+      <section id="guide-publish" class="guide-section">
+        <h3>9. Build và xuất bản GitHub Pages</h3>
+        <p>Build thủ công:</p>
+        <pre><code>npm run clean
+npm run build</code></pre>
+        <p>Trước khi public, kiểm tra các thông tin cá nhân hoặc placeholder:</p>
+        <pre><code>rg "YOUR_USERNAME|your-email@example.com|Tên của bạn|TODO"</code></pre>
+        <p>Luồng GitHub Pages khuyến nghị:</p>
+        <ol>
+          <li>Cập nhật <code>url</code> trong <code>_config.yml</code>.</li>
+          <li>Commit mã nguồn, bài viết và tài nguyên trong <code>source/</code>.</li>
+          <li>Push lên repository GitHub.</li>
+          <li>Dùng GitHub Actions trong <code>.github/workflows/pages.yml</code> để build và publish.</li>
+        </ol>
+        <p>Không cần commit <code>node_modules/</code>. Thư mục <code>public/</code> là kết quả build; nếu workflow tự build trên GitHub thì thường không cần dùng nó làm nguồn chính.</p>
+      </section>
+
+      <section id="guide-trouble" class="guide-section">
+        <h3>10. Lỗi thường gặp</h3>
+        <dl>
+          <dt><code>Port 4000 has been used</code></dt>
+          <dd>Có Hexo server cũ đang chạy. Mở trang 4000 xem có đúng website không, hoặc tắt terminal cũ. Có thể chạy tạm cổng khác bằng <code>npx hexo server -p 4001</code>.</dd>
+          <dt>Đổi bài nhưng website không cập nhật</dt>
+          <dd>Chạy <code>npm run clean</code> rồi <code>npm run build</code>. Hexo đôi khi giữ cache cũ.</dd>
+          <dt>Avatar không hiện</dt>
+          <dd>Kiểm tra ảnh có nằm trong <code>source/images/characters/project-sekai/</code> không, và đường dẫn trong <code>characters.yml</code> có bắt đầu bằng <code>/images/...</code> không.</dd>
+          <dt>Dialogue báo nhân vật chưa khai báo</dt>
+          <dd>Thêm ID đó vào registry nhân vật, hoặc sửa tag <code>{% dialogue id %}</code> cho đúng ID hiện có.</dd>
+          <dt>Tag trạng thái như Hoàn thành xuất hiện ở trang Thẻ</dt>
+          <dd>Xóa trạng thái khỏi trường Tags. Trạng thái chỉ nên nằm trong trường <strong>Trạng thái bản dịch</strong>.</dd>
+        </dl>
+      </section>
+    </article>
+  </main>
+
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <dialog id="build-dialog" class="build-dialog">
+    <h2>Kết quả build</h2>
+    <pre id="build-output"></pre>
+    <form method="dialog"><button class="button button--primary">Đóng</button></form>
+  </dialog>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
