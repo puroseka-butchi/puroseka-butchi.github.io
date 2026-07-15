@@ -14,6 +14,7 @@ const elements = Object.fromEntries([
   'home-order', 'translation-status', 'description', 'categories', 'tags', 'characters', 'translator',
   'source-url', 'txt-import-panel', 'txt-file', 'import-txt-button', 'body', 'preview',
   'refresh-preview', 'toast-region', 'build-dialog', 'build-output',
+  'publish-button', 'publish-dialog', 'publish-message', 'publish-output', 'publish-refresh', 'publish-confirm',
   'find-text', 'replace-text', 'replace-case-sensitive', 'find-next-button', 'replace-all-button', 'replace-status',
   'mode-posts', 'mode-blog', 'mode-guide', 'mode-icons', 'posts-view', 'blog-view', 'guide-view', 'icons-view', 'blog-settings-form', 'blog-save-status',
   'blog-title', 'blog-subtitle', 'blog-description', 'blog-author', 'blog-url',
@@ -30,8 +31,17 @@ async function api(url, options = {}) {
     headers: options.body ? { 'Content-Type': 'application/json', ...(options.headers || {}) } : options.headers
   });
   const payload = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(payload.error || payload.output || `HTTP ${response.status}`);
+  if (!response.ok) {
+    const error = new Error(payload.error || payload.output || `HTTP ${response.status}`);
+    error.payload = payload;
+    throw error;
+  }
   return payload;
+}
+
+function summarizeBuildOutput(output) {
+  const lines = String(output || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+  return lines.find(line => /Nunjucks Error|YAMLException|TypeError|SyntaxError|FATAL|Error:/i.test(line)) || '';
 }
 
 function toast(message, error = false) {
@@ -140,7 +150,8 @@ async function saveBlogSettings(event) {
     toast(`Đã cập nhật blog. Bản sao lưu: ${result.backupPath}`);
   } catch (error) {
     elements['blog-save-status'].textContent = 'Lưu thất bại';
-    toast(error.message, true);
+    const summary = summarizeBuildOutput(error.payload?.output);
+    toast(summary ? `${error.message} Chi tiết: ${summary}` : error.message, true);
   }
 }
 
@@ -762,6 +773,67 @@ async function buildWebsite() {
   }
 }
 
+function renderPublishStatus(result) {
+  const lines = [];
+  if (result.branch) lines.push(`Branch: ${result.branch}`);
+  if (result.remote) lines.push(`Remote:\n${result.remote}`);
+  lines.push('');
+  lines.push(result.status ? `Thay đổi hiện tại:\n${result.status}` : 'Không có thay đổi local.');
+  elements['publish-output'].textContent = lines.join('\n');
+}
+
+async function refreshPublishStatus() {
+  elements['publish-refresh'].disabled = true;
+  try {
+    renderPublishStatus(await api('/api/publish/status'));
+  } catch (error) {
+    elements['publish-output'].textContent = error.message;
+    toast('Không thể đọc trạng thái Git.', true);
+  } finally {
+    elements['publish-refresh'].disabled = false;
+  }
+}
+
+async function openPublishDialog() {
+  elements['publish-dialog'].showModal();
+  elements['publish-output'].textContent = 'Đang tải trạng thái Git…';
+  await refreshPublishStatus();
+}
+
+async function publishToGitHub() {
+  const message = elements['publish-message'].value.trim() || 'Update blog content';
+  const confirmed = window.confirm('Post Studio sẽ build, commit và push lên GitHub. Tiếp tục?');
+  if (!confirmed) return;
+  elements['publish-confirm'].disabled = true;
+  elements['publish-refresh'].disabled = true;
+  elements['publish-output'].textContent = 'Đang build, commit và push…';
+  try {
+    const result = await api('/api/publish', {
+      method: 'POST',
+      body: JSON.stringify({ message })
+    });
+    elements['publish-output'].textContent = [
+      result.build,
+      '',
+      'Commit:',
+      result.commit,
+      '',
+      'Push:',
+      result.push,
+      '',
+      'Trạng thái sau khi push:',
+      result.after?.status || 'Working tree sạch.'
+    ].join('\n');
+    toast('Đã public thay đổi lên GitHub.');
+  } catch (error) {
+    elements['publish-output'].textContent = error.message;
+    toast('Public thất bại. Xem log trong hộp thoại.', true);
+  } finally {
+    elements['publish-confirm'].disabled = false;
+    elements['publish-refresh'].disabled = false;
+  }
+}
+
 async function initialize() {
   try {
     const config = await api('/api/config');
@@ -814,6 +886,9 @@ elements['find-next-button'].addEventListener('click', findNextInBody);
 elements['replace-all-button'].addEventListener('click', replaceAllInBody);
 elements['import-txt-button'].addEventListener('click', importTxt);
 elements['build-button'].addEventListener('click', buildWebsite);
+elements['publish-button'].addEventListener('click', openPublishDialog);
+elements['publish-refresh'].addEventListener('click', refreshPublishStatus);
+elements['publish-confirm'].addEventListener('click', publishToGitHub);
 elements['txt-file'].addEventListener('change', () => {
   const label = elements['txt-file'].nextElementSibling;
   label.textContent = elements['txt-file'].files[0]?.name || 'Chọn file TXT';
@@ -841,6 +916,27 @@ elements['post-type'].addEventListener('change', () => {
 elements['translation-status'].addEventListener('change', () => {
   syncTranslationStatusTag();
 });
+document.querySelectorAll('.copy-command').forEach(button => button.addEventListener('click', async () => {
+  const command = button.dataset.copy || '';
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(command);
+    } else {
+      const textarea = document.createElement('textarea');
+      textarea.value = command;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      textarea.remove();
+    }
+    toast('Đã copy lệnh public vào clipboard.');
+  } catch (error) {
+    toast(`Không thể copy lệnh: ${error.message}`, true);
+  }
+}));
 elements['post-form'].addEventListener('input', event => {
   if (event.target.closest('.find-replace-panel')) return;
   if (event.target !== elements['post-type']) setDirty(true);

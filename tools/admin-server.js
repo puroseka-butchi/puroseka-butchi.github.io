@@ -3,6 +3,7 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
+const { execFile } = require('node:child_process');
 const Hexo = require('hexo');
 const yaml = require('js-yaml');
 const { marked } = require('marked');
@@ -216,6 +217,46 @@ function serializeManagedPage(filePath, title, body) {
   return `---\n${frontMatter}\n---\n\n${String(body || '').trim()}\n`;
 }
 
+function validateLibraryShortcodes(body, pageLabel = 'Trang') {
+  const pairs = {
+    library_event: 'endlibrary_event',
+    library_interview: 'endlibrary_interview',
+    library_grid_start: 'library_grid_end'
+  };
+  const closingToOpening = Object.fromEntries(Object.entries(pairs).map(([open, close]) => [close, open]));
+  const stack = [];
+  const source = String(body || '');
+  const pattern = /\{%\s*([a-zA-Z_][\w-]*)\b[^%]*%\}/g;
+  let match;
+  while ((match = pattern.exec(source))) {
+    const tag = match[1];
+    if (!pairs[tag] && !closingToOpening[tag]) continue;
+    const line = source.slice(0, match.index).split(/\r?\n/).length;
+    if (pairs[tag]) {
+      stack.push({ tag, expected: pairs[tag], line });
+      continue;
+    }
+    const last = stack.pop();
+    if (!last) {
+      throw new Error(`${pageLabel}: tag {% ${tag} %} ở dòng ${line} không có tag mở tương ứng.`);
+    }
+    if (last.expected !== tag) {
+      throw new Error(`${pageLabel}: tag {% ${tag} %} ở dòng ${line} không khớp với {% ${last.tag} %} ở dòng ${last.line}. Cần đóng bằng {% ${last.expected} %}.`);
+    }
+  }
+  const last = stack.pop();
+  if (last) {
+    throw new Error(`${pageLabel}: tag {% ${last.tag} %} ở dòng ${last.line} chưa được đóng bằng {% ${last.expected} %}.`);
+  }
+}
+
+function summarizeBuildFailure(output) {
+  const text = String(output || '').trim();
+  const lines = text.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+  const important = lines.find(line => /Nunjucks Error|YAMLException|TypeError|SyntaxError|FATAL|Error:/i.test(line));
+  return important || lines[lines.length - 1] || 'Không rõ lỗi build.';
+}
+
 function readBlogSettings() {
   const configSource = fs.readFileSync(BLOG_CONFIG_FILE, 'utf8').replace(/^\uFEFF/, '');
   const config = yaml.load(configSource) || {};
@@ -310,6 +351,12 @@ function saveBlogSettings(payload) {
     if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
       throw new Error('Danh sách nhân vật phải là YAML dạng object.');
     }
+  }
+
+  for (const [id, page] of Object.entries(pages)) {
+    if (!page) continue;
+    const label = id === 'overview' ? 'Trang Bản dịch' : `Trang ${id}`;
+    validateLibraryShortcodes(page.body, label);
   }
 
   const backupDir = backupBlogSettings();
@@ -596,6 +643,84 @@ async function runBuild() {
   }
 }
 
+function runCommand(command, args, options = {}) {
+  return new Promise(resolve => {
+    execFile(command, args, {
+      cwd: PROJECT_ROOT,
+      encoding: 'utf8',
+      maxBuffer: 1024 * 1024 * 8,
+      ...options
+    }, (error, stdout = '', stderr = '') => {
+      resolve({
+        ok: !error,
+        code: error?.code ?? 0,
+        stdout,
+        stderr,
+        output: `${stdout}${stderr}`.trim()
+      });
+    });
+  });
+}
+
+async function gitCommand(args, label) {
+  const result = await runCommand('git', args);
+  if (!result.ok) {
+    throw new Error(`${label || `git ${args.join(' ')}`} thất bại:\n${result.output || `Exit code ${result.code}`}`);
+  }
+  return result;
+}
+
+function cleanCommitMessage(value) {
+  return String(value || 'Update blog content')
+    .replace(/\r?\n/g, ' ')
+    .trim()
+    .slice(0, 120) || 'Update blog content';
+}
+
+async function getPublishStatus() {
+  const [status, branch, remote] = await Promise.all([
+    runCommand('git', ['status', '--short']),
+    runCommand('git', ['branch', '--show-current']),
+    runCommand('git', ['remote', '-v'])
+  ]);
+  return {
+    status: status.output,
+    branch: branch.stdout.trim(),
+    remote: remote.output,
+    hasChanges: Boolean(status.output.trim())
+  };
+}
+
+async function publishToGitHub(payload = {}) {
+  const message = cleanCommitMessage(payload.message);
+  const build = await runBuild();
+  if (!build.ok) {
+    return { ok: false, stage: 'build', output: build.output };
+  }
+
+  const before = await getPublishStatus();
+  let commitOutput = 'Không có thay đổi mới để commit.';
+  if (before.hasChanges) {
+    await gitCommand(['add', '-A', '.'], 'Stage thay đổi');
+    const diff = await runCommand('git', ['diff', '--cached', '--quiet']);
+    if (diff.code !== 0) {
+      const commit = await gitCommand(['commit', '-m', message], 'Commit thay đổi');
+      commitOutput = commit.output;
+    }
+  }
+
+  const push = await gitCommand(['push'], 'Push lên GitHub');
+  const after = await getPublishStatus();
+  return {
+    ok: true,
+    build: build.output,
+    before,
+    commit: commitOutput,
+    push: push.output || 'Push hoàn tất.',
+    after
+  };
+}
+
 function contentTypeFor(filePath) {
   const types = {
     '.html': 'text/html; charset=utf-8',
@@ -625,6 +750,19 @@ async function handleApi(request, response, pathname) {
   }
   if (request.method === 'GET' && pathname === '/api/icon-samples') {
     return sendJson(response, 200, { icons: listIconSamples() });
+  }
+  if (request.method === 'GET' && pathname === '/api/publish/status') {
+    return sendJson(response, 200, await getPublishStatus());
+  }
+  if (request.method === 'POST' && pathname === '/api/publish') {
+    assertLocalMutation(request);
+    const payload = await readJsonBody(request);
+    try {
+      const result = await publishToGitHub(payload);
+      return sendJson(response, result.ok ? 200 : 500, result);
+    } catch (error) {
+      return sendJson(response, 500, { error: error.message });
+    }
   }
   if (request.method === 'POST' && pathname === '/api/icons') {
     assertLocalMutation(request);

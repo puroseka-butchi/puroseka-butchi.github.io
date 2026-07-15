@@ -21,6 +21,7 @@
     <div class="header-actions">
       <span id="save-status" class="save-status">Sẵn sàng</span>
       <button id="build-button" class="button button--secondary" type="button">Build website</button>
+      <button id="publish-button" class="button button--secondary button--publish" type="button">Public lên GitHub</button>
       <button id="new-button" class="button button--primary" type="button">＋ Bài mới</button>
     </div>
   </header>
@@ -548,6 +549,84 @@ Chapter 4
 
       <section id="guide-publish" class="guide-section">
         <h3>9. Build và xuất bản GitHub Pages</h3>
+        <div class="publish-flow" aria-label="Quy trình xuất bản bài viết">
+          <div class="publish-step">
+            <span class="publish-step__number">1</span>
+            <strong>Lưu trong Post Studio</strong>
+            <p>Hoàn tất metadata, Markdown, ảnh/nhạc rồi bấm <em>Lưu bài</em>.</p>
+          </div>
+          <div class="publish-step">
+            <span class="publish-step__number">2</span>
+            <strong>Build kiểm tra</strong>
+            <p>Chạy build local để phát hiện lỗi trước khi đưa lên GitHub.</p>
+          </div>
+          <div class="publish-step">
+            <span class="publish-step__number">3</span>
+            <strong>Commit thay đổi</strong>
+            <p>Chỉ commit file cần public: bài viết, ảnh, dữ liệu blog.</p>
+          </div>
+          <div class="publish-step">
+            <span class="publish-step__number">4</span>
+            <strong>Push lên GitHub</strong>
+            <p>GitHub Actions sẽ tự tạo lại website từ source.</p>
+          </div>
+          <div class="publish-step">
+            <span class="publish-step__number">5</span>
+            <strong>Kiểm tra Actions</strong>
+            <p>Đợi workflow thành công rồi mở website public để xem lại.</p>
+          </div>
+        </div>
+
+        <div class="publish-dashboard">
+          <article class="publish-card publish-card--primary">
+            <h4>Luồng nhanh sau khi sửa bài</h4>
+            <p>Dùng khi bạn sửa bài viết, ảnh trong bài, danh sách bản dịch hoặc dữ liệu trong <code>source/</code>.</p>
+            <div class="command-box">
+              <button class="copy-command" type="button" data-copy="npm run build&#10;git status --short&#10;git add source _config.yml _config.next.yml&#10;git commit -m &quot;Update blog content&quot;&#10;git push">Copy</button>
+              <pre><code>npm run build
+git status --short
+git add source _config.yml _config.next.yml
+git commit -m "Update blog content"
+git push</code></pre>
+            </div>
+          </article>
+
+          <article class="publish-card">
+            <h4>Nếu chỉ sửa bài dịch</h4>
+            <p>Gọn hơn, phù hợp khi Post Studio chỉ thay đổi file trong <code>source/_posts/</code> và ảnh trong <code>source/images/</code>.</p>
+            <div class="command-box">
+              <button class="copy-command" type="button" data-copy="npm run build&#10;git add source/_posts source/images source/overview&#10;git commit -m &quot;Update translation posts&quot;&#10;git push">Copy</button>
+              <pre><code>npm run build
+git add source/_posts source/images source/overview
+git commit -m "Update translation posts"
+git push</code></pre>
+            </div>
+          </article>
+
+          <article class="publish-card">
+            <h4>Dùng GitHub Desktop</h4>
+            <ol>
+              <li>Trong Post Studio, bấm <strong>Lưu bài</strong>.</li>
+              <li>Chạy <code>npm run build</code> trong terminal để kiểm tra.</li>
+              <li>Mở GitHub Desktop, xem danh sách changed files.</li>
+              <li>Không chọn các file/thư mục nội bộ nếu xuất hiện bất thường.</li>
+              <li>Nhập Summary, bấm <strong>Commit to main</strong>.</li>
+              <li>Bấm <strong>Push origin</strong>.</li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="publish-checklist">
+          <h4>Checklist an toàn trước khi push</h4>
+          <ul>
+            <li><code>npm run build</code> chạy thành công.</li>
+            <li><code>git status --short</code> không có <code>res/</code>, <code>public/</code>, <code>node_modules/</code>, <code>db.json</code>, <code>.trash/</code>.</li>
+            <li>Bài chưa muốn public đã tắt <strong>Hiển thị trên website</strong>.</li>
+            <li>Ảnh public nằm trong <code>source/images/</code>; nhạc public nằm trong <code>source/audio/</code> nếu có.</li>
+            <li>GitHub Actions phải báo xanh sau khi push.</li>
+          </ul>
+        </div>
+
         <p>Build thủ công:</p>
         <pre><code>npm run clean
 npm run build</code></pre>
@@ -586,6 +665,21 @@ npm run build</code></pre>
     <h2>Kết quả build</h2>
     <pre id="build-output"></pre>
     <form method="dialog"><button class="button button--primary">Đóng</button></form>
+  </dialog>
+
+  <dialog id="publish-dialog" class="build-dialog publish-dialog">
+    <h2>Public lên GitHub</h2>
+    <p class="dialog-note">Post Studio sẽ chạy build local, stage thay đổi, commit rồi push. Hãy kiểm tra danh sách thay đổi trước khi xác nhận.</p>
+    <label class="field">
+      <span>Commit message</span>
+      <input id="publish-message" type="text" value="Update blog content" maxlength="120">
+    </label>
+    <div class="publish-dialog-actions">
+      <button id="publish-refresh" class="button button--secondary" type="button">Kiểm tra thay đổi</button>
+      <button id="publish-confirm" class="button button--primary" type="button">Build, commit và push</button>
+    </div>
+    <pre id="publish-output">Đang tải trạng thái Git…</pre>
+    <form method="dialog"><button class="button button--secondary">Đóng</button></form>
   </dialog>
 
   <script src="/app.js" defer></script>

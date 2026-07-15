@@ -1,8 +1,8 @@
 ---
-title: "Cập nhật website"
+title: "Nhật ký phát triển"
 date: 2026-07-10 14:00:00
 comments: false
 ---
 
-## 10/07/2026
-- Bước đi đầu tiên của blog.
+## 2026/07/16.
+Blog được khởi chạy.
