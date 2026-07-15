@@ -27,7 +27,7 @@ sidebar:
   width_dual_column: 260
 
 avatar:
-  url: images\avatar.png
+  url: /images/avatar.png
   rounded: true
   rotated: false
 
