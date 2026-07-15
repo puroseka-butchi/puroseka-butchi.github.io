@@ -12,8 +12,8 @@ language: vi
 timezone: Asia/Ho_Chi_Minh
 
 # Thay YOUR_USERNAME trước khi xuất bản lên GitHub Pages.
-url: https://<username>.github.io
-root: /puroseka-butchi/
+url: https://puroseka-butchi.github.io
+root: /
 permalink: translations/:title/
 permalink_defaults:
 pretty_urls:
