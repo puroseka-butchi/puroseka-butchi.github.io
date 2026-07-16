@@ -7,6 +7,9 @@ db.json
 Thumbs.db
 .trash/
 README.md
+admin/
+docs/
+tools/
 
 # Local/raw working assets. Converted posts and public-ready media should live in source/.
 res/
