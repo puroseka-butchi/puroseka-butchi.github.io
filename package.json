@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "clean": "hexo clean",
-    "build": "hexo generate",
+    "build": "hexo generate && node scripts/prune-public-assets.js",
     "server": "hexo server",
     "server:debug": "hexo server --debug",
     "admin": "node tools/admin-server.js",
