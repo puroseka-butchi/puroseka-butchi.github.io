@@ -829,6 +829,202 @@ html[data-theme="dark"] .post-button .btn:hover
   margin: .6em 0 0 !important
   text-align: center
 
+.translation-library-card-deck-section,
+.translation-library-side-list-section
+  margin: 1.6em auto 3em
+
+.translation-library-card-deck-section > h3,
+.translation-library-side-list-section > h3
+  font-size: 1.1em
+  font-weight: 700
+  margin: 0 0 1em
+  text-align: center
+
+.translation-library-card-deck
+  display: grid
+  gap: 14px
+  grid-template-columns: repeat(auto-fit, minmax(140px, 180px))
+  justify-content: center
+  margin: 0 auto
+  max-width: 840px
+  position: relative
+
+.translation-library-deck-card
+  background: rgba(255, 255, 255, .72)
+  border: 3px solid rgba(255, 255, 255, .9)
+  border-radius: 9px
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25)
+  aspect-ratio: 2 / 3
+  margin: 0 !important
+  overflow: hidden
+  position: relative
+
+.translation-library-deck-card a
+  border: 0
+  color: inherit
+  display: block
+  height: 100%
+
+.translation-library-deck-card img,
+.translation-library-deck-card__placeholder
+  display: block
+  height: 100%
+  object-fit: cover
+  transition: filter .25s ease, opacity .25s ease, transform .25s ease
+  width: 100%
+
+.translation-library-deck-card__placeholder
+  background: linear-gradient(135deg, #d8d4ef, #9f99c7)
+
+.translation-library-deck-card__title
+  background: linear-gradient(0deg, rgba(0, 0, 0, .65), transparent)
+  bottom: 0
+  color: #fff
+  font-size: .78em
+  font-weight: 700
+  left: 0
+  padding: 1.5em .65em .55em
+  position: absolute
+  right: 0
+  text-align: center
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .7)
+
+.translation-library-deck-card a:hover img
+  transform: scale(1.035)
+
+.translation-library-deck-card.is-locked > img,
+.translation-library-deck-card.is-locked > a > img,
+.translation-library-deck-card.is-locked .translation-library-deck-card__placeholder
+  filter: brightness(.45) grayscale(.35)
+  opacity: .72
+
+.translation-library-side-list
+  display: grid
+  gap: 14px
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  margin: 0 auto
+
+.translation-library-side-list__item
+  align-items: center
+  background: rgba(255, 255, 255, .72)
+  border-radius: 12px
+  box-shadow: 0 2px 9px rgba(38, 35, 68, .18)
+  display: grid
+  gap: 14px
+  grid-template-columns: 92px 1fr
+  min-height: 104px
+  overflow: hidden
+  padding: 10px 14px
+  position: relative
+
+.translation-library-side-list__item.is-locked
+  background: rgba(52, 50, 73, .58)
+
+.translation-library-side-list__thumb
+  border-radius: 4px
+  height: 82px
+  margin: 0 !important
+  overflow: hidden
+  position: relative
+  width: 82px
+
+.translation-library-side-list__thumb img
+  height: 100%
+  margin: 0
+  object-fit: cover
+  width: 100%
+
+.translation-library-side-list__item.is-locked .translation-library-side-list__thumb > img
+  filter: brightness(.45) grayscale(.4)
+
+.translation-library-side-list__content h4
+  color: #48445f
+  font-size: .88em
+  font-weight: 800
+  line-height: 1.3
+  margin: 0 0 .65em
+  max-width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.translation-library-side-list__content
+  min-width: 0
+
+.translation-library-side-list__buttons
+  display: flex
+  gap: 8px
+
+.translation-library-side-list__button
+  align-items: center
+  background: #fff
+  border: 0
+  border-radius: 999px
+  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .18)
+  color: #38364f
+  display: inline-flex
+  font-size: .82em
+  font-weight: 700
+  justify-content: center
+  min-width: 68px
+  padding: .3em .72em
+  text-decoration: none
+
+.translation-library-side-list__button.is-locked
+  background: rgba(255, 255, 255, .55)
+
+.translation-library-notice
+  align-items: center
+  background: #fff
+  border-radius: 12px
+  box-shadow: 0 2px 9px rgba(33, 31, 48, .22)
+  display: grid
+  gap: 24px
+  grid-template-columns: minmax(140px, 280px) 1fr auto
+  margin: 1em auto
+  padding: 18px 24px
+
+.translation-library-notice__image
+  margin: 0 !important
+
+.translation-library-notice__image img
+  border: 2px solid #62607c
+  border-radius: 8px
+  display: block
+  margin: 0
+  max-height: 92px
+  object-fit: cover
+  width: 100%
+
+.translation-library-notice__content h3
+  color: #4b4864
+  font-size: 1.25em
+  font-weight: 900
+  line-height: 1.35
+  margin: 0 0 .4em
+
+.translation-library-notice__content time
+  color: #57536e
+  display: block
+  font-size: 1.05em
+  letter-spacing: .04em
+
+.translation-library-notice__button
+  border: 0
+  border-radius: 10px
+  color: #fff
+  display: inline-block
+  font-weight: 900
+  min-width: 132px
+  padding: .55em 1.1em
+  text-align: center
+
+.translation-library-notice__button--gacha
+  background: #f64b99
+
+.translation-library-notice__button--notice
+  background: #32c7bb
+
 .translation-library-episode
   margin: .4em auto
   max-width: 650px
@@ -867,6 +1063,15 @@ html[data-theme="dark"] .translation-library-side-card__arts
 html[data-theme="dark"] .translation-library-side-card.is-wip img,
 html[data-theme="dark"] .translation-library-side-card__art.is-wip img
   opacity: .48
+
+html[data-theme="dark"] .translation-library-side-list__item,
+html[data-theme="dark"] .translation-library-notice
+  background: #34323f
+
+html[data-theme="dark"] .translation-library-side-list__content h4,
+html[data-theme="dark"] .translation-library-notice__content h3,
+html[data-theme="dark"] .translation-library-notice__content time
+  color: #eee
 
 .post-toc .nav-item
   line-height: 1.5
@@ -996,6 +1201,28 @@ html[data-theme="dark"]
   .translation-library-card img
     height: 92px
     width: 92px
+  .translation-library-card-deck
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  .translation-library-deck-card
+    min-height: 0
+  .translation-library-deck-card img,
+  .translation-library-deck-card__placeholder
+    height: 100%
+  .translation-library-side-list
+    grid-template-columns: 1fr
+  .translation-library-side-list__item
+    grid-template-columns: 74px 1fr
+    padding: 9px
+  .translation-library-side-list__thumb
+    height: 68px
+    width: 68px
+  .translation-library-notice
+    gap: 12px
+    grid-template-columns: 1fr
+    padding: 14px
+    text-align: center
+  .translation-library-notice__button
+    justify-self: center
   .translation-library-links a
     margin: 0 .3em
   .translation-meta, .translation-note

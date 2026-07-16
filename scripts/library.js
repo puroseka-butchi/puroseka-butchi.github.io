@@ -179,6 +179,72 @@ hexo.extend.tag.register('library_side_card', function librarySideCardTag(args) 
   return `<figure class="translation-library-side-card${isUnavailable ? ' is-wip' : ''}">${url ? `<a href="${escapeHtml(url)}">${content}</a>` : content}</figure>`;
 });
 
+hexo.extend.tag.register('library_card_deck_start', function libraryCardDeckStartTag(args) {
+  const title = stripQuotes(args.join(' '));
+  return `<section class="translation-library-card-deck-section">${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-card-deck">`;
+});
+
+hexo.extend.tag.register('library_card_deck_end', function libraryCardDeckEndTag() {
+  return '</div></section>';
+});
+
+hexo.extend.tag.register('library_deck_card', function libraryDeckCardTag(args) {
+  const [image = '', title = 'Card', url = '', state = ''] = parsePipeArguments(args);
+  const isLocked = !url || ['wip', 'locked', 'lock'].includes(state.toLowerCase());
+  const imageHtml = image
+    ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async">`
+    : '<span class="translation-library-deck-card__placeholder"></span>';
+  const body = `${imageHtml}<span class="translation-library-deck-card__title">${escapeHtml(title)}</span>`;
+  return `<figure class="translation-library-deck-card${isLocked ? ' is-locked' : ''}">${url && !isLocked ? `<a href="${escapeHtml(url)}">${body}</a>` : body}</figure>`;
+});
+
+hexo.extend.tag.register('library_side_list_start', function librarySideListStartTag(args) {
+  const title = stripQuotes(args.join(' '));
+  return `<section class="translation-library-side-list-section">${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-side-list">`;
+});
+
+hexo.extend.tag.register('library_side_list_end', function librarySideListEndTag() {
+  return '</div></section>';
+});
+
+hexo.extend.tag.register('library_side_list_item', function librarySideListItemTag(args) {
+  const [image = '', title = 'Side Story', part1Url = '', part2Url = '', state = ''] = parsePipeArguments(args);
+  const isLocked = ['wip', 'locked', 'lock'].includes(state.toLowerCase()) || (!part1Url && !part2Url);
+  const button = (label, url) => url
+    ? `<a class="translation-library-side-list__button" href="${escapeHtml(url)}">${escapeHtml(label)}</a>`
+    : `<span class="translation-library-side-list__button is-locked">${escapeHtml(label)}</span>`;
+  return `<article class="translation-library-side-list__item${isLocked ? ' is-locked' : ''}">
+    <figure class="translation-library-side-list__thumb">
+      ${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async">` : ''}
+    </figure>
+    <div class="translation-library-side-list__content">
+      <h4>${escapeHtml(title)}</h4>
+      <div class="translation-library-side-list__buttons">
+        ${button('Part 1', part1Url)}
+        ${button('Part 2', part2Url)}
+      </div>
+    </div>
+  </article>`;
+});
+
+hexo.extend.tag.register('library_notice', function libraryNoticeTag(args) {
+  const [image = '', title = 'Thông báo', date = '', label = 'Đọc thêm', url = '', variant = 'notice'] = parsePipeArguments(args);
+  const imageHtml = image
+    ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async">`
+    : '';
+  const action = url
+    ? `<a class="translation-library-notice__button translation-library-notice__button--${escapeHtml(variant)}" href="${escapeHtml(url)}">${escapeHtml(label)}</a>`
+    : `<span class="translation-library-notice__button translation-library-notice__button--${escapeHtml(variant)}">${escapeHtml(label)}</span>`;
+  return `<article class="translation-library-notice">
+    ${imageHtml ? `<figure class="translation-library-notice__image">${imageHtml}</figure>` : ''}
+    <div class="translation-library-notice__content">
+      <h3>${escapeHtml(title)}</h3>
+      ${date ? `<time>${escapeHtml(date)}</time>` : ''}
+    </div>
+    ${action}
+  </article>`;
+});
+
 hexo.extend.tag.register('library_episode', function libraryEpisodeTag(args, content) {
   const title = stripQuotes(args.join(' ')) || 'Episode';
   const body = hexo.render.renderSync({ text: String(content || '').trim(), engine: 'markdown' });

@@ -34,8 +34,8 @@ avatar:
 site_state: false
 
 social:
-  GitHub: https://github.com/YOUR_USERNAME || fab fa-github
-  E-Mail: mailto:your-email@example.com || fa fa-envelope
+  Facebook: https://www.facebook.com/NhungdieutuyetvoituIchika || fab fa-facebook
+  YouTube: https://www.youtube.com/@dieutuyetvoituIchikaHoshino || fab fa-youtube
 
 social_icons:
   enable: true
