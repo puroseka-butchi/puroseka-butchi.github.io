@@ -549,3 +549,45 @@ saki-rin:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+cong-chua-nguoi-ca:
+  name: "Công chúa Người cá"
+  short_name: "Công chúa Người cá"
+  aliases: ["Công chúa Người cá"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-hat-ngau:
+  name: "Giọng hát ngầu"
+  short_name: "Giọng hát ngầu"
+  aliases: ["Giọng hát ngầu"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nene-va-ichika:
+  name: "Nene và Ichika"
+  short_name: "Nene và Ichika"
+  aliases: ["Nene và Ichika"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nene-va-moi-nguoi:
+  name: "Nene và mọi người"
+  short_name: "Nene và mọi người"
+  aliases: ["Nene và mọi người"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+moi-nguoi:
+  name: "Mọi người"
+  short_name: "Mọi người"
+  aliases: ["Mọi người"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"

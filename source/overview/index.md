@@ -7,16 +7,17 @@ toc:
 ---
 
 {% library_project Event Story %}
-## Event Stories
 
 {% library_project Side Story %}
 
-## Leo/need
 {% library_side_list_start Hoshino Ichika %}
 {% library_side_list_item /images/overview/res001_no001_1.png | Nhìn lạnh lùng nhưng rất quan tâm bạn bè | /translations/001001-01/  | /translations/001001-02/ | %}
+{% library_side_list_item /images/overview/res001_no002_1.png | Leo/Need | | | locked %}
 {% library_side_list_end %}
 
-## More More Jump!
+{% library_side_list_start Kusanagi Nene %}
+{% library_side_list_item /images/overview/res015_no054_1.png | Happy Birthday 2026 | /translations/015054-01/  | /translations/015054-02/  | %}
+{% library_side_list_end %}
 
 
 {% library_project Mục khác %}

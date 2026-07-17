@@ -1,7 +1,7 @@
 ---
 title: Hatsune Miku "Magical Mirai 2026" – Phỏng vấn Kasamura Tota
 date: 2026-07-16 17:00
-updated: "2026-07-17 00:38:06"
+updated: "2026-07-17 12:06:47"
 original_date: "2026-07-01 07:00:00"
 categories:
   - Phỏng vấn
@@ -22,7 +22,7 @@ translator: M T
 proofreader: null
 source_url: https://natalie.mu/music/pp/magicalmirai2026/page/1
 comments: false
-home_order: 10
+home_order: 5
 ---
 
 <div class="interview-kicker">MUSIC NATALIE · PHỎNG VẤN ĐẶC BIỆT</div>
