@@ -36,6 +36,7 @@ site_state: false
 social:
   Facebook: https://www.facebook.com/NhungdieutuyetvoituIchika || fab fa-facebook
   YouTube: https://www.youtube.com/@dieutuyetvoituIchikaHoshino || fab fa-youtube
+  Discord: https://discord.com/app || fab fa-discord
 
 social_icons:
   enable: true

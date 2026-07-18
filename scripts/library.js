@@ -122,7 +122,8 @@ hexo.extend.tag.register('library_interview', function libraryInterviewTag(args,
 
 hexo.extend.tag.register('library_grid_start', function libraryGridStartTag(args) {
   const title = stripQuotes(args.join(' '));
-  return `<section class="translation-library-grid-section">${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-grid">`;
+  const id = headingId(title);
+  return `<section class="translation-library-grid-section"${id ? ` id="${escapeHtml(id)}"` : ''}>${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-grid">`;
 });
 
 hexo.extend.tag.register('library_grid_end', function libraryGridEndTag() {
@@ -181,7 +182,8 @@ hexo.extend.tag.register('library_side_card', function librarySideCardTag(args) 
 
 hexo.extend.tag.register('library_card_deck_start', function libraryCardDeckStartTag(args) {
   const title = stripQuotes(args.join(' '));
-  return `<section class="translation-library-card-deck-section">${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-card-deck">`;
+  const id = headingId(title);
+  return `<section class="translation-library-card-deck-section"${id ? ` id="${escapeHtml(id)}"` : ''}>${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-card-deck">`;
 });
 
 hexo.extend.tag.register('library_card_deck_end', function libraryCardDeckEndTag() {
@@ -200,7 +202,8 @@ hexo.extend.tag.register('library_deck_card', function libraryDeckCardTag(args) 
 
 hexo.extend.tag.register('library_side_list_start', function librarySideListStartTag(args) {
   const title = stripQuotes(args.join(' '));
-  return `<section class="translation-library-side-list-section">${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-side-list">`;
+  const id = headingId(title);
+  return `<section class="translation-library-side-list-section"${id ? ` id="${escapeHtml(id)}"` : ''}>${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-side-list">`;
 });
 
 hexo.extend.tag.register('library_side_list_end', function librarySideListEndTag() {
@@ -238,7 +241,7 @@ hexo.extend.tag.register('library_notice', function libraryNoticeTag(args) {
   return `<article class="translation-library-notice">
     ${imageHtml ? `<figure class="translation-library-notice__image">${imageHtml}</figure>` : ''}
     <div class="translation-library-notice__content">
-      <h3>${escapeHtml(title)}</h3>
+      <h3 id="${escapeHtml(headingId(title))}">${escapeHtml(title)}</h3>
       ${date ? `<time>${escapeHtml(date)}</time>` : ''}
     </div>
     ${action}
