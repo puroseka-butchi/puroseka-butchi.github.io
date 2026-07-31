@@ -8,6 +8,7 @@ toc:
 
 {% library_project Event Story %}
 
+{% library_visibility hidden %}
 {% library_event_card /images/characters/logo/event211.webp | Bên cậu, cùng cậu ngắm nhìn ngày mai |  %}
 [Chapter 1](/translations/211-01/)
 [Chapter 2](/translations/211-02/)
@@ -17,12 +18,14 @@ toc:
 [Chapter 6](/translations/211-06/)
 [Chapter 7]()
 {% endlibrary_event_card %}
+{% endlibrary_visibility %}
 
 {% library_project Side Story %}
 
 {% library_side_list_start Hoshino Ichika %}
 {% library_side_list_item /images/overview/res001_no001_1.png | Nhìn lạnh lùng nhưng rất quan tâm bạn bè | /translations/001001-01/  | /translations/001001-02/ | %}
 {% library_side_list_item /images/overview/res001_no002_1.png | Leo/Need | | | locked %}
+{% library_visibility hidden %}
 {% library_side_list_item /images/overview/res001_no003_1.png | Nơi ánh mắt ngước nhìn| | | locked %}
 {% library_side_list_item /images/overview/res001_no004_1.png | Chuyện trò trước bình minh| | | locked %}
 {% library_side_list_item /images/overview/res001_no005_1.png | Nhịp bước của những vì sao| | | locked %}
@@ -75,6 +78,7 @@ toc:
 {% library_side_list_item /images/overview/res001_no050_1.png | Có tận 4 Miku | | | locked %}
 
 {% library_side_list_item /images/overview/res001_no051_1.png | Bảo tàng bánh mì yakisoba hằng ao ước | | | locked %}
+{% endlibrary_visibility %}
 {% library_side_list_end %}
 
 {% library_side_list_start Kusanagi Nene %}

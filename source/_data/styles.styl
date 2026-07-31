@@ -103,6 +103,80 @@ html[data-theme="dark"] img:hover
 
 body
   letter-spacing: .01em
+  background-color: #f5f7fc
+  overflow-x: hidden
+  position: relative
+
+body::before
+  background-image: linear-gradient(rgba(247, 250, 255, .18), rgba(247, 250, 255, .08)), url('/images/backgrounds/img_bottom_kv_pc.png')
+  background-position: center, center bottom
+  background-repeat: no-repeat
+  background-size: cover
+  content: ""
+  inset: 0
+  pointer-events: none
+  position: fixed
+  z-index: 0
+
+.main,
+.footer
+  position: relative
+  z-index: 1
+
+.main-inner .post-block,
+.main-inner .pagination,
+.sidebar-inner
+  -webkit-backdrop-filter: blur(18px) saturate(1.18)
+  backdrop-filter: blur(18px) saturate(1.18)
+  background: rgba(255, 255, 255, .78)
+  border: 1px solid rgba(255, 255, 255, .72)
+  border-radius: 8px
+  box-shadow: 0 16px 42px rgba(32, 45, 92, .12)
+
+.main-inner .post-block
+  overflow: hidden
+
+.post-button .btn,
+.translation-library-tab,
+.translation-library-event-card,
+.translation-library-side-list__item,
+.translation-library-notice
+  -webkit-backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px)
+
+.scroll-reveal
+  will-change: opacity, filter, transform
+
+html.scroll-effects-ready .scroll-reveal
+  filter: blur(10px)
+  opacity: 0
+  transform: translateY(18px)
+  transition: opacity .75s cubic-bezier(.33, 1, .68, 1), filter .75s cubic-bezier(.33, 1, .68, 1), transform .75s cubic-bezier(.33, 1, .68, 1)
+
+html.scroll-effects-ready .scroll-reveal.is-visible
+  filter: blur(0)
+  opacity: 1
+  transform: none
+
+html[data-theme="dark"] body
+  background-color: #20222a
+
+html[data-theme="dark"] body::before
+  background-image: linear-gradient(rgba(25, 26, 34, .54), rgba(25, 26, 34, .42)), url('/images/backgrounds/img_bottom_kv_pc.png')
+
+html[data-theme="dark"] .main-inner .post-block,
+html[data-theme="dark"] .main-inner .pagination,
+html[data-theme="dark"] .sidebar-inner
+  background: rgba(43, 43, 54, .78)
+  border-color: rgba(255, 255, 255, .08)
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .28)
+
+@media (prefers-reduced-motion: reduce)
+  html.scroll-effects-ready .scroll-reveal
+    filter: none
+    opacity: 1
+    transform: none
+    transition: none
 
 // Không để tag cloud phóng to các thẻ xuất hiện nhiều lần.
 .tag-cloud-tags a

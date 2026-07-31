@@ -48,6 +48,19 @@ function plainTitle(value) {
     .trim();
 }
 
+function libraryIsVisible(args) {
+  const flag = stripQuotes(args.join(' ')).trim().toLowerCase();
+  return !['hidden', 'hide', 'false', '0', 'ẩn', 'an'].includes(flag);
+}
+
+hexo.extend.tag.register('library_visibility', function libraryVisibilityTag(args, content) {
+  if (!libraryIsVisible(args)) return '';
+  return hexo.render.renderSync({
+    text: String(content || '').trim(),
+    engine: 'markdown'
+  });
+}, { ends: true });
+
 hexo.extend.tag.register('library_project', function libraryProjectTag(args) {
   const title = stripQuotes(args.join(' ')) || 'Tên dự án';
   return `<h1 class="translation-library-project" id="${escapeHtml(headingId(title))}">${escapeHtml(title)}</h1>`;
