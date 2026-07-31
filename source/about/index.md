@@ -16,7 +16,9 @@ Các bản dịch trên blog được thực hiện trực tiếp từ nội dun
 
 Khi dịch, mình luôn cố gắng giữ lại ý nghĩa, cảm xúc và cách nói của nhân vật, đồng thời điều chỉnh câu chữ để lời thoại có thể được đọc một cách tự nhiên bằng tiếng Việt. Vì xưng hô và sắc thái trong tiếng Nhật không phải lúc nào cũng có một đáp án duy nhất, một số lựa chọn dịch vẫn mang tính diễn giải cá nhân.
 
-Về tên riêng, thuật ngữ, kính ngữ và cách xưng hô sẽ được sử dụng nhất quán trong phạm vi có thể. Khi một câu có nhiều cách hiểu, mình có thể thêm chú thích hoặc điều chỉnh bản dịch sau khi tìm được cách diễn đạt phù hợp hơn.
+Về tên riêng, thuật ngữ, kính ngữ và cách xưng hô sẽ được sử dụng nhất quán trong phạm vi có thể. Khi một câu có nhiều cách hiểu, mình có thể thêm chú thích hoặc điều chỉnh bản dịch sau khi tìm được cách diễn đạt phù hợp hơn. 
+
+Mình sẽ giữ lại các hậu tố trong phần lớn bản dịch vì đơn giản mình thích thế, nó tạo chất riêng cho văn hóa nước bạn. Có thể bạn không thích nhưng đấy là thứ mình sẽ làm.
 
 Một số bài viết có thể sử dụng từ điển, công cụ tra cứu hoặc công cụ hỗ trợ trong quá trình xử lý văn bản. Phần câu chữ cuối cùng đều được mình đọc lại, biên tập và chịu trách nhiệm.
 
