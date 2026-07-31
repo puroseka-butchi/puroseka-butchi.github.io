@@ -162,6 +162,80 @@ html[data-theme="dark"] .post-button .btn:hover
   margin: 1.5em 0
   padding: 1em 1.2em
 
+.story-series-nav
+  margin: 2em auto 2.6em
+  max-width: 900px
+
+.story-series-nav table
+  border: 1px solid #d5d5da
+  border-collapse: collapse
+  font-size: .9em
+  margin: 0
+  table-layout: fixed
+  width: 100%
+
+.story-series-nav caption
+  background: rgba(68, 85, 221, .035)
+  border: 1px solid #d5d5da
+  border-bottom: 0
+  caption-side: top
+  color: var(--text-color)
+  font-weight: 750
+  padding: .9em 1em
+  text-align: center
+
+.story-series-nav caption a
+  border: 0
+  color: inherit
+
+.story-series-nav th,
+.story-series-nav td
+  border: 1px solid #d5d5da
+  padding: .8em 1em
+  vertical-align: middle
+
+.story-series-nav th
+  background: rgba(68, 85, 221, .045)
+  font-weight: 750
+  text-align: left
+  width: 110px
+
+.story-series-nav__links
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  gap: .4em 0
+
+.story-series-nav__item
+  align-items: center
+  display: inline-flex
+
+.story-series-nav__item:not(:last-child)::after
+  color: #aaa
+  content: "·"
+  margin: 0 .65em
+
+.story-series-nav__item a
+  color: inherit
+  text-underline-offset: .18em
+
+.story-series-nav__item a.is-current
+  color: $brand
+  font-weight: 800
+
+.story-series-nav__item.is-unavailable
+  color: #aaa
+
+html[data-theme="dark"] .story-series-nav table,
+html[data-theme="dark"] .story-series-nav caption,
+html[data-theme="dark"] .story-series-nav th,
+html[data-theme="dark"] .story-series-nav td
+  border-color: #53525c
+
+html[data-theme="dark"] .story-series-nav caption,
+html[data-theme="dark"] .story-series-nav th
+  background: rgba(130, 140, 240, .08)
+
 .translation-dialogue
   align-items: start
   display: grid
@@ -672,6 +746,125 @@ html[data-theme="dark"] .post-button .btn:hover
   font-family: inherit !important
   font-weight: 500
 
+.translation-library-event-card
+  align-items: stretch
+  background: rgba(255, 255, 255, .82)
+  border: 1px solid rgba(68, 85, 221, .16)
+  border-radius: 12px
+  box-shadow: 0 8px 24px rgba(35, 40, 85, .1)
+  display: grid
+  gap: 1.8em
+  grid-template-columns: minmax(220px, 38%) minmax(0, 1fr)
+  margin: 0 auto 2em
+  max-width: 900px
+  overflow: hidden
+  padding: 1.35em
+
+.translation-library-event-card__cover
+  align-items: center
+  background: linear-gradient(135deg, rgba(68, 85, 221, .05), rgba(255, 255, 255, .25))
+  border-radius: 9px
+  display: flex
+  justify-content: center
+  margin: 0 !important
+  min-height: 210px
+  overflow: hidden
+  padding: 1em
+
+.translation-library-event-card__cover img
+  display: block
+  margin: 0
+  max-height: 190px
+  object-fit: contain
+  opacity: 1
+  width: 100%
+
+.translation-library-event-card__content
+  display: flex
+  flex-direction: column
+  min-width: 0
+
+.translation-library-event-card__header
+  border-bottom: 1px solid rgba(68, 85, 221, .14)
+  margin-bottom: 1em
+  padding-bottom: .8em
+
+.translation-library-event-card__title
+  border: 0 !important
+  font-family: inherit !important
+  font-size: 1.25em
+  font-weight: 750
+  line-height: 1.4
+  margin: 0
+  padding: 0
+  text-align: left
+
+.translation-library-event-card__title a
+  border: 0
+  color: inherit
+
+.translation-library-event-card__description
+  color: #777
+  font-size: .88em
+  line-height: 1.6
+  margin: .55em 0 0
+
+.translation-library-event-card__progress
+  color: #666
+  display: grid
+  font-size: .78em
+  gap: .5em
+  margin-bottom: 1.05em
+
+.translation-library-event-card__progress-track
+  background: rgba(68, 85, 221, .12)
+  border-radius: 999px
+  display: block
+  height: 5px
+  overflow: hidden
+  width: 100%
+
+.translation-library-event-card__progress-track > span
+  background: $brand
+  border-radius: inherit
+  display: block
+  height: 100%
+
+.translation-library-event-card__chapters
+  display: grid
+  gap: .65em
+  grid-template-columns: repeat(4, minmax(0, 1fr))
+  margin-top: auto
+
+.translation-library-event-card__chapter
+  border: 1px solid rgba(68, 85, 221, .22)
+  border-radius: 7px
+  box-sizing: border-box
+  display: block
+  font-size: .82em
+  font-weight: 650
+  overflow: hidden
+  padding: .5em .35em
+  text-align: center
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.translation-library-event-card__chapter.is-available
+  background: $brand
+  border-color: $brand
+  color: #fff
+  text-decoration: none
+
+.translation-library-event-card__chapter.is-available:hover
+  background: darken($brand, 10%)
+  color: #fff
+
+.translation-library-event-card__chapter.is-unavailable
+  background: #f0f0f3
+  border-color: #dddde3
+  color: #999
+  cursor: default
+
 .translation-library-grid-section
   margin: 0 auto 4em
   max-width: 900px
@@ -1068,6 +1261,22 @@ html[data-theme="dark"] .translation-library-side-list__item,
 html[data-theme="dark"] .translation-library-notice
   background: #34323f
 
+html[data-theme="dark"] .translation-library-event-card
+  background: #302f3a
+  border-color: rgba(150, 160, 255, .22)
+
+html[data-theme="dark"] .translation-library-event-card__cover
+  background: linear-gradient(135deg, rgba(68, 85, 221, .12), rgba(35, 34, 43, .4))
+
+html[data-theme="dark"] .translation-library-event-card__description,
+html[data-theme="dark"] .translation-library-event-card__progress
+  color: #bbb
+
+html[data-theme="dark"] .translation-library-event-card__chapter.is-unavailable
+  background: #45444e
+  border-color: #55545f
+  color: #999
+
 html[data-theme="dark"] .translation-library-side-list__content h4,
 html[data-theme="dark"] .translation-library-notice__content h3,
 html[data-theme="dark"] .translation-library-notice__content time
@@ -1162,6 +1371,17 @@ html[data-theme="dark"]
     height: 40px
     right: 12px
     width: 40px
+  .story-series-nav
+    margin: 1.5em 0 2em
+  .story-series-nav table
+    font-size: .82em
+  .story-series-nav th,
+  .story-series-nav td
+    padding: .7em .75em
+  .story-series-nav th
+    width: 88px
+  .story-series-nav__item:not(:last-child)::after
+    margin: 0 .45em
   .translation-library-project
     font-size: 1.65em
     margin-top: 2em
@@ -1174,6 +1394,21 @@ html[data-theme="dark"]
   .translation-library-feature__body
     gap: 1.3em
     grid-template-columns: 1fr
+  .translation-library-event-card
+    gap: 1.1em
+    grid-template-columns: 1fr
+    padding: 1em
+  .translation-library-event-card__cover
+    min-height: 150px
+  .translation-library-event-card__cover img
+    max-height: 150px
+  .translation-library-event-card__title
+    font-size: 1.08em
+    text-align: center
+  .translation-library-event-card__description
+    text-align: center
+  .translation-library-event-card__chapters
+    grid-template-columns: repeat(2, minmax(0, 1fr))
   .translation-library-feature__content
     min-height: 0
   .translation-library-feature__links

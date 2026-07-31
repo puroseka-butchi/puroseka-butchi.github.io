@@ -116,6 +116,49 @@ hexo.extend.tag.register('library_event', function libraryEventTag(args, content
   return renderLibraryFeature(args, content, 'translation-library-feature--event', false);
 }, { ends: true });
 
+hexo.extend.tag.register('library_event_card', function libraryEventCardTag(args, content) {
+  const [image = '', title = 'Tên Event Story', description = '', eventUrl = ''] = parsePipeArguments(args);
+  const chapterLines = String(content || '').split(/\r?\n/)
+    .map(line => line.trim())
+    .filter(Boolean);
+  const chapters = chapterLines.map((line, index) => {
+    const link = line.match(/^\[([^\]]+)\]\(\s*([^)]+?)\s*\)$/);
+    const label = link ? link[1].trim() : line.replace(/^\[|\]\(\s*\)$/g, '').trim();
+    const url = link ? link[2].trim() : '';
+    return {
+      label: label || `Chapter ${index + 1}`,
+      url
+    };
+  });
+  const translatedCount = chapters.filter(chapter => chapter.url).length;
+  const totalCount = chapters.length;
+  const progress = totalCount ? Math.round((translatedCount / totalCount) * 100) : 0;
+  const titleContent = eventUrl
+    ? `<a href="${escapeHtml(eventUrl)}">${renderMultilineTitle(title)}</a>`
+    : renderMultilineTitle(title);
+  const chapterHtml = chapters.map(chapter => chapter.url
+    ? `<a class="translation-library-event-card__chapter is-available" href="${escapeHtml(chapter.url)}">${escapeHtml(chapter.label)}</a>`
+    : `<span class="translation-library-event-card__chapter is-unavailable" aria-disabled="true">${escapeHtml(chapter.label)}</span>`
+  ).join('');
+
+  return `<section class="translation-library-event-card" id="${escapeHtml(headingId(plainTitle(title)))}">
+    <figure class="translation-library-event-card__cover">
+      ${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(plainTitle(title))}" loading="lazy" decoding="async">` : ''}
+    </figure>
+    <div class="translation-library-event-card__content">
+      <header class="translation-library-event-card__header">
+        <h2 class="translation-library-event-card__title">${titleContent}</h2>
+        ${description ? `<p class="translation-library-event-card__description">${escapeHtml(description)}</p>` : ''}
+      </header>
+      ${totalCount ? `<div class="translation-library-event-card__progress">
+        <span>Đã dịch ${translatedCount}/${totalCount} chương</span>
+        <span class="translation-library-event-card__progress-track" aria-hidden="true"><span style="width: ${progress}%"></span></span>
+      </div>` : ''}
+      ${totalCount ? `<div class="translation-library-event-card__chapters">${chapterHtml}</div>` : ''}
+    </div>
+  </section>`;
+}, { ends: true });
+
 hexo.extend.tag.register('library_interview', function libraryInterviewTag(args, content) {
   return renderLibraryFeature(args, content, 'translation-library-feature--interview');
 }, { ends: true });

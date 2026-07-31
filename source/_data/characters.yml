@@ -591,3 +591,231 @@ moi-nguoi:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-mot-co-gai:
+  name: "Giọng một cô gái"
+  short_name: "Giọng một cô gái"
+  aliases: ["Giọng một cô gái"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-mot-co-gai-khac:
+  name: "Giọng một cô gái khác"
+  short_name: "Giọng một cô gái khác"
+  aliases: ["Giọng một cô gái khác"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+saki-toya-rui-va-mizuki:
+  name: "Saki, Toya, Rui và Mizuki"
+  short_name: "Saki, Toya, Rui và Mizuki"
+  aliases: ["Saki, Toya, Rui và Mizuki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-ban-hoc-cu-cua-toya:
+  name: "Giọng bạn học cũ của Toya"
+  short_name: "Giọng bạn học cũ của Toya"
+  aliases: ["Giọng bạn học cũ của Toya"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+ban-hoc-cu-cua-toya:
+  name: "Bạn học cũ của Toya"
+  short_name: "Bạn học cũ của Toya"
+  aliases: ["Bạn học cũ của Toya"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+moriya:
+  name: "Moriya"
+  short_name: "Moriya"
+  aliases: ["Moriya"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+kimura:
+  name: "Kimura"
+  short_name: "Kimura"
+  aliases: ["Kimura"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+majima:
+  name: "Majima"
+  short_name: "Majima"
+  aliases: ["Majima"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+saki-mizuki-va-rui:
+  name: "Saki, Mizuki và Rui"
+  short_name: "Saki, Mizuki và Rui"
+  aliases: ["Saki, Mizuki và Rui"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-moriya:
+  name: "Giọng Moriya"
+  short_name: "Giọng Moriya"
+  aliases: ["Giọng Moriya"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+doi-truong-cau-lac-bo-kich:
+  name: "Đội trưởng câu lạc bộ kịch"
+  short_name: "Đội trưởng câu lạc bộ kịch"
+  aliases: ["Đội trưởng câu lạc bộ kịch"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+rui-thoi-cap-hai:
+  name: "Rui thời cấp hai"
+  short_name: "Rui thời cấp hai"
+  aliases: ["Rui thời cấp hai"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-saki:
+  name: "Giọng Saki"
+  short_name: "Giọng Saki"
+  aliases: ["Giọng Saki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-toya:
+  name: "Giọng Toya"
+  short_name: "Giọng Toya"
+  aliases: ["Giọng Toya"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+kosame:
+  name: "Kosame"
+  short_name: "Kosame"
+  aliases: ["Kosame"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+himari:
+  name: "Himari"
+  short_name: "Himari"
+  aliases: ["Himari"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+cac-ban-cung-lop:
+  name: "Các bạn cùng lớp"
+  short_name: "Các bạn cùng lớp"
+  aliases: ["Các bạn cùng lớp"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+cam-xuc-cua-ai-do:
+  name: "Cảm xúc của ai đó"
+  short_name: "Cảm xúc của ai đó"
+  aliases: ["Cảm xúc của ai đó"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-mizuki:
+  name: "Giọng Mizuki"
+  short_name: "Giọng Mizuki"
+  aliases: ["Giọng Mizuki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+tin-nhan-cua-nhac-si:
+  name: "Tin nhắn của nhạc sĩ"
+  short_name: "Tin nhắn của nhạc sĩ"
+  aliases: ["Tin nhắn của nhạc sĩ"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+shindo:
+  name: "Shindo"
+  short_name: "Shindo"
+  aliases: ["Shindo"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+ichika-va-saki:
+  name: "Ichika và Saki"
+  short_name: "Ichika và Saki"
+  aliases: ["Ichika và Saki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ban-cung-lop:
+  name: "Bạn cùng lớp"
+  short_name: "Bạn cùng lớp"
+  aliases: ["Bạn cùng lớp"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+honami-ichika-va-saki:
+  name: "Honami, Ichika và Saki"
+  short_name: "Honami, Ichika và Saki"
+  aliases: ["Honami, Ichika và Saki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+tin-nhan:
+  name: "Tin nhắn"
+  short_name: "Tin nhắn"
+  aliases: ["Tin nhắn"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+shindou:
+  name: "Shindou"
+  short_name: "Shindou"
+  aliases: ["Shindou"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+khan-gia:
+  name: "Khán giả"
+  short_name: "Khán giả"
+  aliases: ["Khán giả"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"

@@ -5,11 +5,43 @@ db.json
 *.log
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
+.vs/
+.agents/
+.codex/
+.cache/
+coverage/
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
 .trash/
 README.md
 admin/
 docs/
 tools/
+
+# Nội dung làm việc riêng; không dùng thư mục này cho bài đã sẵn sàng public.
+source/_drafts/
+private/
+secrets/
+
+# Biến môi trường, token và khóa xác thực tuyệt đối không commit.
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+secrets*.json
+secrets*.yml
+secrets*.yaml
 
 # Local/raw working assets. Converted posts and public-ready media should live in source/.
 res/

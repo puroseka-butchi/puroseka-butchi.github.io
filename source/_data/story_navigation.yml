@@ -1,0 +1,20 @@
+event211:
+  title: Bên cậu, cùng cậu ngắm nhìn ngày mai
+  url: /overview/#ben-cau-cung-cau-ngam-nhin-ngay-mai
+  groups:
+    - label: Event Story
+      links:
+        - label: Chapter 1
+          url: /translations/211-01/
+        - label: Chapter 2
+        - label: Chapter 3
+        - label: Chapter 4
+        - label: Chapter 5
+        - label: Chapter 6
+        - label: Chapter 7
+    - label: Side Stories
+      links:
+        - label: Saki
+        - label: Toya
+        - label: Rui
+        - label: Mizuki

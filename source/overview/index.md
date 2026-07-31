@@ -8,6 +8,16 @@ toc:
 
 {% library_project Event Story %}
 
+{% library_event_card /images/characters/logo/event211.webp | Bên cậu, cùng cậu ngắm nhìn ngày mai |  %}
+[Chapter 1](/translations/211-01/)
+[Chapter 2](/translations/211-02/)
+[Chapter 3](/translations/211-03/)
+[Chapter 4](/translations/211-04/)
+[Chapter 5](/translations/211-05/)
+[Chapter 6](/translations/211-06/)
+[Chapter 7]()
+{% endlibrary_event_card %}
+
 {% library_project Side Story %}
 
 {% library_side_list_start Hoshino Ichika %}

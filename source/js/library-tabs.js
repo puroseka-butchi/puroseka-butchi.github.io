@@ -23,6 +23,7 @@
     const selectors = [
       '.translation-library-series > h2',
       '.translation-library-feature > h2',
+      '.translation-library-event-card > h2, .translation-library-event-card__title',
       '.translation-library-grid-section > h3',
       '.translation-library-card-deck-section > h3',
       '.translation-library-side-list-section > h3',
