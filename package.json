@@ -6,8 +6,9 @@
   "scripts": {
     "clean": "hexo clean",
     "build": "hexo generate && node scripts/prune-public-assets.js",
-    "server": "hexo server",
-    "server:debug": "hexo server --debug",
+    "server": "node bin/hexo-live-server.js",
+    "server:debug": "node bin/hexo-live-server.js --debug",
+    "server:raw": "hexo server",
     "admin": "node tools/admin-server.js",
     "new": "hexo new post",
     "new:interview": "hexo new interview",

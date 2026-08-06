@@ -516,6 +516,22 @@ iori:
   color: "#999999"
   text_color: "#444444"
 
+shindo:
+  name: "Shindou"
+  short_name: "Shindou"
+  aliases: ["Shindo"]
+  avatar: /images/characters/project-sekai/shindou.png
+  color: "#999999"
+  text_color: "#444444"
+
+shindou:
+  name: "Shindou"
+  short_name: "Shindou"
+  aliases: ["Shindou"]
+  avatar: /images/characters/project-sekai/shindou.png
+  color: "#999999"
+  text_color: "#444444"
+
 ichika-saki-haruka:
   name: "Ichika・Saki・Haruka"
   short_name: "Ichika・Saki・Haruka"
@@ -760,14 +776,6 @@ tin-nhan-cua-nhac-si:
   color: "#999999"
   text_color: "#444444"
 
-shindo:
-  name: "Shindo"
-  short_name: "Shindo"
-  aliases: ["Shindo"]
-  avatar: /images/characters/unknown.svg
-  color: "#999999"
-  text_color: "#444444"
-
 ichika-va-saki:
   name: "Ichika và Saki"
   short_name: "Ichika và Saki"
@@ -803,19 +811,78 @@ tin-nhan:
   text_color: "#444444"
 
 # Auto-added placeholder characters. Review avatar/color/aliases later.
-shindou:
-  name: "Shindou"
-  short_name: "Shindou"
-  aliases: ["Shindou"]
+khan-gia:
+  name: "Khán giả"
+  short_name: "Khán giả"
+  aliases: ["Khán giả"]
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
 
 # Auto-added placeholder characters. Review avatar/color/aliases later.
-khan-gia:
-  name: "Khán giả"
-  short_name: "Khán giả"
-  aliases: ["Khán giả"]
+loa:
+  name: "Loa"
+  short_name: "Loa"
+  aliases: ["Loa"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+tin-nhan-cua-saki:
+  name: "Tin nhắn của Saki"
+  short_name: "Tin nhắn của Saki"
+  aliases: ["Tin nhắn của Saki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+tin-nhan-cua-honami:
+  name: "Tin nhắn của Honami"
+  short_name: "Tin nhắn của Honami"
+  aliases: ["Tin nhắn của Honami"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+tin-nhan-cua-shiho:
+  name: "Tin nhắn của Shiho"
+  short_name: "Tin nhắn của Shiho"
+  aliases: ["Tin nhắn của Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+shiho-honami-va-saki:
+  name: "Shiho, Honami và Saki"
+  short_name: "Shiho, Honami và Saki"
+  aliases: ["Shiho, Honami và Saki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+saki-honami-va-shiho:
+  name: "Saki, Honami và Shiho"
+  short_name: "Saki, Honami và Shiho"
+  aliases: ["Saki, Honami và Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+rin-miku-va-len:
+  name: "Rin, Miku và Len"
+  short_name: "Rin, Miku và Len"
+  aliases: ["Rin, Miku và Len"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+meiko-luka-va-kaito:
+  name: "MEIKO, Luka và KAITO"
+  short_name: "MEIKO, Luka và KAITO"
+  aliases: ["MEIKO, Luka và KAITO"]
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"

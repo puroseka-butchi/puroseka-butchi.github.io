@@ -7,7 +7,9 @@ event211:
         - label: Chapter 1
           url: /translations/211-01/
         - label: Chapter 2
+          url: /translations/211-02/
         - label: Chapter 3
+          url: /translations/event-212-01/
         - label: Chapter 4
         - label: Chapter 5
         - label: Chapter 6
@@ -18,3 +20,36 @@ event211:
         - label: Toya
         - label: Rui
         - label: Mizuki
+event212:
+  title: Echo of a Prayer
+  groups:
+    - label: Event Story
+      links:
+        - label: Chapter 1
+          url: /translations/event-212-01/
+        - label: Chapter 2
+          url: /translations/event-212-02/
+        - label: Chapter 3
+          url: /translations/event-212-03/
+        - label: Chapter 4
+          url: /translations/event-212-04/
+        - label: Chapter 5
+          url: /translations/event-212-05/
+        - label: Chapter 6
+          url: /translations/event-212-06/
+        - label: Chapter 7
+          url: /translations/event-212-07/
+        - label: Chapter 8
+          url: /translations/event-212-08/
+    - label: Side Stories
+      links:
+        - label: Ichika (Part1)
+        - label: Ichika (Part2)
+        - label: Shiho (Part1)
+        - label: Shiho (Part2)
+        - label: Rin (Part1)
+        - label: Rin (Part2)
+        - label: Len (Part1)
+        - label: Len (Part2)
+        - label: Honami (Part1)
+        - label: Honami (Part2)

@@ -8,17 +8,18 @@ toc:
 
 {% library_project Event Story %}
 
-{% library_visibility hidden %}
-{% library_event_card /images/characters/logo/event211.webp | Bên cậu, cùng cậu ngắm nhìn ngày mai |  %}
-[Chapter 1](/translations/211-01/)
-[Chapter 2](/translations/211-02/)
-[Chapter 3](/translations/211-03/)
-[Chapter 4](/translations/211-04/)
-[Chapter 5](/translations/211-05/)
-[Chapter 6](/translations/211-06/)
-[Chapter 7]()
+{% library_event_card /images/characters/logo/event212.png | Echo of a Prayer|  %}
+[Chapter 1](/translations/event-212-01/)
+[Chapter 2](/translations/event-212-02/)
+[Chapter 3](/translations/event-212-03/)
+[Chapter 4](/translations/event-212-04/)
+[Chapter 5](/translations/event-212-05/)
+[Chapter 6](/translations/event-212-06/)
+[Chapter 7](/translations/event-212-07/)
+[Chapter 8](/translations/event-212-08/)
 {% endlibrary_event_card %}
-{% endlibrary_visibility %}
+
+
 
 {% library_project Side Story %}
 
