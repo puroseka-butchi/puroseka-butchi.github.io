@@ -24,7 +24,7 @@ Khi một câu có nhiều cách hiểu, mình có thể bổ sung chú thích h
 
 Trong phần lớn bản dịch, mình sẽ giữ lại một số hậu tố và cách gọi như `-san`, `-chan`, `-kun` hoặc những biệt danh mang sắc thái đặc trưng. Đây là lựa chọn phong cách cá nhân nhằm giữ lại phần nào không khí và quan hệ giữa các nhân vật trong nguyên tác. Tuy cách thể hiện này có thể không phù hợp với sở thích của tất cả mọi người, mình vẫn sẽ sử dụng khi cảm thấy cần thiết.
 
-Một số bài viết có thể sử dụng từ điển, tài liệu tham khảo, công cụ tra cứu hoặc công cụ hỗ trợ xử lý văn bản. Tuy nhiên, phần câu chữ cuối cùng đều được mình đọc lại, biên tập và chịu trách nhiệm trước khi đăng.
+Một số bài viết có thể sử dụng từ điển, tài liệu tham khảo hoặc công cụ tra cứu. Tuy nhiên, phần câu chữ cuối cùng đều được mình đọc lại, biên tập và chịu trách nhiệm trước khi đăng.
 
 Mình vẫn đang trong quá trình học hỏi và cải thiện tiếng Nhật, nên dù đã cố gắng kiểm tra, các bản dịch vẫn có thể còn sai sót. Nếu phát hiện lỗi dịch, lỗi chính tả, liên kết hỏng hoặc chi tiết cần bổ sung, bạn có thể liên hệ với mình qua các kênh được đặt trên blog.
 
