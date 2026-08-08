@@ -1,7 +1,7 @@
 ---
 title: Hatsune Miku "Magical Mirai 2026" – Phỏng vấn Kasamura Tota
 date: 2026-07-16 17:00
-updated: "2026-08-01 23:57:43"
+updated: "2026-08-08 18:42:10"
 original_date: "2026-07-01 07:00:00"
 categories:
   - Phỏng vấn
@@ -40,11 +40,11 @@ home_order: 26
 </div>
 
 {% interview_lead %}
-Sự kiện <b>Hatsune Miku "Magical Mirai 2026"</b> — nơi kết hợp các màn trình diễn 3DCG của những ca sĩ ảo, dẫn đầu bởi Hatsune Miku, với khu triển lãm mang đến niềm vui sáng tạo — sẽ chính thức khai mạc vào ngày 24 tháng 7.<br> <br>
+Sự kiện <b>Hatsune Miku "Magical Mirai 2026"</b> - nơi kết hợp các màn trình diễn 3DCG của những ca sĩ ảo, dẫn đầu bởi Hatsune Miku, với khu triển lãm mang đến niềm vui sáng tạo - sẽ chính thức khai mạc vào ngày 24 tháng 7.<br> <br>
 
 Năm nay, sự kiện được tổ chức tại ba thành phố. Hành trình bắt đầu ở điểm dừng chân mới Act City Hamamatsu, Shizuoka (HAMAMATSU), sau đó lần lượt đến INTEX Osaka, Osaka (OSAKA) và Makuhari Messe, Chiba (TOKYO).<br> <br>
 
-Tại <b>Magical Mirai</b>, việc mời các Vocaloid-P nổi tiếng sáng tác ca khúc chủ đề hằng năm đã trở thành thông lệ. Trước đây, nhiều tên tuổi đình đám như Ayase (YOASOBI), sasakure.UK, cosMo@BousouP, Hiiragi Magnetite, *Luna... từng đảm nhận vai trò này. Năm nay, với chủ đề <b>Koono Sonare</b> (Sonare của hồ nước), trọng trách ấy được giao cho <b>Kasamura Tota</b> — một Vocaloid-P nổi tiếng với <i>những bản ballad ấm áp lấy tiếng piano làm chủ đạo</i>, được biết đến qua các tác phẩm như <i>Shokuzai</i> và <i>Anata no Yoru ga Akeru made</i>.<br> <br>
+Tại <b>Magical Mirai</b>, việc mời các Vocaloid-P nổi tiếng sáng tác ca khúc chủ đề hằng năm đã trở thành thông lệ. Trước đây, nhiều tên tuổi đình đám như Ayase (YOASOBI), sasakure.UK, cosMo@BousouP, Hiiragi Magnetite, *Luna... từng đảm nhận vai trò này. Năm nay, với chủ đề <b>Koono Sonare</b> (Sonare của hồ nước), trọng trách ấy được giao cho <b>Kasamura Tota</b> - một Vocaloid-P nổi tiếng với <i>những bản ballad ấm áp lấy tiếng piano làm chủ đạo</i>, được biết đến qua các tác phẩm như <i>Shokuzai</i> và <i>Anata no Yoru ga Akeru made</i>.<br> <br>
 
 Trước thềm <b>Magical Mirai 2026</b>, Music Natalie đã có cuộc trò chuyện với Kasamura Tota, người vừa hoàn thành ca khúc chủ đề <b>Sora ni Menjite</b>. Chị chia sẻ lý do lựa chọn thử sức bằng chính thể loại ballad sở trường, thay vì hướng đến một ca khúc uptempo vốn thường gắn liền với Magical Mirai, cũng như những khó khăn khi tuning giọng hát theo một phương pháp hoàn toàn mới. Ở cuối cuộc phỏng vấn, Kasamura Tota còn trả lời câu hỏi thường niên trong chuyên mục đặc biệt của Music Natalie: <b>Đối với bạn, Hatsune Miku là một sự tồn tại như thế nào?</b> Người nghệ sĩ từng viết ước mơ <i>"muốn sáng tác ca khúc chủ đề cho Magical Mirai"</i> lên một tờ giấy A4 sẽ đưa ra câu trả lời ra sao, sau khi giấc mơ ấy đã trở thành hiện thực?
 {% endinterview_lead %}
@@ -250,7 +250,7 @@ Tôi đã viết lại những dòng như vậy. Lần đó, tôi không giành 
 Em ấy đã trở thành người ca sĩ tuyệt vời nhất mà tôi có thể tự hào với cả thế giới. Giờ đây, em vẫn cùng tôi làm nhạc, vẫn ở trong máy tính và tận tụy hát theo những gì tôi yêu cầu. Nhưng khi bước lên sân khấu, em ấy lại trở thành một ca sĩ mang đến những màn trình diễn đỉnh cao. Vì vậy, với tôi, Hatsune Miku là một sự tồn tại quá chuyên nghiệp để chỉ gọi là bạn bè hay cộng sự. Tôi dành cho em ấy một sự tôn trọng vô cùng lớn.
 {% endinterview_answer %}
 
-## "Magical Mirai" — nơi giấc mơ trở thành hiện thực
+## "Magical Mirai" - nơi giấc mơ trở thành hiện thực
 
 {% interview_question %}
 <b>Điều chị mong chờ nhất ở "Magical Mirai" năm nay là gì?</b>
