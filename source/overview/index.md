@@ -8,7 +8,18 @@ toc:
 
 {% library_project Event Story %}
 
-{% library_event_card /images/characters/logo/event212.png | Echo of a Prayer|  %}
+{% library_event_card /images/characters/logo/event213.png | Leap Beyond The Limits! - Haruka 7|  %}
+[Chapter 1]()
+[Chapter 2]()
+[Chapter 3]()
+[Chapter 4]()
+[Chapter 5]()
+[Chapter 6]()
+[Chapter 7]()
+[Chapter 8]()
+{% endlibrary_event_card %}
+
+{% library_event_card /images/characters/logo/event212.png | Echo of a Prayer - Ichika 7|  %}
 [Chapter 1](/translations/event-212-01/)
 [Chapter 2](/translations/event-212-02/)
 [Chapter 3](/translations/event-212-03/)
@@ -21,12 +32,15 @@ toc:
 
 
 
+
+
 {% library_project Side Story %}
 
 {% library_side_list_start Hoshino Ichika %}
 {% library_side_list_item /images/overview/res001_no001_1.png | Nhìn lạnh lùng nhưng rất quan tâm bạn bè | /translations/001001-01/  | /translations/001001-02/ | %}
-{% library_side_list_item /images/overview/res001_no002_1.png | Leo/Need | | | locked %}
+
 {% library_visibility hidden %}
+{% library_side_list_item /images/overview/res001_no002_1.png | Leo/Need | | | locked %}
 {% library_side_list_item /images/overview/res001_no003_1.png | Nơi ánh mắt ngước nhìn| | | locked %}
 {% library_side_list_item /images/overview/res001_no004_1.png | Chuyện trò trước bình minh| | | locked %}
 {% library_side_list_item /images/overview/res001_no005_1.png | Nhịp bước của những vì sao| | | locked %}
@@ -80,10 +94,32 @@ toc:
 
 {% library_side_list_item /images/overview/res001_no051_1.png | Bảo tàng bánh mì yakisoba hằng ao ước | | | locked %}
 {% endlibrary_visibility %}
+{% library_side_list_item /images/overview/res001_no052_1.png | Lựa chọn không hối tiếc | | | locked %}
+{% library_side_list_item /images/overview/res001_no053_1.png | Happy Birthday 2026 | | | locked %}
+{% library_side_list_end %}
+
+{% library_side_list_start Tenma Saki %}
+{% library_side_list_item /images/overview/res002_no055_1.png | Điều đã từ bỏ ngày hôm ấy | | | locked %}
+{% library_side_list_end %}
+
+{% library_side_list_start Mochizuki Honami %}
+{% library_side_list_item /images/overview/res003_no055_1.png | Lời động viên ngọt ngào | | | locked %}
+{% library_side_list_end %}
+
+{% library_side_list_start Hinomori Shiho%}
+{% library_side_list_item /images/overview/res004_no057_1.png | Nỗi niềm vướng bận nơi đáy lòng | | | locked %}
 {% library_side_list_end %}
 
 {% library_side_list_start Kusanagi Nene %}
 {% library_side_list_item /images/overview/res015_no054_1.png | Happy Birthday 2026 | /translations/015054-01/  | /translations/015054-02/  | %}
+{% library_side_list_end %}
+
+{% library_side_list_start Kagamine Rin%}
+{% library_side_list_item /images/overview/res022_no054_1.png | Có quá trời việc phải làm!? |   |  |locked %}
+{% library_side_list_end %}
+
+{% library_side_list_start Kagamine Len%}
+{% library_side_list_item /images/overview/res023_no057_1.png | Hãy cứ dõi theo sự lựa chọn đó|   |  |locked %}
 {% library_side_list_end %}
 
 

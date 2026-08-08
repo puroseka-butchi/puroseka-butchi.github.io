@@ -886,3 +886,47 @@ meiko-luka-va-kaito:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+saki-tsukasa:
+  name: "Saki・Tsukasa"
+  short_name: "Saki・Tsukasa"
+  aliases: ["Saki・Tsukasa"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-rin:
+  name: "Giọng Rin"
+  short_name: "Giọng Rin"
+  aliases: ["Giọng Rin"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+miku-va-meiko:
+  name: "Miku và MEIKO"
+  short_name: "Miku và MEIKO"
+  aliases: ["Miku và MEIKO"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+miku-len-va-meiko:
+  name: "Miku, Len và MEIKO"
+  short_name: "Miku, Len và MEIKO"
+  aliases: ["Miku, Len và MEIKO"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ichika-saki-honami-va-shiho:
+  name: "Ichika, Saki, Honami và Shiho"
+  short_name: "Ichika, Saki, Honami và Shiho"
+  aliases: ["Ichika, Saki, Honami và Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
