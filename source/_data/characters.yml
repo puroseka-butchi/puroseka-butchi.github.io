@@ -833,7 +833,7 @@ tin-nhan-cua-saki:
   name: "Tin nhắn của Saki"
   short_name: "Tin nhắn của Saki"
   aliases: ["Tin nhắn của Saki"]
-  avatar: /images/characters/unknown.svg
+  avatar: /images/characters/project-sekai/saki.png
   color: "#999999"
   text_color: "#444444"
 
@@ -841,7 +841,7 @@ tin-nhan-cua-honami:
   name: "Tin nhắn của Honami"
   short_name: "Tin nhắn của Honami"
   aliases: ["Tin nhắn của Honami"]
-  avatar: /images/characters/unknown.svg
+  avatar: /images/characters/project-sekai/honami.png
   color: "#999999"
   text_color: "#444444"
 
@@ -849,7 +849,7 @@ tin-nhan-cua-shiho:
   name: "Tin nhắn của Shiho"
   short_name: "Tin nhắn của Shiho"
   aliases: ["Tin nhắn của Shiho"]
-  avatar: /images/characters/unknown.svg
+  avatar: /images/characters/project-sekai/shiho.png
   color: "#999999"
   text_color: "#444444"
 
@@ -927,6 +927,56 @@ ichika-saki-honami-va-shiho:
   name: "Ichika, Saki, Honami và Shiho"
   short_name: "Ichika, Saki, Honami và Shiho"
   aliases: ["Ichika, Saki, Honami và Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+nhan-vien:
+  name: "Nhân viên"
+  short_name: "Nhân viên"
+  aliases: ["Nhân viên"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+arisa:
+  name: "Arisa"
+  short_name: "Arisa"
+  aliases: ["Arisa"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nguoi-dan-chuong-trinh:
+  name: "Người dẫn chương trình"
+  short_name: "Người dẫn chương trình"
+  aliases: ["Người dẫn chương trình"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+khan-gia-a:
+  name: "Khán giả A"
+  short_name: "Khán giả A"
+  aliases: ["Khán giả A"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+khan-gia-b:
+  name: "Khán giả B"
+  short_name: "Khán giả B"
+  aliases: ["Khán giả B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ban-dich-moi:
+  name: "？？？"
+  short_name: "？？？"
+  aliases: ["？？？"]
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"

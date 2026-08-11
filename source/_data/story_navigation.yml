@@ -44,7 +44,9 @@ event212:
     - label: Side Stories
       links:
         - label: Ichika (Part1)
+          url: /translations/001052-01/
         - label: Ichika (Part2)
+          url: /translations/001052-02/
         - label: Shiho (Part1)
         - label: Shiho (Part2)
         - label: Rin (Part1)

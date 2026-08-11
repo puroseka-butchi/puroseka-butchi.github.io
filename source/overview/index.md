@@ -94,7 +94,7 @@ toc:
 
 {% library_side_list_item /images/overview/res001_no051_1.png | Bảo tàng bánh mì yakisoba hằng ao ước | | | locked %}
 {% endlibrary_visibility %}
-{% library_side_list_item /images/overview/res001_no052_1.png | Lựa chọn không hối tiếc | | | locked %}
+{% library_side_list_item /images/overview/res001_no052_1.png | Lựa chọn không hối tiếc | /translations/001052-01/| /translations/001052-02/| %}
 {% library_side_list_item /images/overview/res001_no053_1.png | Happy Birthday 2026 | /translations/001053-01/ | /translations/001053-02/| %}
 {% library_side_list_end %}
 
