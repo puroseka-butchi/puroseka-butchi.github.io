@@ -24,6 +24,7 @@ Blog-Launcher.bat
 admin/
 docs/
 tools/
+graphify-out/
 
 # Nội dung làm việc riêng; không dùng thư mục này cho bài đã sẵn sàng public.
 source/_drafts/
