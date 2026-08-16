@@ -980,3 +980,79 @@ ban-dich-moi:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+akari:
+  name: "Akari"
+  short_name: "Akari"
+  aliases: ["Akari"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+yuu:
+  name: "Yuu"
+  short_name: "Yuu"
+  aliases: ["Yuu"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+reina:
+  name: "Reina"
+  short_name: "Reina"
+  aliases: ["Reina"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+binh-luan:
+  name: "Bình luận"
+  short_name: "Bình luận"
+  aliases: ["Bình luận"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+chiharu:
+  name: "Chiharu"
+  short_name: "Chiharu"
+  aliases: ["Chiharu"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+arisawa:
+  name: "Arisawa"
+  short_name: "Arisawa"
+  aliases: ["Arisawa"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+minori-airi-va-shizuku:
+  name: "Minori, Airi và Shizuku"
+  short_name: "Minori, Airi và Shizuku"
+  aliases: ["Minori, Airi và Shizuku"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+hiiragi:
+  name: "Hiiragi"
+  short_name: "Hiiragi"
+  aliases: ["Hiiragi"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+airi-shizuku-va-minori:
+  name: "Airi, Shizuku và Minori"
+  short_name: "Airi, Shizuku và Minori"
+  aliases: ["Airi, Shizuku và Minori"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
