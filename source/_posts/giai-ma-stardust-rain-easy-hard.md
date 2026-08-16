@@ -1,7 +1,7 @@
 ---
 title: Giải mã bí ẩn trong MV "Stardust Rain"
 date: 2026-08-16 16:30
-updated: "2026-08-16 20:51:09"
+updated: "2026-08-16 23:30:21"
 categories:
   - Bài viết
 tags:
@@ -19,6 +19,7 @@ translator: M T
 proofreader: null
 source_url: null
 comments: false
+published: false
 ---
 
 {% scene "/images/articles/stardust-rain-puzzle/cover.jpeg" "" %}
