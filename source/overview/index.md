@@ -125,6 +125,4 @@ toc:
 
 {% library_project Mục khác %}
 
-{% library_notice /images/translations/magical-mirai-2026-kasamura-tota/cover.jpeg| Giải mã bí ẩn trong MV "Stardust Rain" | 2026/08/16 | Xem thêm | /translations/giai-ma-stardust-rain-easy-hard/ | notice %}
-
 {% library_notice /images/translations/magical-mirai-2026-kasamura-tota/mv-07.jpg| Phỏng vấn Kasamura Tota – Magical Mirai 2026 | 2026/07/11 | Xem thêm | /translations/magical-mirai-2026-phong-van-kasamura-tota/ | notice %}

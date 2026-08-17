@@ -1056,3 +1056,146 @@ airi-shizuku-va-minori:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+airi-va-nene:
+  name: "Airi và Nene"
+  short_name: "Airi và Nene"
+  aliases: ["Airi và Nene"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+akito-va-ena:
+  name: "Akito và Ena"
+  short_name: "Akito và Ena"
+  aliases: ["Akito và Ena"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+airi-nene-ena-va-akito:
+  name: "Airi, Nene, Ena và Akito"
+  short_name: "Airi, Nene, Ena và Akito"
+  aliases: ["Airi, Nene, Ena và Akito"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+cac-meiko:
+  name: "Các MEIKO"
+  short_name: "Các MEIKO"
+  aliases: ["Các MEIKO"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+daiki:
+  name: "Daiki"
+  short_name: "Daiki"
+  aliases: ["Daiki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+toshiki:
+  name: "Toshiki"
+  short_name: "Toshiki"
+  aliases: ["Toshiki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-meiko:
+  name: "Giọng MEIKO"
+  short_name: "Giọng MEIKO"
+  aliases: ["Giọng MEIKO"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+quai-vat:
+  name: "Quái vật"
+  short_name: "Quái vật"
+  aliases: ["Quái vật"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+quai-vat-b:
+  name: "Quái vật B"
+  short_name: "Quái vật B"
+  aliases: ["Quái vật B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-nene:
+  name: "Giọng Nene"
+  short_name: "Giọng Nene"
+  aliases: ["Giọng Nene"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+quai-vat-a:
+  name: "Quái vật A"
+  short_name: "Quái vật A"
+  aliases: ["Quái vật A"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+quai-vat-a-va-quai-vat-b:
+  name: "Quái vật A và Quái vật B"
+  short_name: "Quái vật A và Quái vật B"
+  aliases: ["Quái vật A và Quái vật B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-noi:
+  name: "Giọng nói"
+  short_name: "Giọng nói"
+  aliases: ["Giọng nói"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-akito:
+  name: "Giọng Akito"
+  short_name: "Giọng Akito"
+  aliases: ["Giọng Akito"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+nene-va-akito:
+  name: "Nene và Akito"
+  short_name: "Nene và Akito"
+  aliases: ["Nene và Akito"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+airi-akito-ena-va-nene:
+  name: "Airi, Akito, Ena và Nene"
+  short_name: "Airi, Akito, Ena và Nene"
+  aliases: ["Airi, Akito, Ena và Nene"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+akito-nene-va-ena:
+  name: "Akito, Nene và Ena"
+  short_name: "Akito, Nene và Ena"
+  aliases: ["Akito, Nene và Ena"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
