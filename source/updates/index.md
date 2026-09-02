@@ -6,6 +6,7 @@ comments: false
 
 ## Blog V1.0
 - 2026/08/06: Hoàn thiện và công bố blog.
+- 2026/09/03: Cải thiện khả năng lưu trữ.
 
 ## Blog V0.0
 - 2026/07/16: Blog khởi chạy.
