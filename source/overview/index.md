@@ -8,7 +8,18 @@ toc:
 
 {% library_project Event Story %}
 
-{% library_event_card /images/characters/logo/event213.png | Leap Beyond The Limits! - Haruka 7|  %}
+{% library_event_card /images/characters/logo/event215.webp| Mix & Make Party Time! - Luka 1|  %}
+[Chapter 1](/translations/event-215-01/)
+[Chapter 2](/translations/event-215-02/)
+[Chapter 3](/translations/event-215-03/)
+[Chapter 4](/translations/event-215-04/)
+[Chapter 5](/translations/event-215-05/)
+[Chapter 6](/translations/event-215-06/)
+[Chapter 7](/translations/event-215-07/)
+[Chapter 8](/translations/event-215-08/)
+{% endlibrary_event_card %}
+
+{% library_event_card /images/characters/logo/event213.webp| Leap Beyond The Limits! - Haruka 7|  %}
 [Chapter 1]()
 [Chapter 2]()
 [Chapter 3]()
@@ -19,7 +30,7 @@ toc:
 [Chapter 8]()
 {% endlibrary_event_card %}
 
-{% library_event_card /images/characters/logo/event212.png | Echo of a Prayer - Ichika 7|  %}
+{% library_event_card /images/characters/logo/event212.webp| Echo of a Prayer - Ichika 7|  %}
 [Chapter 1](/translations/event-212-01/)
 [Chapter 2](/translations/event-212-02/)
 [Chapter 3](/translations/event-212-03/)

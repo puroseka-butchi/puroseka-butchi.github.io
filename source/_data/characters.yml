@@ -1199,3 +1199,97 @@ akito-nene-va-ena:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+luka-va-len:
+  name: "Luka và Len"
+  short_name: "Luka và Len"
+  aliases: ["Luka và Len"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+mizuki-va-saki:
+  name: "Mizuki và Saki"
+  short_name: "Mizuki và Saki"
+  aliases: ["Mizuki và Saki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+len-va-rin:
+  name: "Len và Rin"
+  short_name: "Len và Rin"
+  aliases: ["Len và Rin"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+toya-va-ichika:
+  name: "Toya và Ichika"
+  short_name: "Toya và Ichika"
+  aliases: ["Toya và Ichika"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+rin-va-shizuku:
+  name: "Rin và Shizuku"
+  short_name: "Rin và Shizuku"
+  aliases: ["Rin và Shizuku"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+miku-len-va-rin:
+  name: "Miku, Len và Rin"
+  short_name: "Miku, Len và Rin"
+  aliases: ["Miku, Len và Rin"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+miku-va-luka:
+  name: "Miku và Luka"
+  short_name: "Miku và Luka"
+  aliases: ["Miku và Luka"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+rin-va-miku:
+  name: "Rin và Miku"
+  short_name: "Rin và Miku"
+  aliases: ["Rin và Miku"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+kaito-va-meiko:
+  name: "KAITO và MEIKO"
+  short_name: "KAITO và MEIKO"
+  aliases: ["KAITO và MEIKO"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-kaito-vbs:
+  name: "Giọng KAITO-vbs"
+  short_name: "Giọng KAITO-vbs"
+  aliases: ["Giọng KAITO-vbs"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+luka-va-rin:
+  name: "Luka và Rin"
+  short_name: "Luka và Rin"
+  aliases: ["Luka và Rin"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"

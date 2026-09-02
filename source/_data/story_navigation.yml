@@ -55,3 +55,24 @@ event212:
         - label: Len (Part2)
         - label: Honami (Part1)
         - label: Honami (Part2)
+event215:
+  title: Mix & Make Party Time!
+  groups:
+    - label: Event Story
+      links:
+        - label: Chapter 1
+          url: /translations/event-215-01/
+        - label: Chapter 2
+          url: /translations/event-215-02/
+        - label: Chapter 3
+          url: /translations/event-215-03/
+        - label: Chapter 4
+          url: /translations/event-215-04/
+        - label: Chapter 5
+          url: /translations/event-215-05/
+        - label: Chapter 6
+          url: /translations/event-215-06/
+        - label: Chapter 7
+          url: /translations/event-215-07/
+        - label: Chapter 8
+          url: /translations/event-215-08/
