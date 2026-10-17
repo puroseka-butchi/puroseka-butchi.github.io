@@ -1293,3 +1293,192 @@ luka-va-rin:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+tin-nhan-cua-miku-niigo:
+  name: "Tin nhắn của Miku-niigo"
+  short_name: "Tin nhắn của Miku-niigo"
+  aliases: ["Tin nhắn của Miku-niigo"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+saki-va-miku:
+  name: "Saki và Miku"
+  short_name: "Saki và Miku"
+  aliases: ["Saki và Miku"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+saki-ichika-honami-va-shiho:
+  name: "Saki, Ichika, Honami và Shiho"
+  short_name: "Saki, Ichika, Honami và Shiho"
+  aliases: ["Saki, Ichika, Honami và Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-emu:
+  name: "Giọng Emu"
+  short_name: "Giọng Emu"
+  aliases: ["Giọng Emu"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+quy-ong-tach-tach:
+  name: "Quý ông Tách Tách"
+  short_name: "Quý ông Tách Tách"
+  aliases: ["Quý ông Tách Tách"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+toy-cruise:
+  name: "Toy Cruise"
+  short_name: "Toy Cruise"
+  aliases: ["Toy Cruise"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nene-tsukasa-va-rui:
+  name: "Nene, Tsukasa và Rui"
+  short_name: "Nene, Tsukasa và Rui"
+  aliases: ["Nene, Tsukasa và Rui"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-tsukasa:
+  name: "Giọng Tsukasa"
+  short_name: "Giọng Tsukasa"
+  aliases: ["Giọng Tsukasa"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+honami-va-shiho:
+  name: "Honami và Shiho"
+  short_name: "Honami và Shiho"
+  aliases: ["Honami và Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+quan-ly-cua-hang:
+  name: "Quản lý cửa hàng"
+  short_name: "Quản lý cửa hàng"
+  aliases: ["Quản lý cửa hàng"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+doi-truong-cau-lac-bo-soft-tennis:
+  name: "Đội trưởng câu lạc bộ Soft Tennis"
+  short_name: "Đội trưởng câu lạc bộ Soft Tennis"
+  aliases: ["Đội trưởng câu lạc bộ Soft Tennis"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+cac-thi-sinh:
+  name: "Các thí sinh"
+  short_name: "Các thí sinh"
+  aliases: ["Các thí sinh"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+airi-va-ena:
+  name: "Airi và Ena"
+  short_name: "Airi và Ena"
+  aliases: ["Airi và Ena"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ichika-va-kohane:
+  name: "Ichika và Kohane"
+  short_name: "Ichika và Kohane"
+  aliases: ["Ichika và Kohane"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+chu-tich:
+  name: "Chủ tịch"
+  short_name: "Chủ tịch"
+  aliases: ["Chủ tịch"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+cac-em-nho:
+  name: "Các em nhỏ"
+  short_name: "Các em nhỏ"
+  aliases: ["Các em nhỏ"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+airi-thoi-cap-hai:
+  name: "Airi thời cấp hai"
+  short_name: "Airi thời cấp hai"
+  aliases: ["Airi thời cấp hai"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+ena-thoi-cap-hai:
+  name: "Ena thời cấp hai"
+  short_name: "Ena thời cấp hai"
+  aliases: ["Ena thời cấp hai"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-cua-me:
+  name: "Giọng của mẹ"
+  short_name: "Giọng của mẹ"
+  aliases: ["Giọng của mẹ"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+ichika-kohane-rui-va-ena:
+  name: "Ichika, Kohane, Rui và Ena"
+  short_name: "Ichika, Kohane, Rui và Ena"
+  aliases: ["Ichika, Kohane, Rui và Ena"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-meiko-ln:
+  name: "Giọng MEIKO-ln"
+  short_name: "Giọng MEIKO-ln"
+  aliases: ["Giọng MEIKO-ln"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+nhan-vien-cua-hang:
+  name: "Nhân viên cửa hàng"
+  short_name: "Nhân viên cửa hàng"
+  aliases: ["Nhân viên cửa hàng"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"

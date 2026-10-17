@@ -8,6 +8,17 @@ toc:
 
 {% library_project Event Story %}
 
+{% library_event_card /images/characters/logo/event220.webp| Stars Off Orbit - Honami 7|  %}
+[Chapter 1](/translations/event-220-01/)
+[Chapter 2](/translations/event-220-02/)
+[Chapter 3](/translations/event-220-03/)
+[Chapter 4](/translations/event-220-04/)
+[Chapter 5]()
+[Chapter 6]()
+[Chapter 7]()
+[Chapter 8]()
+{% endlibrary_event_card %}
+
 {% library_event_card /images/characters/logo/event215.webp| Mix & Make Party Time! - Luka 1|  %}
 [Chapter 1](/translations/event-215-01/)
 [Chapter 2](/translations/event-215-02/)
