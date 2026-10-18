@@ -13,10 +13,10 @@ toc:
 [Chapter 2](/translations/event-220-02/)
 [Chapter 3](/translations/event-220-03/)
 [Chapter 4](/translations/event-220-04/)
-[Chapter 5]()
-[Chapter 6]()
-[Chapter 7]()
-[Chapter 8]()
+[Chapter 5](/translations/event-220-05/)
+[Chapter 6](/translations/event-220-06/)
+[Chapter 7](/translations/event-220-07/)
+[Chapter 8](/translations/event-220-08/)
 {% endlibrary_event_card %}
 
 {% library_event_card /images/characters/logo/event215.webp| Mix & Make Party Time! - Luka 1|  %}
