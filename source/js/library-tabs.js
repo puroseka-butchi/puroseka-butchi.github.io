@@ -6,47 +6,11 @@
   const headings = [...body.querySelectorAll(':scope > .translation-library-project')];
   if (!headings.length) return;
   const tocWrap = document.querySelector('.post-toc-wrap');
-
-  const escapeHtml = value => String(value || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-
-  const ensureId = (element, fallback) => {
-    if (!element.id) element.id = fallback;
-    return element.id;
-  };
-
-  const tocItemsFor = pane => {
-    const selectors = [
-      '.translation-library-series > h2',
-      '.translation-library-feature > h2',
-      '.translation-library-event-card > h2, .translation-library-event-card__title',
-      '.translation-library-grid-section > h3',
-      '.translation-library-card-deck-section > h3',
-      '.translation-library-side-list-section > h3',
-      '.translation-library-notice__content > h3'
-    ];
-    return [...pane.querySelectorAll(selectors.join(','))];
-  };
-
-  const updateToc = item => {
-    if (!tocWrap) return;
-    const projectTitle = item.button.textContent.trim();
-    const children = tocItemsFor(item.pane).map((heading, index) => {
-      const target = heading.closest('section, article') || heading;
-      const id = ensureId(target, `${item.pane.id}-section-${index + 1}`);
-      return `<li class="nav-item nav-level-3"><a class="nav-link" href="#${encodeURIComponent(id)}"><span class="nav-text">${escapeHtml(heading.textContent.trim())}</span></a></li>`;
-    }).join('');
-    tocWrap.innerHTML = `<div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#${encodeURIComponent(item.pane.id)}"><span class="nav-text">${escapeHtml(projectTitle)}</span></a>${children ? `<ol class="nav-child">${children}</ol>` : ''}</li></ol></div>`;
-    const sidebar = tocWrap.closest('.sidebar-inner');
-    if (sidebar) {
-      sidebar.classList.remove('sidebar-overview-active');
-      sidebar.classList.add('sidebar-nav-active', 'sidebar-toc-active');
-    }
-  };
+  const sidebar = tocWrap?.closest('.sidebar-inner');
+  if (sidebar) {
+    sidebar.classList.remove('sidebar-nav-active', 'sidebar-toc-active');
+    sidebar.classList.add('sidebar-overview-active', 'translation-library-sidebar-overview');
+  }
 
   const tabs = document.createElement('div');
   tabs.className = 'translation-library-tabs';
@@ -69,6 +33,9 @@
       pane.append(node);
       node = next;
     }
+    if (pane.querySelector('.translation-library-event-card')) {
+      pane.classList.add('translation-library-pane--event');
+    }
 
     const button = document.createElement('button');
     button.type = 'button';
@@ -88,8 +55,54 @@
       item.button.setAttribute('aria-selected', String(active));
       item.pane.hidden = !active;
     }
-    updateToc(selected);
   };
+
+  for (const item of panes) {
+    const groups = [...item.pane.querySelectorAll('.translation-library-side-list-section')];
+    if (!groups.length) continue;
+    const picker = document.createElement('div');
+    picker.className = 'translation-library-character-picker';
+    picker.setAttribute('role', 'group');
+    picker.setAttribute('aria-label', 'Chọn nhân vật Side Story');
+    item.pane.insertBefore(picker, groups[0]);
+
+    const choices = [];
+    const addChoice = (label, avatar, group) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'translation-library-character-picker__button';
+      button.setAttribute('aria-label', label);
+      button.title = label;
+      if (avatar) {
+        const image = document.createElement('img');
+        image.src = avatar;
+        image.alt = '';
+        image.loading = 'lazy';
+        button.append(image);
+      } else {
+        button.textContent = group ? label.slice(0, 2) : 'Tất cả';
+      }
+      picker.append(button);
+      choices.push({ button, group });
+      button.addEventListener('click', () => selectGroup(group));
+    };
+
+    const selectGroup = selected => {
+      for (const group of groups) group.hidden = Boolean(selected && group !== selected);
+      for (const choice of choices) {
+        const active = choice.group === selected;
+        choice.button.classList.toggle('is-active', active);
+        choice.button.setAttribute('aria-pressed', String(active));
+      }
+    };
+
+    addChoice('Tất cả', '', null);
+    for (const group of groups) {
+      addChoice(group.querySelector('h3')?.textContent.trim() || 'Nhân vật', group.dataset.characterAvatar, group);
+    }
+    item.selectSideSection = selectGroup;
+    selectGroup(groups[0]);
+  }
 
   panes.forEach(item => item.button.addEventListener('click', () => activate(item)));
 
@@ -104,5 +117,7 @@
   const initialPane = hashTarget
     ? panes.find(item => item.pane === hashTarget || item.pane.contains(hashTarget))
     : null;
+  const hashGroup = hashTarget?.closest('.translation-library-side-list-section');
+  if (hashGroup) initialPane?.selectSideSection?.(hashGroup);
   activate(initialPane || panes[0]);
 })();

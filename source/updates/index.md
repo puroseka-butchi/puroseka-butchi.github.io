@@ -4,6 +4,9 @@ date: 2026-07-10 14:00:00
 comments: false
 ---
 
+## Blog V1.1
+- 2026/10/22: Cập nhật giao diện blog: Làm gọn phần chọn bản dịch; cải thiện lưu trữ, chuyển đổi .png sang .webp
+
 ## Blog V1.0
 - 2026/08/06: Hoàn thiện và công bố blog.
 - 2026/09/03: Cải thiện khả năng lưu trữ.

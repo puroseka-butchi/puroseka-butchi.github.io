@@ -145,29 +145,24 @@ hexo.extend.tag.register('library_event_card', function libraryEventCardTag(args
   });
   const translatedCount = chapters.filter(chapter => chapter.url).length;
   const totalCount = chapters.length;
-  const progress = totalCount ? Math.round((translatedCount / totalCount) * 100) : 0;
   const titleContent = eventUrl
     ? `<a href="${escapeHtml(eventUrl)}">${renderMultilineTitle(title)}</a>`
     : renderMultilineTitle(title);
-  const chapterHtml = chapters.map(chapter => chapter.url
-    ? `<a class="translation-library-event-card__chapter is-available" href="${escapeHtml(chapter.url)}">${escapeHtml(chapter.label)}</a>`
-    : `<span class="translation-library-event-card__chapter is-unavailable" aria-disabled="true">${escapeHtml(chapter.label)}</span>`
-  ).join('');
+  const firstChapter = chapters[0];
+  const continueHtml = firstChapter?.url
+    ? `<a class="translation-library-event-card__continue" href="${escapeHtml(firstChapter.url)}">Đọc tiếp</a>`
+    : '<span class="translation-library-event-card__continue is-unavailable" aria-disabled="true">Chưa có bản dịch</span>';
 
   return `<section class="translation-library-event-card" id="${escapeHtml(headingId(plainTitle(title)))}">
     <figure class="translation-library-event-card__cover">
       ${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(plainTitle(title))}" loading="lazy" decoding="async">` : ''}
     </figure>
     <div class="translation-library-event-card__content">
-      <header class="translation-library-event-card__header">
-        <h2 class="translation-library-event-card__title">${titleContent}</h2>
-        ${description ? `<p class="translation-library-event-card__description">${escapeHtml(description)}</p>` : ''}
-      </header>
-      ${totalCount ? `<div class="translation-library-event-card__progress">
-        <span>Đã dịch ${translatedCount}/${totalCount} chương</span>
-        <span class="translation-library-event-card__progress-track" aria-hidden="true"><span style="width: ${progress}%"></span></span>
-      </div>` : ''}
-      ${totalCount ? `<div class="translation-library-event-card__chapters">${chapterHtml}</div>` : ''}
+      <h2 class="translation-library-event-card__title">${titleContent}</h2>
+      <div class="translation-library-event-card__footer">
+        <span class="translation-library-event-card__status">Đã dịch ${translatedCount}/${totalCount}</span>
+        ${continueHtml}
+      </div>
     </div>
   </section>`;
 }, { ends: true });
@@ -259,7 +254,10 @@ hexo.extend.tag.register('library_deck_card', function libraryDeckCardTag(args) 
 hexo.extend.tag.register('library_side_list_start', function librarySideListStartTag(args) {
   const title = stripQuotes(args.join(' '));
   const id = headingId(title);
-  return `<section class="translation-library-side-list-section"${id ? ` id="${escapeHtml(id)}"` : ''}>${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-side-list">`;
+  const characters = hexo.locals.get('data')?.characters || {};
+  const character = Object.entries(characters).find(([, entry]) => entry?.name === title);
+  const avatar = character?.[1]?.avatar || '';
+  return `<section class="translation-library-side-list-section"${id ? ` id="${escapeHtml(id)}"` : ''} data-character-avatar="${escapeHtml(avatar)}">${title ? `<h3>${escapeHtml(title)}</h3>` : ''}<div class="translation-library-side-list">`;
 });
 
 hexo.extend.tag.register('library_side_list_end', function librarySideListEndTag() {

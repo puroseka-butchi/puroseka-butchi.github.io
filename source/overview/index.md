@@ -41,7 +41,7 @@ toc:
 [Chapter 8]()
 {% endlibrary_event_card %}
 
-{% library_event_card /images/characters/logo/event212.webp| Echo of a Prayer - Ichika 7|  %}
+{% library_event_card /images/characters/logo/event212.webp | Echo of a Prayer - Ichika 7 |  %}
 [Chapter 1](/translations/event-212-01/)
 [Chapter 2](/translations/event-212-02/)
 [Chapter 3](/translations/event-212-03/)
@@ -59,7 +59,7 @@ toc:
 {% library_project Side Story %}
 
 {% library_side_list_start Hoshino Ichika %}
-{% library_side_list_item /images/overview/res001_no001_1.png | Nhìn lạnh lùng nhưng rất quan tâm bạn bè | /translations/001001-01/  | /translations/001001-02/ | %}
+{% library_side_list_item /images/overview/res001_no001_1.png | Nhìn lạnh lùng nhưng rất quan tâm bạn bè | /translations/001001-01/ | /translations/001001-02/ |  %}
 
 {% library_visibility hidden %}
 {% library_side_list_item /images/overview/res001_no002_1.png | Leo/Need | | | locked %}
@@ -143,7 +143,6 @@ toc:
 {% library_side_list_start Kagamine Len%}
 {% library_side_list_item /images/overview/res023_no057_1.png | Hãy cứ dõi theo sự lựa chọn đó|   |  |locked %}
 {% library_side_list_end %}
-
 
 {% library_project Mục khác %}
 
