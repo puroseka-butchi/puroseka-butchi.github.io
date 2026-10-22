@@ -1482,3 +1482,110 @@ nhan-vien-cua-hang:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+tieng-shibao:
+  name: "Tiếng Shibao"
+  short_name: "Tiếng Shibao"
+  aliases: ["Tiếng Shibao"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+shibao:
+  name: "Shibao"
+  short_name: "Shibao"
+  aliases: ["Shibao"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+giong-honami:
+  name: "Giọng Honami"
+  short_name: "Giọng Honami"
+  aliases: ["Giọng Honami"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-ichika:
+  name: "Giọng Ichika"
+  short_name: "Giọng Ichika"
+  aliases: ["Giọng Ichika"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-shiho:
+  name: "Giọng Shiho"
+  short_name: "Giọng Shiho"
+  aliases: ["Giọng Shiho"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+nhan-vien-nam:
+  name: "Nhân viên nam"
+  short_name: "Nhân viên nam"
+  aliases: ["Nhân viên nam"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nhan-vien-nu:
+  name: "Nhân viên nữ"
+  short_name: "Nhân viên nữ"
+  aliases: ["Nhân viên nữ"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+emu-va-mizuki:
+  name: "Emu và Mizuki"
+  short_name: "Emu và Mizuki"
+  aliases: ["Emu và Mizuki"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+me:
+  name: "Mẹ"
+  short_name: "Mẹ"
+  aliases: ["Mẹ"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+haru:
+  name: "Haru"
+  short_name: "Haru"
+  aliases: ["Haru"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+bo:
+  name: "Bố"
+  short_name: "Bố"
+  aliases: ["Bố"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nhan-vien-phuc-vu:
+  name: "Nhân viên phục vụ"
+  short_name: "Nhân viên phục vụ"
+  aliases: ["Nhân viên phục vụ"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+haru-va-bo:
+  name: "Haru và bố"
+  short_name: "Haru và bố"
+  aliases: ["Haru và bố"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
