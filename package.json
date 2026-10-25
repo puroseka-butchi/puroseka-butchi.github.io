@@ -6,16 +6,9 @@
   "scripts": {
     "clean": "hexo clean",
     "build": "hexo generate && node scripts/prune-public-assets.js",
-    "server": "node bin/hexo-live-server.js",
-    "server:debug": "node bin/hexo-live-server.js --debug",
-    "server:raw": "hexo server",
-    "admin": "node tools/admin-server.js",
+    "server": "hexo server",
     "new": "hexo new post",
-    "new:interview": "hexo new interview",
-    "convert": "node tools/convert-translation.js",
-    "import:media": "node tools/import-media.js",
-    "test": "npm run test:converter",
-    "test:converter": "node --test --test-isolation=none tools/convert-translation.test.js"
+    "new:interview": "hexo new interview"
   },
   "keywords": [
     "hexo",
