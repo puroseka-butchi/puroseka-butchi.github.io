@@ -126,6 +126,7 @@ toc:
 
 {% library_side_list_start Mochizuki Honami %}
 {% library_side_list_item /images/overview/res003_no055_1.png | Lời động viên ngọt ngào | | | locked %}
+{% library_side_list_item /images/overview/003/003057_1.webp | Happy Birthday 2026 | /translations/003057-01/ | /translations/003057-02/ |  %}
 {% library_side_list_end %}
 
 {% library_side_list_start Hinomori Shiho%}
