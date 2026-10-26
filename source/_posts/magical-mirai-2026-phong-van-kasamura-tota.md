@@ -1,7 +1,7 @@
 ---
 title: Hatsune Miku "Magical Mirai 2026" – Phỏng vấn Kasamura Tota
 date: 2026-07-16 17:00
-updated: "2026-10-22 11:24:18"
+updated: "2026-10-26 11:24:40"
 original_date: "2026-07-01 07:00:00"
 categories:
   - Phỏng vấn
@@ -26,7 +26,7 @@ comments: false
 
 <div class="interview-kicker">MUSIC NATALIE · PHỎNG VẤN ĐẶC BIỆT</div>
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/cover.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/cover.webp" "" %}
 
 <div class="translation-meta">
   <strong>Khách mời:</strong> Kasamura Tota<br>
@@ -95,7 +95,7 @@ Tôi hình dung về một điều gì đó thật lớn lao và rộng mở. T�
 Thực ra, trong yêu cầu từ phía Crypton có ghi rằng: "Chúng tôi hoàn toàn không có vấn đề gì nếu Kasamura Tota sáng tác đúng với thể loại bản thân giỏi nhất". Họ nói với tôi rằng không cần quá chú trọng đến không khí sôi động của buổi biểu diễn, cũng không nhất thiết phải viết một ca khúc có tiết tấu nhanh. Nghe vậy, tôi lập tức nghĩ: "Được rồi, vậy thì mình sẽ làm một bản ballad". Và đó là cách "Sora ni Menjite" ra đời.
 {% endinterview_answer %}
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-01.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-01.webp" "" %}
 
 ## Không một ai có thể đứng ngoài câu chuyện "sống"
 
@@ -115,7 +115,7 @@ Tôi thuộc kiểu người viết lời trước, nên lần này cũng bắt 
 Chắc chắn là cụm từ "Sora ni Menjite". Ngay từ đầu, nó đã luôn giữ một vị trí rất quan trọng. Tôi có cảm giác toàn bộ ca khúc được phát triển xoay quanh chính cụm từ ấy.
 {% endinterview_answer %}
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-02.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-02.webp" "" %}
 
 {% interview_question %}
 <b>Việc đây là ca khúc chủ đề cho một sự kiện đã ảnh hưởng như thế nào đến quá trình sản xuất?</b>
@@ -135,7 +135,7 @@ Khi nhận được bản demo phối khí đầu tiên, tôi đã xúc động 
 Khi nhiều nhạc cụ cùng vang lên và phần trình diễn dần tiến đến cao trào, giọng hát của Hatsune Miku lại tạo cảm giác hơi đơn điệu. Tôi cảm thấy cách hát đó chưa thực sự hòa quyện với sức sống của phần nhạc cụ, nên đã thử nghiệm một phương pháp điều chỉnh giọng hát hoàn toàn khác so với trước đây. Đây cũng là một trong những công đoạn khó khăn nhất của lần sáng tác này.
 {% endinterview_answer %}
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-03.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-03.webp" "" %}
 
 {% interview_question %}
 <b>Chị đã điều chỉnh giọng hát theo phương pháp nào?</b>
@@ -153,7 +153,7 @@ Khi nhiều nhạc cụ cùng vang lên và phần trình diễn dần tiến đ
 Vâng, đó là điều tôi chưa từng làm trước đây. Tuy vậy, tôi không cảm thấy mình đang tạo ra một thứ quá xa rời những ca khúc Vocaloid đã làm trong quá khứ. Ngược lại, tôi có cảm giác rằng vào đúng thời điểm cần thiết, mình đã đưa được những gì tốt nhất tích lũy trên hành trình vừa qua vào tác phẩm này.
 {% endinterview_answer %}
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-04.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-04.webp" "" %}
 
 {% interview_question %}
 <b>Trên trang web chính thức của "Magical Mirai", chị có để lại lời bình luận về thông điệp liên quan đến việc "sống". Trong số các Vocaloid-P, có người xem Miku là một nhân vật, có người xem cô ấy là phần mềm, cũng có người xem cô ấy như một phần của chính mình. Vậy vì sao chị lại chọn chủ đề "sống"?</b>
@@ -191,7 +191,7 @@ Trong ca khúc có cụm từ "bầu trời u ám", nhưng ngoài đời thực,
 Tôi rất thích khoảnh khắc bông hoa hướng dương trong tay Miku-san dần héo tàn, nhưng rồi cô ấy nhận được hoa từ rất nhiều người, để sau đó những bông hoa ấy lan rộng khắp bầu trời.
 {% endinterview_answer %}
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-05.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-05.webp" "" %}
 
 ## Hatsune Miku là "người ca sĩ tuyệt vời nhất mà tôi có thể tự hào với cả thế giới"
 
@@ -239,7 +239,7 @@ Trước đây, tôi từng gửi ca khúc "LIFE" tham dự cuộc thi sáng tá
 Tôi đã viết lại những dòng như vậy. Lần đó, tôi không giành chiến thắng trong cuộc thi, nhưng ca khúc <b>Boku ga Yume wo Sutete Otona ni Naru made</b> của tôi lại được trình diễn trên sân khấu "Magical Mirai 2019". Vì đó là trải nghiệm đầu tiên như vậy nên tôi đã đến xem trực tiếp. Thế nhưng, Hatsune Miku mà tôi nhìn thấy trên sân khấu hôm ấy không còn là Hatsune Miku mà tôi từng biết. Cho đến tận ngày hôm đó, tôi chỉ biết một Hatsune Miku sống trong chiếc máy tính của mình, một con người cùng tôi thức khuya làm nhạc, cùng tôi cất tiếng hát và cùng tôi bước đi. Vậy mà trên sân khấu ấy, em ấy lại đang đón nhận tiếng reo hò của vô số khán giả. Kể từ khoảnh khắc nhìn thấy hình ảnh ấy, cách tôi nghĩ về em đã thay đổi rất nhiều.
 {% endinterview_answer %}
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-06.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-06.webp" "" %}
 
 {% interview_question %}
 <b>Cụ thể, suy nghĩ của chị đã thay đổi như thế nào?</b>
@@ -269,7 +269,7 @@ Gần đây, tôi tìm thấy tờ giấy mình viết từ hai năm trước, t
 Vâng. Những ca khúc tôi thường sáng tác không thuộc kiểu có tiết tấu nhanh, trong khi ca khúc chủ đề của "Magical Mirai" lại luôn gắn với hình ảnh uptempo rất mạnh. Vì vậy, thú thật là hai năm trước, tôi đã nghĩ mình sẽ chẳng bao giờ nhận được lời mời này. Thế nhưng, dù vậy, tôi vẫn luôn giữ mong ước ấy trong lòng. Để rồi cuối cùng, tôi lại được giao trọng trách sáng tác bằng chính thể loại ballad mà mình giỏi nhất. Tôi thực sự, thực sự vô cùng hạnh phúc.
 {% endinterview_answer %}
 
-{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-07.jpg" "" %}
+{% scene "/images/translations/magical-mirai-2026-kasamura-tota/mv-07.webp" "" %}
 
 {% interview_question %}
 <b>Tôi nghĩ cách chị thể hiện tác phẩm này đã chứng minh rằng "dùng một bản ballad làm ca khúc chủ đề cho sự kiện cũng hoàn toàn ổn", đồng thời góp phần mở rộng biên độ biểu đạt cho "Magical Mirai" trong tương lai.</b>

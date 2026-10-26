@@ -8,7 +8,7 @@ toc:
 
 {% library_project Event Story %}
 
-{% library_event_card /images/characters/logo/event220.webp| Stars Off Orbit - Honami 7|  %}
+{% library_event_card /images/characters/logo/event220.webp | Stars Off Orbit - Honami 7 |  %}
 [Chapter 1](/translations/event-220-01/)
 [Chapter 2](/translations/event-220-02/)
 [Chapter 3](/translations/event-220-03/)
@@ -59,90 +59,90 @@ toc:
 {% library_project Side Story %}
 
 {% library_side_list_start Hoshino Ichika %}
-{% library_side_list_item /images/overview/res001_no001_1.png | Nhìn lạnh lùng nhưng rất quan tâm bạn bè | /translations/001001-01/ | /translations/001001-02/ |  %}
+{% library_side_list_item /images/overview/001/001001_1.webp | Nhìn lạnh lùng nhưng rất quan tâm bạn bè | /translations/001001-01/ | /translations/001001-02/ |  %}
 
 {% library_visibility hidden %}
-{% library_side_list_item /images/overview/res001_no002_1.png | Leo/Need | | | locked %}
-{% library_side_list_item /images/overview/res001_no003_1.png | Nơi ánh mắt ngước nhìn| | | locked %}
-{% library_side_list_item /images/overview/res001_no004_1.png | Chuyện trò trước bình minh| | | locked %}
-{% library_side_list_item /images/overview/res001_no005_1.png | Nhịp bước của những vì sao| | | locked %}
-{% library_side_list_item /images/overview/res001_no006_1.png | Nụ cười đã trở lại| | | locked %}
-{% library_side_list_item /images/overview/res001_no007_1.png | Mong một ngày nắng đẹp| | | locked %}
-{% library_side_list_item /images/overview/res001_no008_1.png | Xin gửi đến cậu, những tâm tư này| | | locked %}
-{% library_side_list_item /images/overview/res001_no009_1.png | Chiếc ô chờ ngày nắng| | | locked %}
-{% library_side_list_item /images/overview/res001_no010_1.png | Mảnh sao kết nối những tâm tình| | | locked %}
+{% library_side_list_item /images/overview/001/001002_1.webp | Leo/Need | | | locked %}
+{% library_side_list_item /images/overview/001/001003_1.webp | Nơi ánh mắt ngước nhìn| | | locked %}
+{% library_side_list_item /images/overview/001/001004_1.webp | Chuyện trò trước bình minh| | | locked %}
+{% library_side_list_item /images/overview/001/001005_1.webp | Nhịp bước của những vì sao| | | locked %}
+{% library_side_list_item /images/overview/001/001006_1.webp | Nụ cười đã trở lại| | | locked %}
+{% library_side_list_item /images/overview/001/001007_1.webp | Mong một ngày nắng đẹp| | | locked %}
+{% library_side_list_item /images/overview/001/001008_1.webp | Xin gửi đến cậu, những tâm tư này| | | locked %}
+{% library_side_list_item /images/overview/001/001009_1.webp | Chiếc ô chờ ngày nắng| | | locked %}
+{% library_side_list_item /images/overview/001/001010_1.webp | Mảnh sao kết nối những tâm tình| | | locked %}
 
-{% library_side_list_item /images/overview/res001_no011_1.png | Bầu trời sao thuở ấy| | | locked %}
-{% library_side_list_item /images/overview/res001_no012_1.png | Hướng đi của bài hát mới| | | locked %}
-{% library_side_list_item /images/overview/res001_no013_1.png | Mối duyên từ một chiếc CD| | | locked %}
-{% library_side_list_item /images/overview/res001_no014_1.png | Cậu nghe hết rồi à!? | | | locked %}
-{% library_side_list_item /images/overview/res001_no015_1.png | Trước cả khi kịp nghĩ | | | locked %}
-{% library_side_list_item /images/overview/res001_no016_1.png | Mình phải chủ động mới được | | | locked %}
-{% library_side_list_item /images/overview/res001_no017_1.png | Hãy cho mình nghe bài hát ấy | | | locked %}
-{% library_side_list_item /images/overview/res001_no018_1.png | Happy Birthday！！2022 | | | locked %}
-{% library_side_list_item /images/overview/res001_no019_1.png | Chờ khoảnh khắc cảm hứng lóe lên | | | locked %}
-{% library_side_list_item /images/overview/res001_no020_1.png | Âm sắc kết nối đôi ta | | | locked %}
+{% library_side_list_item /images/overview/001/001011_1.webp | Bầu trời sao thuở ấy| | | locked %}
+{% library_side_list_item /images/overview/001/001012_1.webp | Hướng đi của bài hát mới| | | locked %}
+{% library_side_list_item /images/overview/001/001013_1.webp | Mối duyên từ một chiếc CD| | | locked %}
+{% library_side_list_item /images/overview/001/001014_1.webp | Cậu nghe hết rồi à!? | | | locked %}
+{% library_side_list_item /images/overview/001/001015_1.webp | Trước cả khi kịp nghĩ | | | locked %}
+{% library_side_list_item /images/overview/001/001016_1.webp | Mình phải chủ động mới được | | | locked %}
+{% library_side_list_item /images/overview/001/001017_1.webp | Hãy cho mình nghe bài hát ấy | | | locked %}
+{% library_side_list_item /images/overview/001/001018_1.webp | Happy Birthday！！2022 | | | locked %}
+{% library_side_list_item /images/overview/001/001019_1.webp | Chờ khoảnh khắc cảm hứng lóe lên | | | locked %}
+{% library_side_list_item /images/overview/001/001020_1.webp | Âm sắc kết nối đôi ta | | | locked %}
 
-{% library_side_list_item /images/overview/res001_no021_1.png | Tin nhắn cảm ơn đầy hồi hộp| | | locked %}
-{% library_side_list_item /images/overview/res001_no022_1.png | Ấm áp trong bóng tối nhạt nhòa| | | locked %}
-{% library_side_list_item /images/overview/res001_no023_1.png | Tin nhắn hằng mong đợi| | | locked %}
-{% library_side_list_item /images/overview/res001_no024_1.png | Cuộc trốn chạy trên mặt nước | | | locked %}
-{% library_side_list_item /images/overview/res001_no025_1.png | Lời thề giấu kín trong tim | | | locked %}
-{% library_side_list_item /images/overview/res001_no026_1.png | Happy Birthday！！2023 | | | locked %}
-{% library_side_list_item /images/overview/res001_no027_1.png | Brand New Style | | | locked %}
-{% library_side_list_item /images/overview/res001_no028_1.png | Một hành trình mới bắt đầu | | | locked %}
-{% library_side_list_item /images/overview/res001_no029_1.png | Để truyền tới những thanh âm tuyệt vời | | | locked %}
+{% library_side_list_item /images/overview/001/001021_1.webp | Tin nhắn cảm ơn đầy hồi hộp| | | locked %}
+{% library_side_list_item /images/overview/001/001022_1.webp | Ấm áp trong bóng tối nhạt nhòa| | | locked %}
+{% library_side_list_item /images/overview/001/001023_1.webp | Tin nhắn hằng mong đợi| | | locked %}
+{% library_side_list_item /images/overview/001/001024_1.webp | Cuộc trốn chạy trên mặt nước | | | locked %}
+{% library_side_list_item /images/overview/001/001025_1.webp | Lời thề giấu kín trong tim | | | locked %}
+{% library_side_list_item /images/overview/001/001026_1.webp | Happy Birthday！！2023 | | | locked %}
+{% library_side_list_item /images/overview/001/001027_1.webp | Brand New Style | | | locked %}
+{% library_side_list_item /images/overview/001/001028_1.webp | Một hành trình mới bắt đầu | | | locked %}
+{% library_side_list_item /images/overview/001/001029_1.webp | Để truyền tới những thanh âm tuyệt vời | | | locked %}
 
-{% library_side_list_item /images/overview/res001_no031_1.png | Cẩn thận bị nẫng tay trên!| | | locked %}
-{% library_side_list_item /images/overview/res001_no032_1.png | Cứ từ từ thôi, không sao đâu| | | locked %}
-{% library_side_list_item /images/overview/res001_no033_1.png |  Xuất hiện trước đôi bạn đang phiền muộn| | | locked %}
-{% library_side_list_item /images/overview/res001_no034_1.png | Vào một đêm không thể tiến bước| | | locked %}
-{% library_side_list_item /images/overview/res001_no035_1.png | Chặng đường chúng ta cùng bước | | | locked %}
-{% library_side_list_item /images/overview/res001_no036_1.png | Happy Birthday！！2024 | | | locked %}
-{% library_side_list_item /images/overview/res001_no037_1.png | Cuộc gặp gỡ với Miku | | | locked %}
-{% library_side_list_item /images/overview/res001_no038_1.png | Với một bản thân khác ngày thường| | | locked %}
-{% library_side_list_item /images/overview/res001_no040_1.png | Vẽ nên ánh rạng ngời | | | locked %}
+{% library_side_list_item /images/overview/001/001031_1.webp | Cẩn thận bị nẫng tay trên!| | | locked %}
+{% library_side_list_item /images/overview/001/001032_1.webp | Cứ từ từ thôi, không sao đâu| | | locked %}
+{% library_side_list_item /images/overview/001/001033_1.webp |  Xuất hiện trước đôi bạn đang phiền muộn| | | locked %}
+{% library_side_list_item /images/overview/001/001034_1.webp | Vào một đêm không thể tiến bước| | | locked %}
+{% library_side_list_item /images/overview/001/001035_1.webp | Chặng đường chúng ta cùng bước | | | locked %}
+{% library_side_list_item /images/overview/001/001036_1.webp | Happy Birthday！！2024 | | | locked %}
+{% library_side_list_item /images/overview/001/001037_1.webp | Cuộc gặp gỡ với Miku | | | locked %}
+{% library_side_list_item /images/overview/001/001038_1.webp | Với một bản thân khác ngày thường| | | locked %}
+{% library_side_list_item /images/overview/001/001040_1.webp | Vẽ nên ánh rạng ngời | | | locked %}
 
-{% library_side_list_item /images/overview/res001_no041_1.png | Muốn khen thì cứ nói thẳng| | | locked %}
-{% library_side_list_item /images/overview/res001_no042_1.png | Thanh âm gửi trao bằng cả thân tâm | | | locked %}
-{% library_side_list_item /images/overview/res001_no043_1.png | Cảm xúc chẳng thể gọi thành tên| | | locked %}
-{% library_side_list_item /images/overview/res001_no044_1.png | Be With You | | | locked %}
-{% library_side_list_item /images/overview/res001_no045_1.png | Happy Birthday！！2025 | | | locked %}
-{% library_side_list_item /images/overview/res001_no046_1.png | Buổi sáng đầy chấn động | | | locked %}
-{% library_side_list_item /images/overview/res001_no047_1.png | Những lời dệt nên dành cho "bạn"| | | locked %}
-{% library_side_list_item /images/overview/res001_no048_1.png | Buổi diễn VR đầy tò mò | | | locked %}
-{% library_side_list_item /images/overview/res001_no049_1.png | Sai sót bất ngờ mang nụ cười tới | | | locked %}
-{% library_side_list_item /images/overview/res001_no050_1.png | Có tận 4 Miku | | | locked %}
+{% library_side_list_item /images/overview/001/001041_1.webp | Muốn khen thì cứ nói thẳng| | | locked %}
+{% library_side_list_item /images/overview/001/001042_1.webp | Thanh âm gửi trao bằng cả thân tâm | | | locked %}
+{% library_side_list_item /images/overview/001/001043_1.webp | Cảm xúc chẳng thể gọi thành tên| | | locked %}
+{% library_side_list_item /images/overview/001/001044_1.webp | Be With You | | | locked %}
+{% library_side_list_item /images/overview/001/001045_1.webp | Happy Birthday！！2025 | | | locked %}
+{% library_side_list_item /images/overview/001/001046_1.webp | Buổi sáng đầy chấn động | | | locked %}
+{% library_side_list_item /images/overview/001/001047_1.webp | Những lời dệt nên dành cho "bạn"| | | locked %}
+{% library_side_list_item /images/overview/001/001048_1.webp | Buổi diễn VR đầy tò mò | | | locked %}
+{% library_side_list_item /images/overview/001/001049_1.webp | Sai sót bất ngờ mang nụ cười tới | | | locked %}
+{% library_side_list_item /images/overview/001/001050_1.webp | Có tận 4 Miku | | | locked %}
 
-{% library_side_list_item /images/overview/res001_no051_1.png | Bảo tàng bánh mì yakisoba hằng ao ước | | | locked %}
+{% library_side_list_item /images/overview/001/001051_1.webp | Bảo tàng bánh mì yakisoba hằng ao ước | | | locked %}
 {% endlibrary_visibility %}
-{% library_side_list_item /images/overview/res001_no052_1.png | Lựa chọn không hối tiếc | /translations/001052-01/| /translations/001052-02/| %}
-{% library_side_list_item /images/overview/res001_no053_1.png | Happy Birthday 2026 | /translations/001053-01/ | /translations/001053-02/| %}
+{% library_side_list_item /images/overview/001/001052_1.webp | Lựa chọn không hối tiếc | /translations/001052-01/| /translations/001052-02/| %}
+{% library_side_list_item /images/overview/001/001053_1.webp | Happy Birthday 2026 | /translations/001053-01/ | /translations/001053-02/| %}
 {% library_side_list_end %}
 
 {% library_side_list_start Tenma Saki %}
-{% library_side_list_item /images/overview/res002_no055_1.png | Điều đã từ bỏ ngày hôm ấy | | | locked %}
+{% library_side_list_item /images/overview/002/002055_1.webp | Điều đã từ bỏ ngày hôm ấy | | | locked %}
 {% library_side_list_end %}
 
 {% library_side_list_start Mochizuki Honami %}
-{% library_side_list_item /images/overview/res003_no055_1.png | Lời động viên ngọt ngào | | | locked %}
+{% library_side_list_item /images/overview/003/003055_1.webp | Lời động viên ngọt ngào | | | locked %}
 {% library_side_list_item /images/overview/003/003057_1.webp | Happy Birthday 2026 | /translations/003057-01/ | /translations/003057-02/ |  %}
 {% library_side_list_end %}
 
 {% library_side_list_start Hinomori Shiho%}
-{% library_side_list_item /images/overview/res004_no057_1.png | Nỗi niềm vướng bận nơi đáy lòng | | | locked %}
+{% library_side_list_item /images/overview/004/004057_1.webp | Nỗi niềm vướng bận nơi đáy lòng | | | locked %}
 {% library_side_list_end %}
 
 {% library_side_list_start Kusanagi Nene %}
-{% library_side_list_item /images/overview/res015_no054_1.png | Happy Birthday 2026 | /translations/015054-01/  | /translations/015054-02/  | %}
+{% library_side_list_item /images/overview/015/015054_1.webp | Happy Birthday 2026 | /translations/015054-01/  | /translations/015054-02/  | %}
 {% library_side_list_end %}
 
 {% library_side_list_start Kagamine Rin%}
-{% library_side_list_item /images/overview/res022_no054_1.png | Có quá trời việc phải làm!? |   |  |locked %}
+{% library_side_list_item /images/overview/022/022054_1.webp | Có quá trời việc phải làm!? |   |  |locked %}
 {% library_side_list_end %}
 
 {% library_side_list_start Kagamine Len%}
-{% library_side_list_item /images/overview/res023_no057_1.png | Hãy cứ dõi theo sự lựa chọn đó|   |  |locked %}
+{% library_side_list_item /images/overview/023/023057_1.webp | Hãy cứ dõi theo sự lựa chọn đó|   |  |locked %}
 {% library_side_list_end %}
 
 {% library_project Mục khác %}
