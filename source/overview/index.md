@@ -145,6 +145,6 @@ toc:
 {% library_side_list_item /images/overview/023/023057_1.webp | Hãy cứ dõi theo sự lựa chọn đó|   |  |locked %}
 {% library_side_list_end %}
 
-{% library_project Mục khác %}
-
-{% library_notice /images/translations/magical-mirai-2026-kasamura-tota/mv-07.jpg| Phỏng vấn Kasamura Tota – Magical Mirai 2026 | 2026/07/11 | Xem thêm | /translations/magical-mirai-2026-phong-van-kasamura-tota/ | notice %}
+{% library_project Bài viết %}
+{% library_notice /images/translations/preview_design/Airi7/1.webp | Phỏng vấn thiết kế minh họa - Open up new horizons! | 2026/10/31 | Xem thêm | /translations/preview-design-airi7/ | notice %}
+{% library_notice /images/translations/magical-mirai-2026-kasamura-tota/mv-07.webp| Phỏng vấn Kasamura Tota - Magical Mirai 2026 | 2026/07/11 | Xem thêm | /translations/magical-mirai-2026-phong-van-kasamura-tota/ | notice %}

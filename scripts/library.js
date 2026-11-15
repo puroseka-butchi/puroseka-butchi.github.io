@@ -285,21 +285,26 @@ hexo.extend.tag.register('library_side_list_item', function librarySideListItemT
 });
 
 hexo.extend.tag.register('library_notice', function libraryNoticeTag(args) {
-  const [image = '', title = 'Thông báo', date = '', label = 'Đọc thêm', url = '', variant = 'notice'] = parsePipeArguments(args);
+  const [image = '', title = 'Thông báo', date = '', , url = ''] = parsePipeArguments(args);
   const imageHtml = image
     ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async">`
     : '';
-  const action = url
-    ? `<a class="translation-library-notice__button translation-library-notice__button--${escapeHtml(variant)}" href="${escapeHtml(url)}">${escapeHtml(label)}</a>`
-    : `<span class="translation-library-notice__button translation-library-notice__button--${escapeHtml(variant)}">${escapeHtml(label)}</span>`;
-  return `<article class="translation-library-notice">
+  const category = title.match(/^(Phỏng vấn|Hậu trường)(?:\s|$)/i)?.[1] || '';
+  const dateParts = date.match(/^(\d{4})[/-](\d{2})[/-](\d{2})$/);
+  const displayDate = dateParts ? `${dateParts[3]}.${dateParts[2]}.${dateParts[1]}` : date;
+  const dateHtml = date
+    ? `<time${dateParts ? ` datetime="${dateParts[1]}-${dateParts[2]}-${dateParts[3]}"` : ''}>${escapeHtml(displayDate)}</time>`
+    : '';
+  const content = `
     ${imageHtml ? `<figure class="translation-library-notice__image">${imageHtml}</figure>` : ''}
     <div class="translation-library-notice__content">
-      <h3 id="${escapeHtml(headingId(title))}">${escapeHtml(title)}</h3>
-      ${date ? `<time>${escapeHtml(date)}</time>` : ''}
-    </div>
-    ${action}
-  </article>`;
+      <div class="translation-library-notice__meta">${category ? `<span class="translation-library-notice__category">${escapeHtml(category)}</span>` : ''}${category && dateHtml ? '<span aria-hidden="true"> · </span>' : ''}${dateHtml}</div>
+      <h3>${escapeHtml(title)}</h3>
+      ${url ? '<span class="translation-library-notice__read">Đọc bài viết ↗</span>' : ''}
+    </div>`;
+  return url
+    ? `<a class="translation-library-notice" id="${escapeHtml(headingId(title))}" href="${escapeHtml(url)}">${content}</a>`
+    : `<article class="translation-library-notice" id="${escapeHtml(headingId(title))}">${content}</article>`;
 });
 
 hexo.extend.tag.register('library_episode', function libraryEpisodeTag(args, content) {

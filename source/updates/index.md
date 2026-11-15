@@ -5,6 +5,7 @@ comments: false
 ---
 
 ## Blog V1.1
+- 2026/11/15: Cập nhật chọn "Bài viết".
 - 2026/10/22: Cập nhật giao diện blog: Làm gọn phần chọn bản dịch; cải thiện lưu trữ, chuyển đổi .png sang .webp
 
 ## Blog V1.0

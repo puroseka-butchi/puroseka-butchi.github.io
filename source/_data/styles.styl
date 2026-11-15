@@ -139,8 +139,7 @@ body::before
 .post-button .btn,
 .translation-library-tab,
 .translation-library-event-card,
-.translation-library-side-list__item,
-.translation-library-notice
+.translation-library-side-list__item
   -webkit-backdrop-filter: blur(10px)
   backdrop-filter: blur(10px)
 
@@ -1406,55 +1405,57 @@ html[data-theme="dark"] .story-series-nav th
 
 .translation-library-notice
   align-items: center
-  background: #fff
-  border-radius: 12px
-  box-shadow: 0 2px 9px rgba(33, 31, 48, .22)
+  border-bottom: 1px solid rgba(75, 72, 100, .18)
+  color: inherit
   display: grid
-  gap: 24px
-  grid-template-columns: minmax(140px, 280px) 1fr auto
-  margin: 1em auto
-  padding: 18px 24px
+  gap: 16px
+  grid-template-columns: 154px minmax(0, 1fr)
+  margin: 0
+  padding: 14px 2px
+  text-decoration: none
+
+.translation-library-notice:hover
+  color: inherit
+  background: rgba(75, 72, 100, .05)
+
+.translation-library-notice:focus-visible
+  outline: 2px solid $brand
+  outline-offset: 2px
 
 .translation-library-notice__image
   margin: 0 !important
 
 .translation-library-notice__image img
-  border: 2px solid #62607c
-  border-radius: 8px
+  border-radius: 7px
   display: block
   margin: 0
-  max-height: 92px
   object-fit: cover
-  width: 100%
+  height: 112px
+  width: 154px
+
+.translation-library-notice__meta
+  color: var(--text-color)
+  font-size: .78em
+  margin-bottom: .65em
+  opacity: .7
+
+.translation-library-notice__category
+  text-transform: uppercase
 
 .translation-library-notice__content h3
-  color: #4b4864
-  font-size: 1.25em
-  font-weight: 900
+  color: var(--text-color)
+  font-size: 1.14em
+  font-weight: 700
   line-height: 1.35
-  margin: 0 0 .4em
+  margin: 0 0 .55em
 
 .translation-library-notice__content time
-  color: #57536e
-  display: block
-  font-size: 1.05em
-  letter-spacing: .04em
+  color: inherit
 
-.translation-library-notice__button
-  border: 0
-  border-radius: 10px
-  color: #fff
-  display: inline-block
-  font-weight: 900
-  min-width: 132px
-  padding: .55em 1.1em
-  text-align: center
-
-.translation-library-notice__button--gacha
-  background: #f64b99
-
-.translation-library-notice__button--notice
-  background: #32c7bb
+.translation-library-notice__read
+  color: var(--text-color)
+  font-size: .86em
+  opacity: .72
 
 .translation-library-episode
   margin: .4em auto
@@ -1495,9 +1496,11 @@ html[data-theme="dark"] .translation-library-side-card.is-wip img,
 html[data-theme="dark"] .translation-library-side-card__art.is-wip img
   opacity: .48
 
-html[data-theme="dark"] .translation-library-side-list__item,
-html[data-theme="dark"] .translation-library-notice
+html[data-theme="dark"] .translation-library-side-list__item
   background: #34323f
+
+html[data-theme="dark"] .translation-library-notice
+  border-color: rgba(235, 235, 245, .2)
 
 html[data-theme="dark"] .translation-library-event-card
   background: #302f3a
@@ -1708,11 +1711,16 @@ html[data-theme="dark"]
     width: 68px
   .translation-library-notice
     gap: 12px
-    grid-template-columns: 1fr
-    padding: 14px
-    text-align: center
-  .translation-library-notice__button
-    justify-self: center
+    grid-template-columns: 96px minmax(0, 1fr)
+    padding: 12px 2px
+  .translation-library-notice__image img
+    height: 76px
+    width: 96px
+  .translation-library-notice__meta
+    margin-bottom: .35em
+  .translation-library-notice__content h3
+    font-size: .98em
+    margin-bottom: .35em
   .translation-library-links a
     margin: 0 .3em
   .translation-meta, .translation-note

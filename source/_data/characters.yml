@@ -1589,3 +1589,268 @@ haru-va-bo:
   avatar: /images/characters/unknown.svg
   color: "#999999"
   text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+kohane-va-luka:
+  name: "Kohane và Luka"
+  short_name: "Kohane và Luka"
+  aliases: ["Kohane và Luka"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-len-vbs:
+  name: "Giọng Len-vbs"
+  short_name: "Giọng Len-vbs"
+  aliases: ["Giọng Len-vbs"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giong-rin-vbs:
+  name: "Giọng Rin-vbs"
+  short_name: "Giọng Rin-vbs"
+  aliases: ["Giọng Rin-vbs"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+miku-va-moi-nguoi:
+  name: "Miku và mọi người"
+  short_name: "Miku và mọi người"
+  aliases: ["Miku và mọi người"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+ena-airi-nene-va-akito:
+  name: "Ena, Airi, Nene và Akito"
+  short_name: "Ena, Airi, Nene và Akito"
+  aliases: ["Ena, Airi, Nene và Akito"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+loi-nhan-thu-nhat:
+  name: "Lời nhắn thứ nhất"
+  short_name: "Lời nhắn thứ nhất"
+  aliases: ["Lời nhắn thứ nhất"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+loi-nhan-thu-hai:
+  name: "Lời nhắn thứ hai"
+  short_name: "Lời nhắn thứ hai"
+  aliases: ["Lời nhắn thứ hai"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nhung-loi-nhan-khac:
+  name: "Những lời nhắn khác"
+  short_name: "Những lời nhắn khác"
+  aliases: ["Những lời nhắn khác"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+minori-va-airi:
+  name: "Minori và Airi"
+  short_name: "Minori và Airi"
+  aliases: ["Minori và Airi"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+shizuku-va-haruka:
+  name: "Shizuku và Haruka"
+  short_name: "Shizuku và Haruka"
+  aliases: ["Shizuku và Haruka"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+thanh-vien-a:
+  name: "Thành viên A"
+  short_name: "Thành viên A"
+  aliases: ["Thành viên A"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+thanh-vien-b:
+  name: "Thành viên B"
+  short_name: "Thành viên B"
+  aliases: ["Thành viên B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+cac-thanh-vien:
+  name: "Các thành viên"
+  short_name: "Các thành viên"
+  aliases: ["Các thành viên"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+marina:
+  name: "Marina"
+  short_name: "Marina"
+  aliases: ["Marina"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+thu-cua-nguoi-ham-mo:
+  name: "Thư của người hâm mộ"
+  short_name: "Thư của người hâm mộ"
+  aliases: ["Thư của người hâm mộ"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+thuc-tap-sinh-a:
+  name: "Thực tập sinh A"
+  short_name: "Thực tập sinh A"
+  aliases: ["Thực tập sinh A"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+thuc-tap-sinh-b:
+  name: "Thực tập sinh B"
+  short_name: "Thực tập sinh B"
+  aliases: ["Thực tập sinh B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+dan-chi-thuc-tap-sinh:
+  name: "Đàn chị thực tập sinh"
+  short_name: "Đàn chị thực tập sinh"
+  aliases: ["Đàn chị thực tập sinh"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+nha-san-xuat:
+  name: "Nhà sản xuất"
+  short_name: "Nhà sản xuất"
+  aliases: ["Nhà sản xuất"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+cac-thuc-tap-sinh:
+  name: "Các thực tập sinh"
+  short_name: "Các thực tập sinh"
+  aliases: ["Các thực tập sinh"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+khach-mua-sam-a:
+  name: "Khách mua sắm A"
+  short_name: "Khách mua sắm A"
+  aliases: ["Khách mua sắm A"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+khach-mua-sam-b:
+  name: "Khách mua sắm B"
+  short_name: "Khách mua sắm B"
+  aliases: ["Khách mua sắm B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+dan-chi-thuc-tap-sinh-a:
+  name: "Đàn chị thực tập sinh A"
+  short_name: "Đàn chị thực tập sinh A"
+  aliases: ["Đàn chị thực tập sinh A"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+dan-chi-thuc-tap-sinh-b:
+  name: "Đàn chị thực tập sinh B"
+  short_name: "Đàn chị thực tập sinh B"
+  aliases: ["Đàn chị thực tập sinh B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+nhung-nguoi-qua-duong:
+  name: "Những người qua đường"
+  short_name: "Những người qua đường"
+  aliases: ["Những người qua đường"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giam-khao-a:
+  name: "Giám khảo A"
+  short_name: "Giám khảo A"
+  aliases: ["Giám khảo A"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giam-khao-b:
+  name: "Giám khảo B"
+  short_name: "Giám khảo B"
+  aliases: ["Giám khảo B"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+giam-khao-c:
+  name: "Giám khảo C"
+  short_name: "Giám khảo C"
+  aliases: ["Giám khảo C"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+thanh-vien:
+  name: "Thành viên"
+  short_name: "Thành viên"
+  aliases: ["Thành viên"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+tat-ca-moi-nguoi:
+  name: "Tất cả mọi người"
+  short_name: "Tất cả mọi người"
+  aliases: ["Tất cả mọi người"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+minori-haruka-va-airi:
+  name: "Minori, Haruka và Airi"
+  short_name: "Minori, Haruka và Airi"
+  aliases: ["Minori, Haruka và Airi"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"
+
+# Auto-added placeholder characters. Review avatar/color/aliases later.
+video:
+  name: "Video"
+  short_name: "Video"
+  aliases: ["Video"]
+  avatar: /images/characters/unknown.svg
+  color: "#999999"
+  text_color: "#444444"

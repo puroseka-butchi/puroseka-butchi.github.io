@@ -16,6 +16,8 @@ translator: Tên của bạn
 proofreader:
 source_url:
 comments: false
+toc:
+  enable: false
 ---
 
 <div class="interview-kicker">ĐẶC BIỆT · PHỎNG VẤN</div>

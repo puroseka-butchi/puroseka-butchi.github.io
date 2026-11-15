@@ -22,6 +22,8 @@ translator: M T
 proofreader: null
 source_url: https://natalie.mu/music/pp/magicalmirai2026/page/1
 comments: false
+toc:
+  enable: false
 ---
 
 <div class="interview-kicker">MUSIC NATALIE · PHỎNG VẤN ĐẶC BIỆT</div>
